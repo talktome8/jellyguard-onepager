@@ -1,0 +1,129 @@
+{
+  "header": {
+    "cta": "Schedule a consultation",
+    "logoAlt": "JellyGuard"
+  },
+  "hero": {
+    "title": "Clean Water, Naturally",
+    "tagline": "JellyGuard uses nature-inspired technology to protect marine intake systems from jellyfish blooms without harm or chemicals",
+    "cta": "Learn How It Works",
+    "learnMore": "Learn more"
+  },
+  "opening": {
+    "title": "The Challenge",
+    "text": "Coastal facilities worldwide face operational shutdowns when jellyfish swarms clog cooling-water intakes. Traditional barriers harm marine life and require intensive maintenance. JellyGuard offers a smarter solution."
+  },
+  "promise": {
+    "title": "Our Promise",
+    "text": "A passive, biomimetic system that gently lifts jellyfish away from intake zones and concentrates them in a thin surface layer for safe removal - without toxic coatings, moving parts, or ecosystem disruption."
+  },
+  "globalImpact": {
+    "title": "Global Impact",
+    "subtitle": "JellyGuard addresses a worldwide problem",
+    "left": [
+      "Jellyfish blooms shut down power plants, desalination facilities, and industrial cooling systems",
+      "Climate change and warming seas intensify bloom frequency and scale",
+      "Existing solutions often damage marine ecosystems or prove economically unsustainable"
+    ],
+    "right": [
+      "Our technology works in harmony with ocean currents and natural behavior",
+      "Reduces downtime and maintenance costs",
+      "Protects both infrastructure and marine biodiversity"
+    ]
+  },
+  "fourSteps": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "label": "Sense",
+        "description": "Detect jellyfish presence and water flow patterns"
+      },
+      {
+        "label": "Lift",
+        "description": "Gently guide jellyfish upward using natural buoyancy"
+      },
+      {
+        "label": "Skim",
+        "description": "Concentrate organisms in a thin surface layer"
+      },
+      {
+        "label": "Process",
+        "description": "Safe removal or bypass without harm"
+      }
+    ]
+  },
+  "differentiators": {
+    "title": "Why JellyGuard",
+    "items": [
+      {
+        "title": "Low-power & Reliable",
+        "description": "Minimal in-water hardware, modular maintenance"
+      },
+      {
+        "title": "Eco-Friendly",
+        "description": "No chemicals, no entrapment, no ecosystem damage"
+      },
+      {
+        "title": "Scalable",
+        "description": "Modular design adapts to small intakes or large industrial facilities"
+      },
+      {
+        "title": "Proven Approach",
+        "description": "Inspired by natural marine processes and validated through rigorous testing"
+      }
+    ]
+  },
+  "whoWeServe": {
+    "title": "Who We Serve",
+    "primary": "Power generation facilities, desalination plants, industrial cooling systems, and marine infrastructure operators facing jellyfish-related intake challenges.",
+    "secondary": "We also partner with environmental agencies, marine research institutions, and coastal developers seeking sustainable intake protection."
+  },
+  "siteRequirements": {
+    "title": "Minimal Site Requirements",
+    "intro": "JellyGuard integrates seamlessly with existing infrastructure:",
+    "items": [
+      "Coastal or offshore intake location",
+      "Basic site assessment and water flow data",
+      "Standard mounting surfaces or anchoring points",
+      "Access for periodic inspection (frequency based on bloom patterns)"
+    ]
+  },
+  "commercialModel": {
+    "title": "Commercial Model",
+    "text": "We offer flexible deployment options including full installation, lease agreements, and performance-based contracts. Our team conducts site assessments, custom design, installation, and ongoing monitoring to ensure optimal protection and ROI."
+  },
+  "safetyEcology": {
+    "title": "Safety & Ecology",
+    "text": "JellyGuard is designed with marine conservation at its core. Our system avoids entrapment, uses no biocides or anti-fouling chemicals, and allows safe passage for non-target species. We work closely with environmental regulators and marine biologists to ensure compliance and minimal ecological footprint."
+  },
+  "finalCta": {
+    "title": "Ready to Protect Your Operations?",
+    "subtitle": "Schedule a consultation to discuss your site and explore how JellyGuard can safeguard your intake systems.",
+    "cta": "Get in Touch"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "fields": {
+      "name": "Name",
+      "organization": "Organization",
+      "role": "Role",
+      "email": "Email",
+      "phone": "Phone",
+      "region": "Region",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "organization": "Company or institution",
+      "role": "Your position",
+      "email": "email@example.com",
+      "phone": "+1 234 567 8900",
+      "region": "e.g., Mediterranean, Southeast Asia",
+      "message": "Tell us about your facility and challenges..."
+    },
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Thank you! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again."
+  }
+}

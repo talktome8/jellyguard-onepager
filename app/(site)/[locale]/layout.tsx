@@ -1,0 +1,68 @@
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Inter, Heebo } from 'next/font/google';
+import { locales } from '@/i18n';
+import JellyScroll from './components/JellyScroll';
+import ScrollProgress from './components/ScrollProgress';
+import '@/styles/globals.css';
+import '@/styles/theme.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
+const heebo = Heebo({
+  subsets: ['hebrew'],
+  variable: '--font-heebo',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
+  children,
+  params: { locale }
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  if (!locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+  const direction = locale === 'he' ? 'rtl' : 'ltr';
+
+  return (
+    <html lang={locale} dir={direction} className={`${inter.variable} ${heebo.variable}`}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>JellyGuard - Clean Water, Naturally</title>
+        <meta name="description" content="Nature-inspired technology to protect marine intake systems from jellyfish blooms" />
+      </head>
+      <body className={locale === 'he' ? 'font-heebo' : 'font-inter'}>
+        <NextIntlClientProvider messages={messages}>
+          {/* Scroll progress bar */}
+          <ScrollProgress />
+          
+          {/* Global jellyfish animation overlay */}
+          <JellyScroll />
+          
+          {/* Page content */}
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

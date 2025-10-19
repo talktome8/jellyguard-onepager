@@ -1,0 +1,198 @@
+/* Theme Utilities */
+
+/* Buttons */
+.btn-primary {
+  @apply bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:ring-2 focus:ring-teal focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply border-2 border-teal text-teal hover:bg-teal hover:text-white font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 focus:ring-2 focus:ring-teal focus:ring-offset-2;
+}
+
+.btn-outline {
+  @apply border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 focus:ring-2 focus:ring-navy focus:ring-offset-2;
+}
+
+/* Cards */
+.card {
+  @apply bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
+}
+
+.card-soft {
+  @apply bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50;
+}
+
+/* Glassy card - new striking style */
+.card-glass {
+  @apply rounded-2xl border border-white/40 bg-white/70 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 p-6 md:p-8;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,163,163,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-glass:hover::before {
+  width: 400px;
+  height: 400px;
+  opacity: 1;
+}
+
+/* Sections and Strips */
+.section {
+  @apply relative py-16 md:py-24 lg:py-32;
+}
+
+.strip {
+  @apply w-full transition-all duration-500;
+}
+
+.strip:hover {
+  background-color: rgba(26, 163, 163, 0.02);
+}
+
+.strip-sand {
+  @apply bg-sand;
+}
+
+.strip-sand:hover {
+  background-color: rgba(237, 245, 247, 0.98);
+  filter: brightness(1.02);
+}
+
+.strip-white {
+  @apply bg-white;
+}
+
+.strip-white:hover {
+  background-color: rgba(255, 255, 255, 0.98);
+  filter: brightness(1.02);
+}
+
+.strip-navy {
+  @apply bg-navy text-white;
+}
+
+.strip-navy:hover {
+  background-color: rgba(11, 27, 43, 0.97);
+  filter: brightness(1.05);
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Typography */
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-4;
+  letter-spacing: -0.025em;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-gray-700 mb-8 max-w-3xl;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  @apply text-xs md:text-sm font-semibold text-teal uppercase tracking-wider mb-2;
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+/* Animations */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+.hover-lift {
+  @apply hover:-translate-y-1 transition-transform duration-300;
+}
+
+/* Coral accent - using direct values to avoid circular dependency */
+.accent-coral {
+  color: #ff7f66;
+}
+
+.border-coral {
+  border-color: #ff7f66;
+}
+
+.bg-coral {
+  background-color: #ff7f66;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-md border-b border-gray-200/50;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .card,
+[dir="rtl"] .card-soft,
+[dir="rtl"] .btn-primary,
+[dir="rtl"] .btn-secondary,
+[dir="rtl"] .btn-outline {
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Mirror icons and accents in RTL */
+[dir="rtl"] .accent-coral {
+  transform: scaleX(-1);
+}
+
+/* Jellyfish animation container */
+.jellyfish-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.jelly-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.jelly-sprite {
+  will-change: transform;
+}
+
+.skim-sentinel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+}

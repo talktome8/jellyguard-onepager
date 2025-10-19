@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0b1b2b;
+  --teal: #1aa3a3;
+  --sand: #edf5f7;
+  --ink: #0f172a;
+  --coral: #ff7f66;
+  --white: #ffffff;
+  
+  /* Semantic colors */
+  --bg-primary: var(--sand);
+  --bg-secondary: var(--white);
+  --bg-accent: var(--navy);
+  --text-primary: var(--ink);
+  --text-secondary: #64748b;
+  --border-light: #e2e8f0;
+  --shadow-soft: 0 2px 8px rgba(11, 27, 43, 0.08);
+  --shadow-medium: 0 4px 16px rgba(11, 27, 43, 0.12);
+  --shadow-strong: 0 8px 24px rgba(11, 27, 43, 0.16);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  color: var(--ink);
+  background-color: var(--sand);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+body[dir="rtl"] {
+  font-family: var(--font-heebo), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Jellyfish overlay container */
+.jellyfish-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.jelly-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skim-sentinel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content layer - ensure content is above jellyfish */
+.content-layer {
+  position: relative;
+  z-index: 10;
+}
