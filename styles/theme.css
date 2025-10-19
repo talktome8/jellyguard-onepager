@@ -3,10 +3,45 @@
 /* Buttons */
 .btn-primary {
   @apply bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 focus:ring-2 focus:ring-teal focus:ring-offset-2;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-primary:hover::after {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-secondary {
   @apply border-2 border-teal text-teal hover:bg-teal hover:text-white font-semibold px-8 py-3.5 rounded-2xl transition-all duration-300 focus:ring-2 focus:ring-teal focus:ring-offset-2;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(26, 163, 163, 0.1) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-secondary:hover::before {
+  transform: translateX(100%);
 }
 
 .btn-outline {
@@ -16,10 +51,32 @@
 /* Cards */
 .card {
   @apply bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--teal), var(--navy), var(--teal));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover::before {
+  opacity: 0.1;
 }
 
 .card-soft {
   @apply bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 /* Glassy card - new striking style */

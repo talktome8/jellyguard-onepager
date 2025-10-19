@@ -234,10 +234,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              {t('title')}
+              <span className="inline-block">{t('title')}</span>
             </motion.h1>
             <motion.p 
-              className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto"
+              className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto font-medium"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -254,15 +254,16 @@ export default function Hero() {
             >
               <a 
                 href="#contact" 
-                className="btn-primary text-base sm:text-lg px-10 py-4 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                className="btn-primary text-base sm:text-lg px-10 py-4 shadow-lg hover:shadow-xl w-full sm:w-auto group relative overflow-hidden"
               >
-                {t('cta')}
+                <span className="relative z-10">{t('cta')}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-teal to-[#168a8a] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
                 href="#opening" 
-                className="bg-white/90 backdrop-blur-sm border-2 border-navy/20 text-navy hover:bg-navy hover:text-white hover:border-navy font-semibold text-base sm:text-lg px-10 py-4 rounded-2xl transition-all duration-300 w-full sm:w-auto focus:ring-2 focus:ring-navy focus:ring-offset-2"
+                className="glass border-2 border-navy/20 text-navy hover:bg-navy hover:text-white hover:border-navy font-semibold text-base sm:text-lg px-10 py-4 rounded-2xl transition-all duration-300 w-full sm:w-auto focus:ring-2 focus:ring-navy focus:ring-offset-2 group"
               >
-                {t('learnMore') || 'Learn more'}
+                <span className="group-hover:tracking-wide transition-all duration-300">{t('learnMore') || 'Learn more'}</span>
               </a>
             </motion.div>
           </div>
