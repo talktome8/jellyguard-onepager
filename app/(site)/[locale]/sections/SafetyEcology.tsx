@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import WaveFlow from '../components/WaveFlow';
 
 export default function SafetyEcology() {
   const t = useTranslations('safety');
@@ -20,7 +21,9 @@ export default function SafetyEcology() {
   }, []);
 
   return (
-    <section ref={ref} className="strip strip-sand section">
+    <section ref={ref} className="strip strip-sand section relative overflow-hidden">
+      {/* Gentle waves showing harmony with nature */}
+      <WaveFlow direction="left" speed={0.6} amplitude={12} color="rgba(136, 212, 235, 0.1)" />
       <div className="section-container">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">

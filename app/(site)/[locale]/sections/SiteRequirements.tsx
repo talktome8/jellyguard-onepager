@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import GridFlow from '../components/GridFlow';
 
 export default function SiteRequirements() {
   const t = useTranslations('site');
@@ -20,7 +21,9 @@ export default function SiteRequirements() {
   }, []);
 
   return (
-    <section ref={ref} className="strip strip-white section">
+    <section ref={ref} className="strip strip-white section relative overflow-hidden">
+      {/* Flowing grid showing systematic integration */}
+      <GridFlow color="rgba(26, 163, 163, 0.06)" speed={0.4} />
       <div className="section-container">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">

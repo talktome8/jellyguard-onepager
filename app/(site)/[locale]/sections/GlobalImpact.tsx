@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import WorldMapOverlay from '../components/WorldMapOverlay';
 import WaterCaustics from '../components/WaterCaustics';
 import MiniJellyfish from '../components/MiniJellyfish';
+import SwirlEffect from '../components/SwirlEffect';
 
 export default function GlobalImpact() {
   const t = useTranslations('impact');
@@ -24,8 +25,8 @@ export default function GlobalImpact() {
 
   return (
     <section ref={ref} className="strip strip-sand section relative overflow-hidden">
-      {/* Water caustics effect */}
-      <WaterCaustics />
+      {/* Swirling particles showing the growing global crisis */}
+      <SwirlEffect intensity="high" color="rgba(255, 127, 102, 0.08)" />
       
       {/* Mini jellyfish decorations */}
       <MiniJellyfish position="left" size="sm" opacity={0.08} />

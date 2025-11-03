@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import WaterCaustics from '../components/WaterCaustics';
 import MiniJellyfish from '../components/MiniJellyfish';
+import DepthLayers from '../components/DepthLayers';
 
 export default function Differentiators() {
   const t = useTranslations('why');
@@ -44,8 +45,8 @@ export default function Differentiators() {
 
   return (
     <section ref={ref} className="strip strip-sand section relative overflow-hidden">
-      {/* Water caustics and jellyfish */}
-      <WaterCaustics />
+      {/* Depth layers showing multi-layered solution approach */}
+      <DepthLayers layers={5} color="rgba(26, 163, 163, 0.06)" />
       <MiniJellyfish position="right" size="sm" opacity={0.12} />
       
       <div className="section-container relative z-10">

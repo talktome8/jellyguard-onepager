@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import ContactForm from '../components/ContactForm';
 import TestimonialBar from '../components/TestimonialBar';
+import RippleEffect from '../components/RippleEffect';
 
 export default function FinalCTA() {
   const t = useTranslations('cta');
@@ -27,7 +28,9 @@ export default function FinalCTA() {
       {/* Trust strip - HIDDEN until real testimonials available */}
       {/* <TestimonialBar /> */}
       
-      <section ref={ref} id="contact" className="strip strip-white section">
+      <section ref={ref} id="contact" className="strip strip-white section relative overflow-hidden">
+        {/* Converging ripples calling to action */}
+        <RippleEffect frequency={1800} color="rgba(26, 163, 163, 0.1)" />
         <div className="section-container">
           <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
             <div className="max-w-4xl mx-auto">

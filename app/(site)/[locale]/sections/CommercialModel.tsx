@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import CurrentFlow from '../components/CurrentFlow';
 
 export default function CommercialModel() {
   const t = useTranslations('commercial');
@@ -20,7 +21,9 @@ export default function CommercialModel() {
   }, []);
 
   return (
-    <section ref={ref} className="strip strip-navy section">
+    <section ref={ref} className="strip strip-navy section relative overflow-hidden">
+      {/* Particle flow showing flexible deployment options */}
+      <CurrentFlow />
       <div className="section-container">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto text-center">

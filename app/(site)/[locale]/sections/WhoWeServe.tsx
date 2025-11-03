@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import RippleEffect from '../components/RippleEffect';
 
 export default function WhoWeServe() {
   const t = useTranslations('serve');
@@ -20,7 +21,9 @@ export default function WhoWeServe() {
   }, []);
 
   return (
-    <section ref={ref} className="strip strip-sand section">
+    <section ref={ref} className="strip strip-sand section relative overflow-hidden">
+      {/* Ripple effect showing expanding reach and impact */}
+      <RippleEffect frequency={2500} color="rgba(26, 163, 163, 0.12)" />
       <div className="section-container">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
