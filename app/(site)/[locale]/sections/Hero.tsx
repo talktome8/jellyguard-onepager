@@ -242,12 +242,12 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              {t('tagline')}
+              {t('subtitle')}
             </motion.p>
             
             {/* Dual CTAs with stagger animation */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -256,15 +256,34 @@ export default function Hero() {
                 href="#contact" 
                 className="btn-primary text-base sm:text-lg px-10 py-4 shadow-lg hover:shadow-xl w-full sm:w-auto group relative overflow-hidden"
               >
-                <span className="relative z-10">{t('cta')}</span>
+                <span className="relative z-10">{t('cta_primary')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-teal to-[#168a8a] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
                 href="#opening" 
                 className="glass border-2 border-navy/20 text-navy hover:bg-navy hover:text-white hover:border-navy font-semibold text-base sm:text-lg px-10 py-4 rounded-2xl transition-all duration-300 w-full sm:w-auto focus:ring-2 focus:ring-navy focus:ring-offset-2 group"
               >
-                <span className="group-hover:tracking-wide transition-all duration-300">{t('learnMore') || 'Learn more'}</span>
+                <span className="group-hover:tracking-wide transition-all duration-300">{t('cta_secondary')}</span>
               </a>
+            </motion.div>
+
+            {/* Key Stats - Trust Indicators */}
+            <motion.div 
+              className="grid grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {(t.raw('stats') as Array<{value: string, label: string}>).map((stat, idx) => (
+                <div key={idx} className="text-center">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm sm:text-base text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </motion.div>
           </div>
         </motion.div>

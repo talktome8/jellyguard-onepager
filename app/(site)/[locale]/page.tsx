@@ -2,6 +2,9 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TrustStrip from './components/TrustStrip';
+import FloatingJellyfish from './components/FloatingJellyfish';
+import DepthGradient from './components/DepthGradient';
+import StickyCtaButton from './components/StickyCtaButton';
 import Hero from './sections/Hero';
 import Opening from './sections/Opening';
 import Promise from './sections/Promise';
@@ -20,46 +23,55 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   setRequestLocale(locale);
   
   return (
-    <div className="content-layer">
-      <Header />
+    <>
+      {/* Atmospheric background effects */}
+      <FloatingJellyfish />
+      <DepthGradient />
       
-      <main>
-        <Hero />
-        <WaveDivider color="sand" />
+      <div className="content-layer">
+        <Header />
         
-        <Opening />
-        <WaveDivider color="white" flip />
-        
-        <Promise />
-        <WaveDivider color="sand" />
-        
-        <GlobalImpact />
-        <WaveDivider color="sand" flip />
-        
-        <FourSteps />
-        <WaveDivider color="white" />
-        
-        <Differentiators />
-        <WaveDivider color="sand" flip />
-        
-        <WhoWeServe />
-        <WaveDivider color="white" />
-        
-        <SiteRequirements />
-        <WaveDivider color="white" flip />
-        
-        <CommercialModel />
-        <WaveDivider color="sand" />
-        
-        <SafetyEcology />
-        <WaveDivider color="white" flip />
-        
-        <TrustStrip />
-        
-        <FinalCTA />
-      </main>
+        <main>
+          <Hero />
+          <WaveDivider color="sand" />
+          
+          <Opening />
+          <WaveDivider color="white" flip />
+          
+          <Promise />
+          <WaveDivider color="sand" />
+          
+          <GlobalImpact />
+          <WaveDivider color="sand" flip />
+          
+          <FourSteps />
+          <WaveDivider color="white" />
+          
+          <Differentiators />
+          <WaveDivider color="sand" flip />
+          
+          <WhoWeServe />
+          <WaveDivider color="white" />
+          
+          <SiteRequirements />
+          <WaveDivider color="white" flip />
+          
+          <CommercialModel />
+          <WaveDivider color="sand" />
+          
+          <SafetyEcology />
+          <WaveDivider color="white" flip />
+          
+          <TrustStrip />
+          
+          <FinalCTA />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+        
+        {/* Sticky CTA Button */}
+        <StickyCtaButton />
+      </div>
+    </>
   );
 }

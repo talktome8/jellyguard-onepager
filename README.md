@@ -6,10 +6,11 @@ A bilingual (English/Hebrew) marketing website for JellyGuard built with Next.js
 
 - **Bilingual Support**: Full internationalization with English and Hebrew locales
 - **RTL Support**: Complete right-to-left layout support for Hebrew
-- **Unique Scroll Animation**: Jellyfish silhouettes float upward and get skimmed into a thin surface layer
+- **Cinematic Scroll Animation**: Jellyfish silhouettes float upward, background ambient jellyfish drift slowly, depth-feeling gradient transitions
+- **Value-Focused Copy**: Emphasis on operational protection, cost savings, and environmental responsibility
 - **Responsive Design**: Mobile-first approach with clean, modern aesthetics
 - **Accessibility**: Keyboard navigation, reduced motion support, and WCAG compliance
-- **Performance Optimized**: Next.js 14 with App Router, optimized images, and lazy loading
+- **Performance Optimized**: Next.js 14 with App Router, optimized images, GPU-accelerated animations
 
 ## Tech Stack
 
@@ -120,11 +121,11 @@ jellyguard-onepager/
 
 ## Animation
 
-The jellyfish scroll animation uses SVG sprites that:
-- Float upward at varying speeds as the user scrolls
-- Get "skimmed" into a thin elliptical layer at the top of the viewport
-- Use only CSS transforms and opacity for 60fps performance
-- Respect `prefers-reduced-motion` settings
+The jellyfish animation system includes:
+- **Active sprites**: Float upward at varying speeds as the user scrolls, get "skimmed" into a thin elliptical layer at the top
+- **Ambient jellyfish**: 6-8 background silhouettes with slow vertical drift (20-35s cycles) using CSS keyframes
+- **GPU-accelerated**: Uses only CSS transforms and opacity for 60fps performance
+- **Accessible**: Respects `prefers-reduced-motion` settings with static fallback
 
 ## Contact Form API
 

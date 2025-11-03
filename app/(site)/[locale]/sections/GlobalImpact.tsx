@@ -1,14 +1,29 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
-import SectionTitle from '../components/SectionTitle';
+import { useState, useEffect, useRef } from 'react';
 import WorldMapOverlay from '../components/WorldMapOverlay';
 import WaterCaustics from '../components/WaterCaustics';
 import MiniJellyfish from '../components/MiniJellyfish';
 
 export default function GlobalImpact() {
-  const t = useTranslations('globalImpact');
+  const t = useTranslations('impact');
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="strip strip-sand section relative overflow-hidden">
+    <section ref={ref} className="strip strip-sand section relative overflow-hidden">
       {/* Water caustics effect */}
       <WaterCaustics />
       
@@ -33,68 +48,65 @@ export default function GlobalImpact() {
       </div>
       
       <div className="section-container relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <SectionTitle 
-            kicker="GLOBAL IMPACT"
-            title={t('title')}
-            subtitle={t('subtitle')}
-            centered
-            icon="globe"
-          />
-          
-          {/* Three compact stat badges with minimal icons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="group px-6 py-3 card-glass rounded-full text-sm font-semibold text-navy flex items-center gap-2 hover:-translate-y-0.5 transition-transform duration-300">
-              <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M3 10h18M3 14h18" />
-              </svg>
-              <span>Thin-layer capture</span>
+        <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
+          <div className="max-w-6xl mx-auto">
+            {/* Title Section */}
+            <div className="text-center mb-12">
+              <div className="mb-3 text-xs uppercase tracking-widest text-teal font-semibold">
+                {t('eyebrow')}
+              </div>
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-navy mb-4">
+                {t('title')}
+              </h2>
             </div>
-            <div className="group px-6 py-3 card-glass rounded-full text-sm font-semibold text-navy flex items-center gap-2 hover:-translate-y-0.5 transition-transform duration-300">
-              <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>No shredding</span>
+            
+            {/* Three compact stat badges */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {[0, 1, 2].map((idx) => (
+                <div 
+                  key={idx} 
+                  className="group px-6 py-3 card-glass rounded-full text-sm font-semibold text-navy flex items-center gap-2 hover:-translate-y-0.5 transition-transform duration-300"
+                >
+                  <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{t(`badges.${idx}`)}</span>
+                </div>
+              ))}
             </div>
-            <div className="group px-6 py-3 card-glass rounded-full text-sm font-semibold text-navy flex items-center gap-2 hover:-translate-y-0.5 transition-transform duration-300">
-              <svg className="w-5 h-5 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              <span>Low-power</span>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            {/* Left Column */}
-            <div className="card-glass transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-coral/10 flex items-center justify-center text-coral text-sm">!</span>
-                The Problem
-              </h3>
-              <ul className="space-y-4">
-                {['left.0', 'left.1', 'left.2'].map((key, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 bg-coral rounded-full mt-2"></span>
-                    <span className="text-gray-700">{t(key)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              {/* Left Column - Problem */}
+              <div className={`reveal ${isVisible ? 'is-in' : ''} card-glass transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`} style={{ animationDelay: '0.1s' }}>
+                <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-full bg-coral/10 flex items-center justify-center text-coral text-sm">!</span>
+                  The Problem
+                </h3>
+                <ul className="space-y-4">
+                  {[0, 1, 2].map((idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 bg-coral rounded-full mt-2"></span>
+                      <span className="text-gray-700">{t(`problem_points.${idx}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            {/* Right Column */}
-            <div className="card-glass bg-teal/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-teal/20 flex items-center justify-center text-teal text-sm">✓</span>
-                Our Solution
-              </h3>
-              <ul className="space-y-4">
-                {['right.0', 'right.1', 'right.2'].map((key, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-1.5 h-1.5 bg-teal rounded-full mt-2"></span>
-                    <span className="text-gray-700 font-medium">{t(key)}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Right Column - Solution */}
+              <div className={`reveal ${isVisible ? 'is-in' : ''} card-glass bg-teal/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`} style={{ animationDelay: '0.2s' }}>
+                <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-full bg-teal/20 flex items-center justify-center text-teal text-sm">✓</span>
+                  Our Solution
+                </h3>
+                <ul className="space-y-4">
+                  {[0, 1, 2].map((idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 bg-teal rounded-full mt-2"></span>
+                      <span className="text-gray-700 font-medium">{t(`solution_points.${idx}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
