@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import BubbleRise from '../components/BubbleRise';
 
 export default function Opening() {
   const t = useTranslations('opening');
@@ -21,10 +22,8 @@ export default function Opening() {
 
   return (
     <section ref={ref} id="opening" className="strip strip-white section relative overflow-hidden">
-      {/* Subtle wave pattern background */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_40px,#1aa3a3_40px,#1aa3a3_42px)]" />
-      </div>
+      {/* Bubble rise animation showing jellyfish blooms rising */}
+      <BubbleRise density="high" color="rgba(26, 163, 163, 0.12)" />
       
       <div className="section-container relative z-10">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>

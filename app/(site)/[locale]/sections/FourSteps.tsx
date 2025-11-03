@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import WaveFlow from '../components/WaveFlow';
 
 export default function FourSteps() {
   const t = useTranslations('steps');
@@ -65,8 +66,8 @@ export default function FourSteps() {
 
   return (
     <section ref={ref} className="strip strip-white section relative overflow-hidden">
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[linear-gradient(to_right,#1aa3a3_1px,transparent_1px),linear-gradient(to_bottom,#1aa3a3_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      {/* Wave flow animation showing the process flow */}
+      <WaveFlow direction="right" speed={1.2} amplitude={15} color="rgba(26, 163, 163, 0.1)" />
       
       <div className="section-container relative z-10">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>

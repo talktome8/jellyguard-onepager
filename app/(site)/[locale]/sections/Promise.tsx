@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
-import BubbleField from '../components/BubbleField';
+import CurrentFlow from '../components/CurrentFlow';
 
 export default function Promise() {
   const t = useTranslations('promise');
@@ -22,8 +22,8 @@ export default function Promise() {
 
   return (
     <section ref={ref} className="strip strip-navy section relative overflow-hidden">
-      {/* Bubble field for depth */}
-      <BubbleField />
+      {/* Current flow animation showing how the system works with natural currents */}
+      <CurrentFlow />
       
       {/* Radial gradient for spotlight effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,163,163,0.15)_0%,transparent_70%)] pointer-events-none" />
