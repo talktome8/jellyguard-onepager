@@ -71,7 +71,7 @@ export default function ContactForm() {
         
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.name')} *
             </label>
             <input
@@ -87,7 +87,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="organization" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.organization')} *
             </label>
             <input
@@ -105,7 +105,7 @@ export default function ContactForm() {
 
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="role" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.role')} *
             </label>
             <input
@@ -121,7 +121,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.email')} *
             </label>
             <input
@@ -139,7 +139,7 @@ export default function ContactForm() {
 
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.phone')}
             </label>
             <input
@@ -154,7 +154,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="region" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="region" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.region')}
             </label>
             <input
@@ -170,7 +170,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-1">
             {t('fields.message')} *
           </label>
           <textarea

@@ -87,7 +87,7 @@ export default function GlobalImpact() {
                   {[0, 1, 2].map((idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-1.5 h-1.5 bg-coral rounded-full mt-2"></span>
-                      <span className="text-gray-700">{t(`problem_points.${idx}`)}</span>
+                      <span className="text-slate-700 font-medium">{t(`problem_points.${idx}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -103,7 +103,7 @@ export default function GlobalImpact() {
                   {[0, 1, 2].map((idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-1.5 h-1.5 bg-teal rounded-full mt-2"></span>
-                      <span className="text-gray-700 font-medium">{t(`solution_points.${idx}`)}</span>
+                      <span className="text-slate-700 font-semibold">{t(`solution_points.${idx}`)}</span>
                     </li>
                   ))}
                 </ul>

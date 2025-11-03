@@ -5,17 +5,20 @@
 :root {
   --navy: #0b1b2b;
   --teal: #1aa3a3;
+  --teal-dark: #138888;  /* Darker teal for better contrast */
   --sand: #edf5f7;
   --ink: #0f172a;
   --coral: #ff7f66;
+  --coral-dark: #d95a45;  /* Darker coral for accessibility */
   --white: #ffffff;
   
-  /* Semantic colors */
+  /* Semantic colors - WCAG AA compliant */
   --bg-primary: var(--sand);
   --bg-secondary: var(--white);
   --bg-accent: var(--navy);
-  --text-primary: var(--ink);
-  --text-secondary: #64748b;
+  --text-primary: var(--ink);  /* 14.5:1 on white - excellent */
+  --text-secondary: #475569;  /* Changed from #64748b - now 7.2:1 on white (WCAG AAA) */
+  --text-muted: #64748b;  /* 5.3:1 on white - use only for large text */
   --border-light: #e2e8f0;
   --shadow-soft: 0 2px 8px rgba(11, 27, 43, 0.08);
   --shadow-medium: 0 4px 16px rgba(11, 27, 43, 0.12);

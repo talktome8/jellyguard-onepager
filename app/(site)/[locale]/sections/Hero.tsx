@@ -237,7 +237,7 @@ export default function Hero() {
               <span className="inline-block">{t('title')}</span>
             </motion.h1>
             <motion.p 
-              className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto font-medium"
+              className="text-lg sm:text-xl md:text-2xl text-slate-700 mb-12 leading-relaxed max-w-2xl mx-auto font-medium"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -279,7 +279,7 @@ export default function Hero() {
                   <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">
+                  <div className="text-sm sm:text-base text-slate-700 font-medium">
                     {stat.label}
                   </div>
                 </div>

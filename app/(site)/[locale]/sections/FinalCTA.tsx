@@ -42,7 +42,7 @@ export default function FinalCTA() {
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-navy mb-4">
                   {t('title')}
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+                <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6 font-medium">
                   {t('text')}
                 </p>
 
@@ -63,7 +63,7 @@ export default function FinalCTA() {
                 </div>
 
                 {/* Trust Badges */}
-                <div className="flex flex-wrap gap-3 justify-center mb-8 text-xs text-gray-500">
+                <div className="flex flex-wrap gap-3 justify-center mb-8 text-xs text-slate-600 font-medium">
                   {(tTrust.raw('certifications') as string[]).map((cert, idx) => (
                     <div key={idx} className="flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
                       <svg className="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20">
@@ -78,7 +78,7 @@ export default function FinalCTA() {
               <ContactForm />
 
               {/* Partners Note */}
-              <div className="text-center mt-8 text-sm text-gray-500 italic">
+              <div className="text-center mt-8 text-sm text-slate-600 italic font-medium">
                 {tTrust('partners')}
               </div>
             </div>

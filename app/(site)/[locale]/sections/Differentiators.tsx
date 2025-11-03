@@ -87,7 +87,7 @@ export default function Differentiators() {
                       <h3 className="text-xl font-bold text-navy mb-2 transition-colors duration-300 group-hover:text-teal">
                         {t(`items.${idx}.title`)}
                       </h3>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-slate-700 leading-relaxed font-medium">
                         {t(`items.${idx}.text`)}
                       </p>
                     </div>

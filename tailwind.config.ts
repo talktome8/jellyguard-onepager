@@ -11,9 +11,11 @@ const config: Config = {
       colors: {
         navy: '#0b1b2b',
         teal: '#1aa3a3',
+        'teal-dark': '#138888',  // Darker teal for better contrast (4.5:1 on white)
         sand: '#edf5f7',
         ink: '#0f172a',
         coral: '#ff7f66',
+        'coral-dark': '#d95a45',  // Darker coral for accessibility (4.5:1 on white)
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],

@@ -74,16 +74,18 @@
 }
 
 .card-soft {
-  @apply bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50;
+  @apply bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
-/* Glassy card - new striking style */
+/* Glassy card - improved contrast for accessibility */
 .card-glass {
-  @apply rounded-2xl border border-white/40 bg-white/70 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 p-6 md:p-8;
+  @apply rounded-2xl border border-white/60 bg-white/85 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 p-6 md:p-8;
   position: relative;
   overflow: hidden;
+  /* Ensure text contrast is maintained */
+  color: var(--ink);
 }
 
 .card-glass::before {
