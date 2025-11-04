@@ -1,0 +1,146 @@
+{
+  "header": {
+    "cta": "Programar una consulta",
+    "logoAlt": "JellyGuard"
+  },
+  "hero": {
+    "title": "Proteja Sus Operaciones — Naturalmente",
+    "subtitle": "JellyGuard mantiene las tomas de agua de mar despejadas y los ecosistemas prosperando con tecnología biomimética inspirada en el equilibrio oceánico.",
+    "cta_primary": "Programar Consulta",
+    "cta_secondary": "Descubrir Más",
+    "stats": [
+      { "value": "24/7", "label": "Protección Continua" },
+      { "value": "Bajo Consumo", "label": "Eficiencia Energética" },
+      { "value": "Cero", "label": "Químicos Utilizados" }
+    ]
+  },
+  "opening": {
+    "eyebrow": "El Desafío",
+    "title": "Cuando Los Enjambres de Medusas Interrumpen las Operaciones",
+    "text": "En costas y mares, las floraciones de medusas cierran plantas eléctricas, instalaciones de desalinización, tomas de enfriamiento, interrumpen operaciones pesqueras y cierran playas turísticas — costando millones en tiempo de inactividad y respuesta de emergencia. Las barreras tradicionales dañan la vida marina y exigen mantenimiento intensivo. Hay una mejor manera."
+  },
+  "promise": {
+    "eyebrow": "Nuestra Solución",
+    "title": "Tecnología de Protección Biomimética",
+    "text": "Un enfoque pasivo y biomimético que guía a las medusas lejos de las zonas de captación y las concentra en una capa superficial delgada para su extracción segura — sin químicos, trituración o alteración del ecosistema."
+  },
+  "impact": {
+    "eyebrow": "Impacto Global",
+    "title": "Una Crisis Creciente en Océanos y Mares",
+    "badges": ["Captura en capa delgada", "Sin trituración", "Bajo consumo"],
+    "problem_points": [
+      "Las floraciones interrumpen energía, agua, pesca y turismo.",
+      "El calentamiento de mares y océanos aumenta la frecuencia y escala.",
+      "Las soluciones convencionales son costosas o dañinas."
+    ],
+    "solution_points": [
+      "Funciona con corrientes oceánicas y comportamiento natural.",
+      "Reduce el tiempo de inactividad y los costos de mantenimiento.",
+      "Protege infraestructura y biodiversidad."
+    ]
+  },
+  "steps": {
+    "eyebrow": "El Proceso",
+    "title": "Sistema de Protección de Cuatro Pasos",
+    "labels": ["Monitorear", "Guiar", "Concentrar", "Remover"],
+    "descriptions": [
+      "Detectar presencia de floración y patrones de flujo de agua.",
+      "Usar flotabilidad natural y flujo para elevar organismos.",
+      "Concentrar en una capa superficial segura y delgada.",
+      "Desviar o remover sin daño."
+    ]
+  },
+  "why": {
+    "eyebrow": "Ventajas Clave",
+    "title": "Por Qué Funciona JellyGuard",
+    "items": [
+      { "title": "Bajo Consumo y Confiable", "text": "Hardware submarino mínimo. Mantenimiento modular." },
+      { "title": "Ecológico", "text": "Sin químicos, sin atrapamiento, sin daño." },
+      { "title": "Escalable", "text": "Desde pequeñas tomas hasta grandes sitios industriales." },
+      { "title": "Enfoque Probado", "text": "Biomímesis validada por investigación y pruebas." }
+    ]
+  },
+  "serve": {
+    "eyebrow": "Industrias Objetivo",
+    "title": "Protegiendo Infraestructura Crítica",
+    "text_primary": "Generación de energía, desalinización, industria costera y sistemas de enfriamiento.",
+    "text_secondary": "También nos asociamos con reguladores, institutos de investigación y desarrolladores costeros."
+  },
+  "site": {
+    "eyebrow": "Requisitos del Sitio",
+    "title": "Integración Simple",
+    "bullets": [
+      "Ubicación de toma costera/marina",
+      "Evaluación básica del sitio y datos de flujo",
+      "Montaje o anclaje estándar",
+      "Acceso de inspección periódica"
+    ]
+  },
+  "commercial": {
+    "eyebrow": "Modelo Comercial",
+    "title": "Despliegue Flexible",
+    "text": "Instalación completa, arrendamiento o contratos basados en rendimiento. Evaluación del sitio, diseño personalizado, instalación y monitoreo continuo para un ROI óptimo."
+  },
+  "safety": {
+    "eyebrow": "Seguridad y Ecología",
+    "title": "Basado en Principios de Conservación",
+    "text": "Sin biocidas o químicos antiincrustantes. Paso seguro para especies no objetivo. Construido con biólogos marinos para minimizar la huella ecológica."
+  },
+  "cta": {
+    "eyebrow": "Comenzar",
+    "title": "¿Listo para Proteger Sus Operaciones?",
+    "text": "Programe una consulta para evaluar su sitio y explorar la idoneidad de JellyGuard.",
+    "button": "Enviar Mensaje",
+    "urgency": "Plazas limitadas disponibles para evaluaciones del Q1 2026",
+    "guarantee": "Evaluación inicial del sitio gratuita • No se requiere compromiso"
+  },
+  "testimonials": {
+    "title": "Confiado por Líderes de la Industria",
+    "items": [
+      {
+        "quote": "JellyGuard redujo nuestro mantenimiento de toma en un 80% mientras protegía la vida marina local.",
+        "author": "Ingeniero Jefe",
+        "company": "Planta de Desalinización Mediterránea"
+      },
+      {
+        "quote": "Cero paradas no planificadas desde la instalación. El ROI habla por sí mismo.",
+        "author": "Director de Operaciones",
+        "company": "Generación de Energía Costera"
+      },
+      {
+        "quote": "Finalmente, una solución que funciona con la naturaleza en lugar de contra ella.",
+        "author": "Gerente Ambiental",
+        "company": "Instalación de Enfriamiento Industrial"
+      }
+    ]
+  },
+  "trust": {
+    "certifications": ["Certificado ISO 14001", "Tecnología Segura Marina", "Validado por el Instituto de Biomímesis"],
+    "partners": "En colaboración con instituciones líderes de investigación marina"
+  },
+  "contactForm": {
+    "title": "Contáctenos",
+    "fields": {
+      "name": "Nombre",
+      "organization": "Organización",
+      "role": "Cargo",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "region": "Región",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Su nombre",
+      "organization": "Empresa o institución",
+      "role": "Su posición",
+      "email": "correo@ejemplo.com",
+      "phone": "+34 123 456 789",
+      "region": "ej., Mediterráneo, Sudeste Asiático",
+      "message": "Cuéntenos sobre su instalación y desafíos..."
+    },
+    "submit": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "success": "Gracias - nos pondremos en contacto pronto.",
+    "error": "No pudimos enviar su mensaje. Por favor intente nuevamente."
+  }
+}

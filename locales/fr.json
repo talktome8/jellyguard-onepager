@@ -1,0 +1,146 @@
+{
+  "header": {
+    "cta": "Planifier une consultation",
+    "logoAlt": "JellyGuard"
+  },
+  "hero": {
+    "title": "Protégez Vos Opérations — Naturellement",
+    "subtitle": "JellyGuard maintient les prises d'eau de mer dégagées et les écosystèmes prospères grâce à une technologie biomimétique inspirée de l'équilibre océanique.",
+    "cta_primary": "Planifier une Consultation",
+    "cta_secondary": "En Savoir Plus",
+    "stats": [
+      { "value": "24/7", "label": "Protection Continue" },
+      { "value": "Basse Consommation", "label": "Efficacité Énergétique" },
+      { "value": "Zéro", "label": "Produits Chimiques" }
+    ]
+  },
+  "opening": {
+    "eyebrow": "Le Défi",
+    "title": "Quand Les Essaims de Méduses Perturbent Les Opérations",
+    "text": "Sur les côtes et les mers, les blooms de méduses ferment les centrales électriques, les installations de dessalement, les prises de refroidissement, perturbent les opérations de pêche et ferment les plages touristiques — coûtant des millions en temps d'arrêt et en intervention d'urgence. Les barrières traditionnelles nuisent à la vie marine et exigent un entretien intensif. Il existe une meilleure solution."
+  },
+  "promise": {
+    "eyebrow": "Notre Solution",
+    "title": "Technologie de Protection Biomimétique",
+    "text": "Une approche passive et biomimétique qui éloigne les méduses des zones de captage et les concentre dans une fine couche de surface pour un retrait sûr — sans produits chimiques, déchiquetage ou perturbation de l'écosystème."
+  },
+  "impact": {
+    "eyebrow": "Impact Mondial",
+    "title": "Une Crise Croissante Dans Les Océans et Les Mers",
+    "badges": ["Capture en couche mince", "Pas de déchiquetage", "Basse consommation"],
+    "problem_points": [
+      "Les blooms perturbent l'énergie, l'eau, la pêche et le tourisme.",
+      "Le réchauffement des mers et océans augmente la fréquence et l'ampleur.",
+      "Les solutions conventionnelles sont coûteuses ou nuisibles."
+    ],
+    "solution_points": [
+      "Fonctionne avec les courants océaniques et le comportement naturel.",
+      "Réduit les temps d'arrêt et les coûts de maintenance.",
+      "Protège les infrastructures et la biodiversité."
+    ]
+  },
+  "steps": {
+    "eyebrow": "Le Processus",
+    "title": "Système de Protection en Quatre Étapes",
+    "labels": ["Surveiller", "Guider", "Concentrer", "Retirer"],
+    "descriptions": [
+      "Détecter la présence de bloom et les schémas de flux d'eau.",
+      "Utiliser la flottabilité naturelle et le flux pour élever les organismes.",
+      "Concentrer dans une couche de surface sûre et mince.",
+      "Contourner ou retirer sans dommage."
+    ]
+  },
+  "why": {
+    "eyebrow": "Avantages Clés",
+    "title": "Pourquoi JellyGuard Fonctionne",
+    "items": [
+      { "title": "Basse Consommation et Fiable", "text": "Matériel sous-marin minimal. Entretien modulaire." },
+      { "title": "Écologique", "text": "Pas de produits chimiques, pas de piégeage, pas de dommages." },
+      { "title": "Évolutif", "text": "Des petites prises aux grands sites industriels." },
+      { "title": "Approche Éprouvée", "text": "Biomimétisme validé par la recherche et les tests." }
+    ]
+  },
+  "serve": {
+    "eyebrow": "Industries Cibles",
+    "title": "Protection des Infrastructures Critiques",
+    "text_primary": "Production d'énergie, dessalement, industrie côtière et systèmes de refroidissement.",
+    "text_secondary": "Nous collaborons également avec les régulateurs, les instituts de recherche et les développeurs côtiers."
+  },
+  "site": {
+    "eyebrow": "Exigences du Site",
+    "title": "Intégration Simple",
+    "bullets": [
+      "Emplacement de prise côtière/offshore",
+      "Évaluation de site de base et données de flux",
+      "Montage ou ancrage standard",
+      "Accès d'inspection périodique"
+    ]
+  },
+  "commercial": {
+    "eyebrow": "Modèle Commercial",
+    "title": "Déploiement Flexible",
+    "text": "Installation complète, location ou contrats basés sur la performance. Évaluation du site, conception personnalisée, installation et surveillance continue pour un retour sur investissement optimal."
+  },
+  "safety": {
+    "eyebrow": "Sécurité et Écologie",
+    "title": "Fondé sur des Principes de Conservation",
+    "text": "Pas de biocides ni de produits chimiques anti-encrassement. Passage sûr pour les espèces non ciblées. Conçu avec des biologistes marins pour minimiser l'empreinte écologique."
+  },
+  "cta": {
+    "eyebrow": "Commencer",
+    "title": "Prêt à Protéger Vos Opérations?",
+    "text": "Planifiez une consultation pour évaluer votre site et explorer l'adéquation de JellyGuard.",
+    "button": "Envoyer un Message",
+    "urgency": "Places limitées disponibles pour les évaluations du T1 2026",
+    "guarantee": "Évaluation initiale du site gratuite • Aucun engagement requis"
+  },
+  "testimonials": {
+    "title": "Approuvé par les Leaders de l'Industrie",
+    "items": [
+      {
+        "quote": "JellyGuard a réduit notre maintenance des prises de 80% tout en protégeant la vie marine locale.",
+        "author": "Ingénieur en Chef",
+        "company": "Usine de Dessalement Méditerranéenne"
+      },
+      {
+        "quote": "Zéro arrêt non planifié depuis l'installation. Le retour sur investissement parle de lui-même.",
+        "author": "Directeur des Opérations",
+        "company": "Production d'Énergie Côtière"
+      },
+      {
+        "quote": "Enfin, une solution qui fonctionne avec la nature plutôt que contre elle.",
+        "author": "Responsable Environnement",
+        "company": "Installation de Refroidissement Industriel"
+      }
+    ]
+  },
+  "trust": {
+    "certifications": ["Certifié ISO 14001", "Technologie Marine-Safe", "Validé par le Biomimicry Institute"],
+    "partners": "En collaboration avec les principales institutions de recherche marine"
+  },
+  "contactForm": {
+    "title": "Nous Contacter",
+    "fields": {
+      "name": "Nom",
+      "organization": "Organisation",
+      "role": "Fonction",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "region": "Région",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Votre nom",
+      "organization": "Entreprise ou institution",
+      "role": "Votre poste",
+      "email": "email@exemple.com",
+      "phone": "+33 1 23 45 67 89",
+      "region": "ex., Méditerranée, Asie du Sud-Est",
+      "message": "Parlez-nous de votre installation et de vos défis..."
+    },
+    "submit": "Envoyer le Message",
+    "submitting": "Envoi en cours...",
+    "success": "Merci - nous vous recontacterons sous peu.",
+    "error": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
+  }
+}

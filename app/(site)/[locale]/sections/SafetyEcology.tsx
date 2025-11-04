@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
 import WaveFlow from '../components/WaveFlow';
+import CoralGrowth from '../components/CoralGrowth';
 
 export default function SafetyEcology() {
   const t = useTranslations('safety');
@@ -24,7 +25,9 @@ export default function SafetyEcology() {
     <section ref={ref} className="strip strip-sand section relative overflow-hidden">
       {/* Gentle waves showing harmony with nature */}
       <WaveFlow direction="left" speed={0.6} amplitude={12} color="rgba(136, 212, 235, 0.1)" />
-      <div className="section-container">
+      {/* Growing coral animation - symbolizing conservation and marine life protection */}
+      <CoralGrowth />
+      <div className="section-container relative z-10">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
             {/* Title Section */}

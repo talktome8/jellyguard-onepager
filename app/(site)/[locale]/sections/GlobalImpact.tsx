@@ -6,6 +6,7 @@ import WorldMapOverlay from '../components/WorldMapOverlay';
 import WaterCaustics from '../components/WaterCaustics';
 import MiniJellyfish from '../components/MiniJellyfish';
 import SwirlEffect from '../components/SwirlEffect';
+import PlanktonDrift from '../components/PlanktonDrift';
 
 export default function GlobalImpact() {
   const t = useTranslations('impact');
@@ -27,6 +28,9 @@ export default function GlobalImpact() {
     <section ref={ref} className="strip strip-sand section relative overflow-hidden">
       {/* Swirling particles showing the growing global crisis */}
       <SwirlEffect intensity="high" color="rgba(255, 127, 102, 0.08)" />
+      
+      {/* Bioluminescent plankton drift - representing living marine ecosystem */}
+      <PlanktonDrift />
       
       {/* Mini jellyfish decorations */}
       <MiniJellyfish position="left" size="sm" opacity={0.08} />

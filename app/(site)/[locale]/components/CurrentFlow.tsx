@@ -47,8 +47,8 @@ export default function CurrentFlow() {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(237, 245, 247, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Clear canvas with transparency to preserve dark background
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((p, i) => {
         p.x += p.vx;
