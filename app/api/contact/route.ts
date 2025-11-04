@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
     if (validatedData.honeypot && validatedData.honeypot.length > 0) {
       // Silent rejection for bots
       return NextResponse.json(
-        { success: true, message: 'Thanks — we'll get back to you shortly.' },
+        { success: true, message: 'Thanks - we will get back to you shortly.' },
         { status: 200 }
       );
     }
@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
     if (!gasResponse.ok) {
       console.error('Google Apps Script error:', gasResponse.status, gasResponse.statusText);
       return NextResponse.json(
-        { success: false, message: 'We couldn't send your message. Please try again.' },
+        { success: false, message: 'We could not send your message. Please try again.' },
         { status: 500 }
       );
     }
@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { success: true, message: 'Thanks — we'll get back to you shortly.' },
+      { success: true, message: 'Thanks - we will get back to you shortly.' },
       { status: 200 }
     );
   } catch (error) {
@@ -131,7 +131,7 @@ export async function POST(request: NextRequest) {
 
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { success: false, message: 'We couldn't send your message. Please try again.' },
+      { success: false, message: 'We could not send your message. Please try again.' },
       { status: 500 }
     );
   }

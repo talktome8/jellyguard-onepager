@@ -140,7 +140,7 @@
     },
     "submit": "Send Message",
     "submitting": "Sending...",
-    "success": "Thanks — we'll get back to you shortly.",
-    "error": "We couldn't send your message. Please try again."
+    "success": "Thanks - we will get back to you shortly.",
+    "error": "We could not send your message. Please try again."
   }
 }
