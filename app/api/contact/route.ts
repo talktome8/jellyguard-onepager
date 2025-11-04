@@ -57,28 +57,68 @@ export async function POST(request: NextRequest) {
     if (validatedData.honeypot && validatedData.honeypot.length > 0) {
       // Silent rejection for bots
       return NextResponse.json(
-        { success: true, message: 'Contact form submitted successfully' },
+        { success: true, message: 'Thanks — we'll get back to you shortly.' },
         { status: 200 }
       );
     }
 
-    // In a production environment, you would:
-    // 1. Send an email notification
-    // 2. Store in a database
-    // 3. Integrate with a CRM
-    // 4. Send confirmation email to the user
-    
-    // For now, we'll just log it and return success
-    console.log('Contact form submission:', {
-      ...validatedData,
-      honeypot: undefined, // Remove honeypot from logs
+    // Get Google Apps Script endpoint from environment variable
+    const gasEndpoint = process.env.GAS_CONTACT_URL;
+    if (!gasEndpoint) {
+      console.error('GAS_CONTACT_URL not configured');
+      return NextResponse.json(
+        { success: false, message: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
+    // Collect metadata
+    const userAgent = request.headers.get('user-agent') || 'Unknown';
+    const referer = request.headers.get('referer') || '';
+    const page = referer ? new URL(referer).pathname : 'unknown';
+
+    // Prepare payload for Google Sheets (exclude honeypot)
+    const payload = {
+      name: validatedData.name,
+      organization: validatedData.organization,
+      role: validatedData.role,
+      email: validatedData.email,
+      phone: validatedData.phone || '',
+      region: validatedData.region || '',
+      message: validatedData.message,
+      page,
+      userAgent,
+      ip,
+    };
+
+    // Forward to Google Apps Script
+    const gasResponse = await fetch(gasEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
     });
 
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    if (!gasResponse.ok) {
+      console.error('Google Apps Script error:', gasResponse.status, gasResponse.statusText);
+      return NextResponse.json(
+        { success: false, message: 'We couldn't send your message. Please try again.' },
+        { status: 500 }
+      );
+    }
+
+    const gasResult = await gasResponse.json();
+    
+    // Log successful submission (without sensitive data)
+    console.log('Contact form submitted successfully:', {
+      email: validatedData.email,
+      organization: validatedData.organization,
+      timestamp: new Date().toISOString(),
+    });
 
     return NextResponse.json(
-      { success: true, message: 'Contact form submitted successfully' },
+      { success: true, message: 'Thanks — we'll get back to you shortly.' },
       { status: 200 }
     );
   } catch (error) {
@@ -91,7 +131,7 @@ export async function POST(request: NextRequest) {
 
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { success: false, message: 'Internal server error' },
+      { success: false, message: 'We couldn't send your message. Please try again.' },
       { status: 500 }
     );
   }
