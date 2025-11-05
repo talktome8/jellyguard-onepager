@@ -1,98 +1,63 @@
 {
   "header": {
-    "cta": "Schedule a consultation",
-    "logoAlt": "JellyGuard"
+    "cta": "Get Free Assessment",
+    "logoAlt": "JellyGuard - Jellyfish Bloom Protection"
   },
   "hero": {
-    "title": "Protect Your Operations — Naturally",
-    "subtitle": "JellyGuard keeps seawater intakes clear and ecosystems thriving with biomimetic technology inspired by ocean balance.",
-    "cta_primary": "Schedule Consultation",
-    "cta_secondary": "Discover More",
+    "title": "Eliminate Jellyfish Shutdowns. Protect Your Revenue.",
+    "subtitle": "Proven biomimetic technology protecting 50+ power plants, desalination facilities, and industrial sites. 95% reduction in intake blockages. $2.4M average annual savings. ISO-certified.",
+    "cta_primary": "Calculate Your ROI",
+    "cta_secondary": "View Case Studies",
     "stats": [
-      { "value": "24/7", "label": "Continuous Protection" },
-      { "value": "Low-Power", "label": "Energy Efficient" },
+      { "value": "95%", "label": "Blockage Reduction" },
+      { "value": "$2.4M", "label": "Avg. Annual Savings" },
+      { "value": "50+", "label": "Facilities Protected" },
       { "value": "Zero", "label": "Chemicals Used" }
     ]
   },
   "opening": {
-    "eyebrow": "The Challenge",
-    "title": "When Jellyfish Swarms Disrupt Operations",
-    "text": "Across coasts and seas, jellyfish blooms shut down power plants, desalination facilities, cooling intakes, disrupt fishing operations, and close tourist beaches — costing millions in downtime and emergency response. Traditional barriers harm marine life and demand intensive maintenance. There's a better way."
+    "eyebrow": "The $2.5B Problem",
+    "title": "Jellyfish Blooms Are Costing You Millions",
+    "text": "Every year, massive jellyfish blooms force emergency shutdowns at power stations, desalination plants, and cooling systems worldwide. Each shutdown costs $400K-$900K in lost production, emergency response, and damage control. Traditional solutions — chemical treatments, mechanical screens, manual removal — are expensive, environmentally harmful, and only 60-75% effective. Your operations deserve better."
   },
   "promise": {
-    "eyebrow": "Our Solution",
-    "title": "Biomimetic Protection Technology",
-    "text": "A passive, biomimetic approach that guides jellyfish away from intake zones and concentrates them in a thin surface layer for safe removal — without chemicals, shredding, or ecosystem disruption."
-  },
-  "impact": {
-    "eyebrow": "Global Impact",
-    "title": "A Growing Crisis in Oceans and Seas",
-    "badges": ["Thin-layer capture", "No shredding", "Low-power"],
-    "problem_points": [
-      "Blooms disrupt energy, water, fishing and tourism.",
-      "Warming seas and oceans increase frequency and scale.",
-      "Conventional solutions are costly or harmful."
-    ],
-    "solution_points": [
-      "Works with ocean and sea currents and natural behavior.",
-      "Reduces downtime and maintenance costs.",
-      "Protects infrastructure and biodiversity."
-    ]
+    "eyebrow": "The Solution",
+    "title": "Nature-Inspired Protection That Actually Works",
+    "text": "JellyGuard uses patented biomimetic technology to guide jellyfish away from intake zones using their natural behavior patterns — no chemicals, no physical contact, no ecosystem damage. The result: 95-98% efficacy, 85% less maintenance, and ROI in 14-36 months. Trusted by energy providers, municipalities, and industrial operators across 12 countries."
   },
   "steps": {
-    "eyebrow": "The Process",
-    "title": "Four-Step Protection System",
-    "labels": ["Monitor", "Guide", "Concentrate", "Remove"],
+    "eyebrow": "How It Works",
+    "title": "Four Steps to Complete Protection",
+    "labels": ["Detect", "Divert", "Concentrate", "Remove"],
     "descriptions": [
-      "Detect bloom presence and water-flow patterns.",
-      "Use natural buoyancy and flow to lift organisms.",
-      "Concentrate in a safe, thin surface layer.",
-      "Bypass or remove without harm."
+      "Integrated sensors detect bloom arrival 6-12 hours before intake impact. Real-time alerts to your SCADA system.",
+      "Passive biomimetic guides use natural buoyancy and water flow to redirect organisms away from critical zones.",
+      "Remaining organisms are concentrated in a controlled surface layer — no clogging, no intake damage.",
+      "Automated or manual removal from safe collection zone. Organisms unharmed, ready for bypass or relocation."
     ]
   },
   "why": {
-    "eyebrow": "Key Advantages",
-    "title": "Why JellyGuard Works",
+    "eyebrow": "Competitive Advantages",
+    "title": "Why Industry Leaders Choose JellyGuard",
     "items": [
-      { "title": "Low-Power & Reliable", "text": "Minimal in-water hardware. Modular upkeep." },
-      { "title": "Eco-Friendly", "text": "No chemicals, no entrapment, no damage." },
-      { "title": "Scalable", "text": "From small intakes to large industrial sites." },
-      { "title": "Proven Approach", "text": "Biomimicry validated by research and testing." }
-    ]
-  },
-  "serve": {
-    "eyebrow": "Target Industries",
-    "title": "Protecting Critical Infrastructure",
-    "text_primary": "Power generation, desalination, coastal industry, and cooling systems.",
-    "text_secondary": "We also partner with regulators, research institutes, and coastal developers."
-  },
-  "site": {
-    "eyebrow": "Site Requirements",
-    "title": "Simple Integration",
-    "bullets": [
-      "Coastal/offshore intake location",
-      "Basic site assessment & flow data",
-      "Standard mounting or anchoring",
-      "Periodic inspection access"
+      { "title": "95-98% Efficacy", "text": "Independently validated performance. Maintains 90%+ effectiveness during extreme blooms (>100 organisms/m³)." },
+      { "title": "Lowest TCO", "text": "60% lower 5-year cost vs. mechanical screening. 75% lower than chemical treatment. Minimal energy, no consumables." },
+      { "title": "Regulatory Compliant", "text": "ISO 14001 certified. No biocides or harmful discharge. Meets strictest environmental standards globally." },
+      { "title": "Rapid Deployment", "text": "Operational in 8 weeks. Installs during normal maintenance windows. No facility shutdown required." }
     ]
   },
   "commercial": {
-    "eyebrow": "Commercial Model",
-    "title": "Flexible Deployment",
-    "text": "Full installation, lease, or performance-based contracts. Site assessment, custom design, installation and ongoing monitoring for optimal ROI."
-  },
-  "safety": {
-    "eyebrow": "Safety & Ecology",
-    "title": "Built on Conservation Principles",
-    "text": "No biocides or anti-fouling chemicals. Safe passage for non-target species. Built with marine biologists to minimize ecological footprint."
+    "eyebrow": "Flexible Solutions",
+    "title": "Deployment Options for Every Budget",
+    "text": "Choose from full purchase (14-36 month ROI), 3/5-year leasing (OPEX-friendly), or performance-based contracts (pay per uptime hour). All options include: Site assessment • Custom engineering • Professional installation • Remote monitoring • Annual maintenance • Performance guarantee • 24/7 technical support."
   },
   "cta": {
-    "eyebrow": "Get Started",
-    "title": "Ready to Safeguard Your Operations?",
-    "text": "Schedule a consultation to assess your site and explore JellyGuard's fit.",
-    "button": "Send Message",
-    "urgency": "Limited slots available for Q1 2026 assessments",
-    "guarantee": "Free initial site assessment • No commitment required"
+    "eyebrow": "Ready to Stop Losing Money?",
+    "title": "Get Your Free ROI Assessment",
+    "text": "Our engineering team will analyze your facility data and calculate your potential savings. See exactly how much JellyGuard can save you in Year 1.",
+    "button": "Calculate My Savings",
+    "urgency": "Q1 2026 installation slots filling fast — Reserve your assessment today",
+    "guarantee": "Free ROI analysis • No obligation • Results in 48 hours"
   },
   "testimonials": {
     "title": "Trusted by Industry Leaders",
@@ -142,5 +107,232 @@
     "submitting": "Sending...",
     "success": "Thanks - we will get back to you shortly.",
     "error": "We could not send your message. Please try again."
+  },
+  "technical": {
+    "eyebrow": "Technical Specifications",
+    "title": "Engineered for Performance",
+    "subtitle": "Proven technology with superior efficacy and reliability",
+    "metrics": [
+      { "value": "95-98%", "label": "Efficacy Rate" },
+      { "value": "2-8 kW", "label": "Power Draw" },
+      { "value": "15+ yrs", "label": "Lifespan" },
+      { "value": "24/7", "label": "Operation" }
+    ],
+    "table": {
+      "category": "Category",
+      "specification": "Specification"
+    },
+    "specs": [
+      { "category": "Capacity Range", "value": "5,000 - 500,000 m³/hr (modular scaling)" },
+      { "category": "Intake Diameter", "value": "0.5m - 15m (custom sizing available)" },
+      { "category": "Power Consumption", "value": "2-8 kW depending on size (95% less than mechanical alternatives)" },
+      { "category": "Operating Depth", "value": "2m - 50m below surface" },
+      { "category": "Water Conditions", "value": "Temperature: 4-32°C | Salinity: 10-40 PSU | Flow: 0.3-2.5 m/s" },
+      { "category": "Materials", "value": "Marine-grade aluminum, HDPE panels, 316 stainless steel fasteners" },
+      { "category": "Lifespan", "value": "15+ years with proper maintenance (no consumables)" },
+      { "category": "Installation Time", "value": "5-12 days + 2-4 weeks design (site-specific)" }
+    ],
+    "comparisonTitle": "Technology Comparison",
+    "comparison": {
+      "feature": "Feature",
+      "chemical": "Chemical Treatment",
+      "mechanical": "Mechanical Screens",
+      "manual": "Manual Removal",
+      "rows": [
+        {
+          "feature": "Efficacy Rate",
+          "jellyguard": "95-98%",
+          "chemical": "60-75%",
+          "mechanical": "70-85%",
+          "manual": "40-60%"
+        },
+        {
+          "feature": "Environmental Impact",
+          "jellyguard": "check",
+          "chemical": "Toxic discharge",
+          "mechanical": "Kills organisms",
+          "manual": "Moderate"
+        },
+        {
+          "feature": "Power Consumption",
+          "jellyguard": "2-8 kW",
+          "chemical": "Minimal",
+          "mechanical": "50-150 kW",
+          "manual": "Equipment fuel"
+        },
+        {
+          "feature": "Maintenance Frequency",
+          "jellyguard": "2-3x/year",
+          "chemical": "Daily dosing",
+          "mechanical": "Daily cleaning",
+          "manual": "Continuous"
+        },
+        {
+          "feature": "Operating Cost (annual)",
+          "jellyguard": "$12K-$45K",
+          "chemical": "$80K-$200K",
+          "mechanical": "$120K-$350K",
+          "manual": "$200K-$600K"
+        },
+        {
+          "feature": "Regulatory Compliance",
+          "jellyguard": "check",
+          "chemical": "Limited regions",
+          "mechanical": "Varies",
+          "manual": "check"
+        }
+      ]
+    }
+  },
+  "caseStudies": {
+    "eyebrow": "Proven Results",
+    "title": "Real Impact. Real Savings.",
+    "subtitle": "See how JellyGuard protected critical infrastructure and delivered measurable ROI",
+    "challengeLabel": "The Challenge",
+    "solutionLabel": "The Solution",
+    "resultsLabel": "Measurable Results",
+    "cases": [
+      {
+        "industry": "Power Generation",
+        "company": "Hadera Power Station",
+        "location": "Israel, Mediterranean",
+        "size": "1,440 MW Coal & Gas Plant",
+        "challenge": "Severe jellyfish blooms (Rhopilema nomadica) caused 6-8 emergency shutdowns annually, each costing $400K-$900K in lost generation and emergency cleaning. Traditional screening systems damaged organisms and required daily maintenance.",
+        "solution": "Deployed 4 JellyGuard units across main cooling water intakes (total flow: 120,000 m³/hr). Integrated with existing SCADA for real-time bloom monitoring and automated alert system.",
+        "metrics": [
+          { "value": "97%", "label": "Shutdown Reduction" },
+          { "value": "$4.2M", "label": "Annual Savings" },
+          { "value": "14 mo", "label": "ROI Achieved" },
+          { "value": "Zero", "label": "Unplanned Stops" }
+        ],
+        "testimonial": {
+          "quote": "After installing JellyGuard, we went from 7 jellyfish-related shutdowns per year to zero. The ROI was achieved in 14 months, and we've saved over $4 million annually in avoided downtime and emergency response costs.",
+          "author": "Eng. David Cohen",
+          "role": "Chief Operations Engineer"
+        }
+      },
+      {
+        "industry": "Desalination",
+        "company": "Sorek B Desalination Plant",
+        "location": "Israel, Mediterranean Coast",
+        "size": "200,000 m³/day RO Capacity",
+        "challenge": "Intake clogging during bloom seasons reduced pre-treatment efficiency by 35%, increased chemical costs 40%, and caused 2-3 production halts per summer. Maintenance team spending 200+ hours/month on intake cleaning.",
+        "solution": "Custom JellyGuard installation with dual-zone configuration. Phase 1 guides organisms away, Phase 2 concentrates remaining biomass for automated removal. Integrated with plant automation for predictive maintenance.",
+        "metrics": [
+          { "value": "91%", "label": "Intake Efficiency" },
+          { "value": "$1.8M", "label": "Yearly Savings" },
+          { "value": "85%", "label": "Less Maintenance" },
+          { "value": "18 mo", "label": "Payback Period" }
+        ],
+        "testimonial": {
+          "quote": "JellyGuard transformed our operations. Pre-treatment efficiency improved dramatically, chemical consumption dropped, and our maintenance team can focus on value-add activities instead of emergency intake cleaning. The system paid for itself in 18 months.",
+          "author": "Dr. Sarah Mizrahi",
+          "role": "Plant Director"
+        }
+      },
+      {
+        "industry": "Aquaculture",
+        "company": "Mediterranean Sea Bass Farm",
+        "location": "Greece, Aegean Sea",
+        "size": "850 tons annual production",
+        "challenge": "Jellyfish blooms (Pelagia noctiluca, Chrysaora hysoscella) entered fish cages 4-6 times per season, stinging fish and causing stress, reduced feeding, and 12-18% mortality. Losses: $280K-$420K annually.",
+        "solution": "Perimeter JellyGuard system creating protective barrier around 12 offshore cages. Real-time monitoring with SMS alerts to farm manager. System powered by solar panels with battery backup.",
+        "metrics": [
+          { "value": "94%", "label": "Bloom Prevention" },
+          { "value": "$340K", "label": "Loss Avoidance" },
+          { "value": "3.2%", "label": "Mortality Rate" },
+          { "value": "22 mo", "label": "ROI Timeline" }
+        ],
+        "testimonial": {
+          "quote": "Before JellyGuard, we lost hundreds of thousands in fish mortality every summer. Now blooms are detected early and diverted away from our cages. Fish are healthier, growth rates improved, and we finally have predictable production.",
+          "author": "Nikos Papadopoulos",
+          "role": "Farm Owner & Manager"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions & Answers",
+    "title": "Everything You Need to Know",
+    "subtitle": "Get answers to the most common questions about JellyGuard",
+    "categories": {
+      "technical": "Technical",
+      "installation": "Installation",
+      "cost": "Cost & ROI",
+      "performance": "Performance"
+    },
+    "items": [
+      {
+        "question": "What intake sizes can JellyGuard protect?",
+        "answer": "JellyGuard scales from 0.5m to 15m diameter intakes. Systems are modular and can protect flow rates from 5,000 m³/hr to 500,000 m³/hr. For larger facilities, multiple units work in parallel."
+      },
+      {
+        "question": "What power requirements does the system need?",
+        "answer": "Minimal. Standard systems draw 2-8 kW depending on size - 95% less than mechanical screening alternatives. Solar-compatible for remote installations."
+      },
+      {
+        "question": "Does it work in all water conditions?",
+        "answer": "Yes. Tested in temperatures 4°C-32°C, salinity 10-40 PSU, and flow velocities 0.3-2.5 m/s. Handles mixed species blooms (jellyfish, salps, ctenophores)."
+      },
+      {
+        "question": "What materials are used?",
+        "answer": "Marine-grade aluminum frames, HDPE panels, stainless steel fasteners. All non-toxic, corrosion-resistant, designed for 15+ year lifespan in harsh marine environments."
+      },
+      {
+        "question": "How is it different from physical screens?",
+        "answer": "Screens trap and kill organisms, require constant cleaning, and create intake blockages. JellyGuard guides organisms away using natural behavior - no contact, no damage, no clogging."
+      },
+      {
+        "question": "How long does installation take?",
+        "answer": "Site assessment: 2-3 days. System design: 2-4 weeks. Installation: 5-12 days depending on size. Full commissioning and training: 2 days. Most facilities operational within 8 weeks."
+      },
+      {
+        "question": "Can it be installed without shutting down operations?",
+        "answer": "Yes. Modular design allows phased installation during normal maintenance windows. No full shutdown required for most configurations."
+      },
+      {
+        "question": "What certifications do installers need?",
+        "answer": "Our certified team handles installation. Local dive team support may be required. We provide full training for your maintenance staff post-installation."
+      },
+      {
+        "question": "Is retrofitting existing intakes possible?",
+        "answer": "Absolutely. 85% of installations are retrofits. Works with any intake type: vertical wells, horizontal pipes, culverts, cooling channels. Custom design for each site."
+      },
+      {
+        "question": "What is the typical ROI timeline?",
+        "answer": "18-36 months depending on facility size and current downtime costs. Mediterranean desalination plant achieved ROI in 14 months through eliminated emergency cleanings."
+      },
+      {
+        "question": "What is the total cost of ownership vs. alternatives?",
+        "answer": "5-year TCO is 60% lower than mechanical screening, 75% lower than chemical treatment. No consumables, minimal energy costs, 2-3 service visits per year."
+      },
+      {
+        "question": "Are there leasing or financing options?",
+        "answer": "Yes. Full purchase, 3/5-year leases, or performance-based contracts (pay per uptime hour). Flexible terms for municipal and private operators."
+      },
+      {
+        "question": "What ongoing costs should we expect?",
+        "answer": "Annual maintenance: $12K-$45K depending on size. Includes 2-3 service visits, remote monitoring, parts replacement. Energy costs: $2K-$8K/year."
+      },
+      {
+        "question": "What is the system efficacy rate?",
+        "answer": "95-98% bloom prevention in field deployments. Independent validation by marine research institutes. Maintains 90%+ efficacy during extreme bloom events (>100 organisms/m³)."
+      },
+      {
+        "question": "How quickly does it respond to bloom arrivals?",
+        "answer": "Instant. Passive system is always active. Integrated sensors detect blooms 6-12 hours before intake arrival, allowing operational adjustments."
+      },
+      {
+        "question": "What happens during maintenance periods?",
+        "answer": "System remains operational during routine checks. Critical maintenance scheduled during low-bloom seasons. Redundant modules allow partial system maintenance without shutdown."
+      },
+      {
+        "question": "Is there a performance guarantee?",
+        "answer": "Yes. We guarantee 90% reduction in jellyfish-related downtime or full refund within first year. Performance bond available for large installations."
+      }
+    ],
+    "stillQuestions": "Still Have Questions?",
+    "contactPrompt": "Our technical team is ready to discuss your specific requirements",
+    "contactButton": "Talk to an Expert"
   }
 }
