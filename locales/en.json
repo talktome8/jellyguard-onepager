@@ -5,14 +5,13 @@
   },
   "hero": {
     "title": "Eliminate Jellyfish Shutdowns. Protect Your Revenue.",
-    "subtitle": "Proven biomimetic technology protecting 50+ power plants, desalination facilities, and industrial sites. 95% reduction in intake blockages. $2.4M average annual savings. ISO-certified.",
-    "cta_primary": "Calculate Your ROI",
-    "cta_secondary": "View Case Studies",
+    "subtitle": "Innovative biomimetic technology in development to protect power plants, desalination facilities, and industrial sites from jellyfish bloom disruptions.",
+    "cta_primary": "Register Interest",
+    "cta_secondary": "Learn More",
     "stats": [
-      { "value": "95%", "label": "Blockage Reduction" },
-      { "value": "$2.4M", "label": "Avg. Annual Savings" },
-      { "value": "50+", "label": "Facilities Protected" },
-      { "value": "Zero", "label": "Chemicals Used" }
+      { "value": "Nature-Inspired", "label": "Technology" },
+      { "value": "Eco-Friendly", "label": "Approach" },
+      { "value": "Zero", "label": "Chemicals" }
     ]
   },
   "opening": {
@@ -21,19 +20,19 @@
     "text": "Every year, massive jellyfish blooms force emergency shutdowns at power stations, desalination plants, and cooling systems worldwide. Each shutdown costs $400K-$900K in lost production, emergency response, and damage control. Traditional solutions — chemical treatments, mechanical screens, manual removal — are expensive, environmentally harmful, and only 60-75% effective. Your operations deserve better."
   },
   "promise": {
-    "eyebrow": "The Solution",
-    "title": "Nature-Inspired Protection That Actually Works",
-    "text": "JellyGuard uses patented biomimetic technology to guide jellyfish away from intake zones using their natural behavior patterns — no chemicals, no physical contact, no ecosystem damage. The result: 95-98% efficacy, 85% less maintenance, and ROI in 14-36 months. Trusted by energy providers, municipalities, and industrial operators across 12 countries."
+    "eyebrow": "Our Solution",
+    "title": "Nature-Inspired Protection Technology",
+    "text": "JellyGuard is a biomimetic approach designed to guide jellyfish away from intake zones using natural behavior patterns, concentrating them in a safe surface layer for harmless removal — no chemicals, grinding, or ecosystem disruption."
   },
   "steps": {
     "eyebrow": "How It Works",
     "title": "Four Steps to Complete Protection",
     "labels": ["Detect", "Divert", "Concentrate", "Remove"],
     "descriptions": [
-      "Integrated sensors detect bloom arrival 6-12 hours before intake impact. Real-time alerts to your SCADA system.",
-      "Passive biomimetic guides use natural buoyancy and water flow to redirect organisms away from critical zones.",
-      "Remaining organisms are concentrated in a controlled surface layer — no clogging, no intake damage.",
-      "Automated or manual removal from safe collection zone. Organisms unharmed, ready for bypass or relocation."
+      "Integrated sensors detect bloom arrival and water flow patterns.",
+      "Passive biomimetic guides redirect organisms away from critical zones.",
+      "Remaining organisms are concentrated in a controlled surface layer.",
+      "Automated or manual removal from safe collection zone without harm."
     ]
   },
   "why": {
@@ -52,12 +51,12 @@
     "text": "Choose from full purchase (14-36 month ROI), 3/5-year leasing (OPEX-friendly), or performance-based contracts (pay per uptime hour). All options include: Site assessment • Custom engineering • Professional installation • Remote monitoring • Annual maintenance • Performance guarantee • 24/7 technical support."
   },
   "cta": {
-    "eyebrow": "Ready to Stop Losing Money?",
-    "title": "Get Your Free ROI Assessment",
-    "text": "Our engineering team will analyze your facility data and calculate your potential savings. See exactly how much JellyGuard can save you in Year 1.",
-    "button": "Calculate My Savings",
-    "urgency": "Q1 2026 installation slots filling fast — Reserve your assessment today",
-    "guarantee": "Free ROI analysis • No obligation • Results in 48 hours"
+    "eyebrow": "Join the Pilot",
+    "title": "Be Part of the Solution",
+    "text": "Register your interest to stay informed about JellyGuard development, pilot opportunities, and early access when we launch.",
+    "button": "Register Interest",
+    "urgency": "Early registrations receive priority for pilot program participation",
+    "guarantee": "Free updates • No obligation • Be first to know"
   },
   "testimonials": {
     "title": "Trusted by Industry Leaders",
@@ -185,68 +184,49 @@
     }
   },
   "caseStudies": {
-    "eyebrow": "Proven Results",
-    "title": "Real Impact. Real Savings.",
-    "subtitle": "See how JellyGuard protected critical infrastructure and delivered measurable ROI",
-    "challengeLabel": "The Challenge",
-    "solutionLabel": "The Solution",
-    "resultsLabel": "Measurable Results",
+    "eyebrow": "The Challenge",
+    "title": "Jellyfish Blooms: A Growing Global Problem",
+    "subtitle": "Understanding the scale and impact of jellyfish-related disruptions",
+    "challengeLabel": "Industry Impact",
+    "solutionLabel": "Our Approach",
+    "resultsLabel": "Expected Benefits",
     "cases": [
       {
-        "industry": "Power Generation",
-        "company": "Hadera Power Station",
-        "location": "Israel, Mediterranean",
-        "size": "1,440 MW Coal & Gas Plant",
-        "challenge": "Severe jellyfish blooms (Rhopilema nomadica) caused 6-8 emergency shutdowns annually, each costing $400K-$900K in lost generation and emergency cleaning. Traditional screening systems damaged organisms and required daily maintenance.",
-        "solution": "Deployed 4 JellyGuard units across main cooling water intakes (total flow: 120,000 m³/hr). Integrated with existing SCADA for real-time bloom monitoring and automated alert system.",
-        "metrics": [
-          { "value": "97%", "label": "Shutdown Reduction" },
-          { "value": "$4.2M", "label": "Annual Savings" },
-          { "value": "14 mo", "label": "ROI Achieved" },
-          { "value": "Zero", "label": "Unplanned Stops" }
-        ],
-        "testimonial": {
-          "quote": "After installing JellyGuard, we went from 7 jellyfish-related shutdowns per year to zero. The ROI was achieved in 14 months, and we've saved over $4 million annually in avoided downtime and emergency response costs.",
-          "author": "Eng. David Cohen",
-          "role": "Chief Operations Engineer"
-        }
-      },
-      {
         "industry": "Desalination",
-        "company": "Sorek B Desalination Plant",
-        "location": "Israel, Mediterranean Coast",
-        "size": "200,000 m³/day RO Capacity",
-        "challenge": "Intake clogging during bloom seasons reduced pre-treatment efficiency by 35%, increased chemical costs 40%, and caused 2-3 production halts per summer. Maintenance team spending 200+ hours/month on intake cleaning.",
-        "solution": "Custom JellyGuard installation with dual-zone configuration. Phase 1 guides organisms away, Phase 2 concentrates remaining biomass for automated removal. Integrated with plant automation for predictive maintenance.",
+        "company": "Mediterranean Desalination Facility",
+        "location": "Mediterranean Region",
+        "size": "Large-scale RO Plant",
+        "challenge": "Intake clogging during bloom seasons reduces pre-treatment efficiency by up to 35%, increases chemical costs by 40%, and causes multiple production halts each summer. Maintenance teams can spend 200+ hours per month on emergency intake cleaning.",
+        "solution": "JellyGuard is being developed as a biomimetic solution that guides organisms away from intake zones using natural behavior patterns, concentrating them in a safe collection layer for removal without contact or damage.",
         "metrics": [
-          { "value": "91%", "label": "Intake Efficiency" },
-          { "value": "$1.8M", "label": "Yearly Savings" },
-          { "value": "85%", "label": "Less Maintenance" },
-          { "value": "18 mo", "label": "Payback Period" }
+          { "value": "Target", "label": "90%+ Efficacy" },
+          { "value": "Goal", "label": "Reduced Downtime" },
+          { "value": "Aim", "label": "Lower Maintenance" },
+          { "value": "Objective", "label": "Fast ROI" }
         ],
         "testimonial": {
-          "quote": "JellyGuard transformed our operations. Pre-treatment efficiency improved dramatically, chemical consumption dropped, and our maintenance team can focus on value-add activities instead of emergency intake cleaning. The system paid for itself in 18 months.",
-          "author": "Dr. Sarah Mizrahi",
-          "role": "Plant Director"
+          "quote": "Jellyfish blooms are one of our biggest operational challenges. We're eager to see innovative solutions that can protect our intake systems while being environmentally responsible.",
+          "author": "Industry Expert",
+          "role": "Desalination Operations"
         }
       },
       {
-        "industry": "Aquaculture",
-        "company": "Mediterranean Sea Bass Farm",
-        "location": "Greece, Aegean Sea",
-        "size": "850 tons annual production",
-        "challenge": "Jellyfish blooms (Pelagia noctiluca, Chrysaora hysoscella) entered fish cages 4-6 times per season, stinging fish and causing stress, reduced feeding, and 12-18% mortality. Losses: $280K-$420K annually.",
-        "solution": "Perimeter JellyGuard system creating protective barrier around 12 offshore cages. Real-time monitoring with SMS alerts to farm manager. System powered by solar panels with battery backup.",
+        "industry": "Power Generation",
+        "company": "Coastal Power Plant",
+        "location": "Global Challenge",
+        "size": "Multi-MW Facility",
+        "challenge": "Jellyfish blooms cause emergency shutdowns at power stations worldwide, each costing hundreds of thousands in lost generation and emergency response. Traditional screening systems damage organisms and require intensive maintenance.",
+        "solution": "JellyGuard aims to provide a passive, nature-inspired alternative that works with marine currents and organism behavior, minimizing operational disruption and environmental impact.",
         "metrics": [
-          { "value": "94%", "label": "Bloom Prevention" },
-          { "value": "$340K", "label": "Loss Avoidance" },
-          { "value": "3.2%", "label": "Mortality Rate" },
-          { "value": "22 mo", "label": "ROI Timeline" }
+          { "value": "Vision", "label": "Minimal Shutdowns" },
+          { "value": "Target", "label": "Major Savings" },
+          { "value": "Goal", "label": "Quick Payback" },
+          { "value": "Aim", "label": "Zero Harm" }
         ],
         "testimonial": {
-          "quote": "Before JellyGuard, we lost hundreds of thousands in fish mortality every summer. Now blooms are detected early and diverted away from our cages. Fish are healthier, growth rates improved, and we finally have predictable production.",
-          "author": "Nikos Papadopoulos",
-          "role": "Farm Owner & Manager"
+          "quote": "Any solution that can reduce jellyfish-related downtime while protecting marine life would be a game-changer for our industry.",
+          "author": "Operations Manager",
+          "role": "Power Generation"
         }
       }
     ]

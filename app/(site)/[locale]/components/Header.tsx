@@ -37,6 +37,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href={`/${locale}`} className="flex items-center group">
+              <img 
+                src="/logo.svg" 
+                alt="JellyGuard" 
+                className="h-12 w-12 mr-3 transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="text-2xl font-bold text-navy group-hover:text-teal transition-colors">
                 JellyGuard
               </div>

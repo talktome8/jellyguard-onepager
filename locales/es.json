@@ -45,7 +45,7 @@
     "labels": ["Monitorear", "Guiar", "Concentrar", "Remover"],
     "descriptions": [
       "Detectar presencia de floración y patrones de flujo de agua.",
-      "Usar flotabilidad natural y flujo para elevar organismos.",
+      "Guías biomiméticas pasivas redirigen organismos lejos de zonas críticas.",
       "Concentrar en una capa superficial segura y delgada.",
       "Desviar o remover sin daño."
     ]

@@ -20,7 +20,7 @@ export default function CaseStudies() {
     return () => observer.disconnect();
   }, []);
 
-  const cases = [0, 1, 2];
+  const cases = [0, 1];
 
   return (
     <section ref={ref} className="strip strip-navy section relative overflow-hidden">

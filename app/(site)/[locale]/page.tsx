@@ -1,7 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
+import dynamic from 'next/dynamic';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import TrustStrip from './components/TrustStrip';
 import FloatingJellyfish from './components/FloatingJellyfish';
 import DepthGradient from './components/DepthGradient';
 import StickyCtaButton from './components/StickyCtaButton';
@@ -12,10 +12,14 @@ import CaseStudies from './sections/CaseStudies';
 import FourSteps from './sections/FourSteps';
 import TechnicalSpecs from './sections/TechnicalSpecs';
 import Differentiators from './sections/Differentiators';
-import CommercialModel from './sections/CommercialModel';
 import FAQ from './sections/FAQ';
 import FinalCTA from './sections/FinalCTA';
-import WaveDivider from './components/WaveDivider';
+
+// Dynamically import 3D Jellyfish (client-side only, no SSR)
+const Jellyfish3D = dynamic(() => import('./components/Jellyfish3D'), {
+  ssr: false,
+  loading: () => null
+});
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   // Enable static rendering
@@ -27,50 +31,42 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <FloatingJellyfish />
       <DepthGradient />
       
+      {/* 3D Interactive Jellyfish */}
+      <Jellyfish3D />
+      
       <div className="content-layer">
         <Header />
         
         <main>
-          {/* 1. HERO - Value proposition with stats */}
+          {/* 1. HERO - Immediate value proposition with compelling stats */}
           <Hero />
-          <WaveDivider color="sand" />
           
-          {/* 2. PROBLEM - The challenge (jellyfish impact) */}
+          {/* 2. PROBLEM - Quantified challenge and market context */}
           <Opening />
-          <WaveDivider color="white" flip />
           
-          {/* 3. SOLUTION - Our technology */}
+          {/* 3. SOLUTION - Clear, differentiated technology explanation */}
           <Promise />
-          <WaveDivider color="white" />
           
-          {/* 4. PROOF - Case studies with real results (NEW - High Impact) */}
+          {/* 4. PROOF - Real case studies with measurable ROI */}
           <CaseStudies />
-          <WaveDivider color="sand" />
           
-          {/* 5. HOW IT WORKS - 4-step process */}
+          {/* 5. HOW IT WORKS - Simple 4-step process visualization */}
           <FourSteps />
-          <WaveDivider color="white" />
           
-          {/* 6. TECHNICAL CREDIBILITY - Specs & comparison (NEW - Technical buyers) */}
-          <TechnicalSpecs />
-          <WaveDivider color="sand" flip />
+          {/* 6. TECHNICAL CREDIBILITY - Detailed specs & competitive comparison (Hidden until post-POC) */}
+          <div className="hidden">
+            <TechnicalSpecs />
+          </div>
           
-          {/* 7. DIFFERENTIATION - Why choose us */}
+          {/* 7. DIFFERENTIATION - Why JellyGuard wins vs alternatives */}
           <Differentiators />
-          <WaveDivider color="white" />
           
-          {/* 8. COMMERCIAL - Pricing & deployment options */}
-          <CommercialModel />
-          <WaveDivider color="sand" flip />
+          {/* 8. OBJECTION HANDLING - Comprehensive FAQ (Hidden until post-POC) */}
+          <div className="hidden">
+            <FAQ />
+          </div>
           
-          {/* 9. OBJECTION HANDLING - FAQ (NEW - Reduce friction) */}
-          <FAQ />
-          <WaveDivider color="white" />
-          
-          {/* 10. TRUST - Certifications */}
-          <TrustStrip />
-          
-          {/* 11. CTA - Contact form */}
+          {/* 9. FINAL CTA - High-urgency contact form with clear value */}
           <FinalCTA />
         </main>
 
