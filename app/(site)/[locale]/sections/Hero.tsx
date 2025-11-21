@@ -97,84 +97,8 @@ export default function Hero() {
           </motion.div>
         )}
 
-        {/* Jellyfish with sophisticated parallax - each at different depth */}
-        {/* Jellyfish 1 - large, left with bioluminescent glow */}
-        <motion.div 
-          className="absolute w-64 h-80 opacity-8 animate-glow-pulse -z-50 pointer-events-none"
-          style={{ 
-            top: '25%',
-            left: '-3rem',
-            y: jellyfish1Y,
-          }}
-        >
-          <svg viewBox="0 0 100 140" className="w-full h-full filter blur-sm">
-            <defs>
-              <radialGradient id="jellyGlow1" cx="50%" cy="35%">
-                <stop offset="0%" stopColor="#1aa3a3" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#1aa3a3" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#1aa3a3" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <ellipse cx="50" cy="35" rx="45" ry="35" fill="url(#jellyGlow1)" />
-            <ellipse cx="50" cy="35" rx="35" ry="25" fill="#1aa3a3" opacity="0.7" />
-            <path d="M20 60 Q 15 100, 20 120" stroke="#1aa3a3" strokeWidth="3" fill="none" opacity="0.6" />
-            <path d="M40 65 Q 35 105, 38 130" stroke="#1aa3a3" strokeWidth="2.5" fill="none" opacity="0.6" />
-            <path d="M50 68 Q 50 110, 50 135" stroke="#1aa3a3" strokeWidth="3" fill="none" opacity="0.6" />
-            <path d="M60 65 Q 65 105, 62 130" stroke="#1aa3a3" strokeWidth="2.5" fill="none" opacity="0.6" />
-            <path d="M80 60 Q 85 100, 80 120" stroke="#1aa3a3" strokeWidth="3" fill="none" opacity="0.6" />
-          </svg>
-        </motion.div>
-
-        {/* Jellyfish 2 - medium, right with pulse */}
-        <motion.div 
-          className="absolute w-48 h-64 opacity-6 animate-glow-pulse -z-50 pointer-events-none [animation-delay:1.5s]"
-          style={{ 
-            top: '33%',
-            right: '2rem',
-            y: jellyfish2Y,
-          }}
-        >
-          <svg viewBox="0 0 100 140" className="w-full h-full filter blur-sm">
-            <defs>
-              <radialGradient id="jellyGlow2" cx="50%" cy="35%">
-                <stop offset="0%" stopColor="#66d9d9" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#1aa3a3" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#1aa3a3" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <ellipse cx="50" cy="35" rx="40" ry="30" fill="url(#jellyGlow2)" />
-            <ellipse cx="50" cy="35" rx="30" ry="20" fill="#1aa3a3" opacity="0.8" />
-            <path d="M25 55 Q 20 90, 23 110" stroke="#1aa3a3" strokeWidth="2" fill="none" opacity="0.7" />
-            <path d="M45 60 Q 42 95, 44 120" stroke="#1aa3a3" strokeWidth="2" fill="none" opacity="0.7" />
-            <path d="M55 60 Q 58 95, 56 120" stroke="#1aa3a3" strokeWidth="2" fill="none" opacity="0.7" />
-            <path d="M75 55 Q 80 90, 77 110" stroke="#1aa3a3" strokeWidth="2" fill="none" opacity="0.7" />
-          </svg>
-        </motion.div>
-
-        {/* Jellyfish 3 - small, top right with glow */}
-        <motion.div 
-          className="absolute w-32 h-48 opacity-5 animate-glow-pulse -z-50 pointer-events-none [animation-delay:3s]"
-          style={{ 
-            top: '3rem',
-            right: '25%',
-            y: jellyfish3Y,
-          }}
-        >
-          <svg viewBox="0 0 100 140" className="w-full h-full filter blur">
-            <defs>
-              <radialGradient id="jellyGlow3" cx="50%" cy="30%">
-                <stop offset="0%" stopColor="#88d4eb" stopOpacity="1" />
-                <stop offset="50%" stopColor="#1aa3a3" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#1aa3a3" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <ellipse cx="50" cy="30" rx="35" ry="25" fill="url(#jellyGlow3)" />
-            <ellipse cx="50" cy="30" rx="25" ry="15" fill="#1aa3a3" opacity="0.9" />
-            <path d="M30 50 Q 28 75, 30 90" stroke="#1aa3a3" strokeWidth="1.5" fill="none" opacity="0.8" />
-            <path d="M50 52 Q 50 80, 50 100" stroke="#1aa3a3" strokeWidth="1.5" fill="none" opacity="0.8" />
-            <path d="M70 50 Q 72 75, 70 90" stroke="#1aa3a3" strokeWidth="1.5" fill="none" opacity="0.8" />
-          </svg>
-        </motion.div>
+        {/* Jellyfish - REMOVED from hero to prevent blocking interaction */}
+        {/* Jellyfish decorations moved to other sections where they don't interfere */}
         
         {/* Parallax wave layers */}
         <motion.div 
