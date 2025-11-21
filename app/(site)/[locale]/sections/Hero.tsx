@@ -100,7 +100,7 @@ export default function Hero() {
         {/* Jellyfish with sophisticated parallax - each at different depth */}
         {/* Jellyfish 1 - large, left with bioluminescent glow */}
         <motion.div 
-          className="absolute w-64 h-80 opacity-6 animate-glow-pulse -z-10 pointer-events-none"
+          className="absolute w-64 h-80 opacity-8 animate-glow-pulse -z-50 pointer-events-none"
           style={{ 
             top: '25%',
             left: '-3rem',
@@ -127,7 +127,7 @@ export default function Hero() {
 
         {/* Jellyfish 2 - medium, right with pulse */}
         <motion.div 
-          className="absolute w-48 h-64 opacity-5 animate-glow-pulse -z-10 pointer-events-none [animation-delay:1.5s]"
+          className="absolute w-48 h-64 opacity-6 animate-glow-pulse -z-50 pointer-events-none [animation-delay:1.5s]"
           style={{ 
             top: '33%',
             right: '2rem',
@@ -153,7 +153,7 @@ export default function Hero() {
 
         {/* Jellyfish 3 - small, top right with glow */}
         <motion.div 
-          className="absolute w-32 h-48 opacity-4 animate-glow-pulse -z-10 pointer-events-none [animation-delay:3s]"
+          className="absolute w-32 h-48 opacity-5 animate-glow-pulse -z-50 pointer-events-none [animation-delay:3s]"
           style={{ 
             top: '3rem',
             right: '25%',

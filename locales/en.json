@@ -184,52 +184,65 @@
     }
   },
   "caseStudies": {
-    "eyebrow": "The Challenge",
-    "title": "Jellyfish Blooms: A Growing Global Problem",
-    "subtitle": "Understanding the scale and impact of jellyfish-related disruptions",
-    "challengeLabel": "Industry Impact",
-    "solutionLabel": "Our Approach",
-    "resultsLabel": "Expected Benefits",
-    "cases": [
+    "eyebrow": "The Global Crisis",
+    "title": "Jellyfish Blooms Are Escalating Worldwide",
+    "subtitle": "Climate change is intensifying jellyfish populations, threatening critical infrastructure across industries",
+    "stats": [
       {
-        "industry": "Desalination",
-        "company": "Mediterranean Desalination Facility",
-        "location": "Mediterranean Region",
-        "size": "Large-scale RO Plant",
-        "challenge": "Intake clogging during bloom seasons reduces pre-treatment efficiency by up to 35%, increases chemical costs by 40%, and causes multiple production halts each summer. Maintenance teams can spend 200+ hours per month on emergency intake cleaning.",
-        "solution": "JellyGuard is being developed as a biomimetic solution that guides organisms away from intake zones using natural behavior patterns, concentrating them in a safe collection layer for removal without contact or damage.",
-        "metrics": [
-          { "value": "Target", "label": "90%+ Efficacy" },
-          { "value": "Goal", "label": "Reduced Downtime" },
-          { "value": "Aim", "label": "Lower Maintenance" },
-          { "value": "Objective", "label": "Fast ROI" }
-        ],
-        "testimonial": {
-          "quote": "Jellyfish blooms are one of our biggest operational challenges. We're eager to see innovative solutions that can protect our intake systems while being environmentally responsible.",
-          "author": "Industry Expert",
-          "role": "Desalination Operations"
-        }
+        "value": "$200M+",
+        "label": "Annual Losses",
+        "description": "Power plants and desalination facilities lose millions yearly to jellyfish-related shutdowns"
       },
       {
-        "industry": "Power Generation",
-        "company": "Coastal Power Plant",
-        "location": "Global Challenge",
-        "size": "Multi-MW Facility",
-        "challenge": "Jellyfish blooms cause emergency shutdowns at power stations worldwide, each costing hundreds of thousands in lost generation and emergency response. Traditional screening systems damage organisms and require intensive maintenance.",
-        "solution": "JellyGuard aims to provide a passive, nature-inspired alternative that works with marine currents and organism behavior, minimizing operational disruption and environmental impact.",
-        "metrics": [
-          { "value": "Vision", "label": "Minimal Shutdowns" },
-          { "value": "Target", "label": "Major Savings" },
-          { "value": "Goal", "label": "Quick Payback" },
-          { "value": "Aim", "label": "Zero Harm" }
-        ],
-        "testimonial": {
-          "quote": "Any solution that can reduce jellyfish-related downtime while protecting marine life would be a game-changer for our industry.",
-          "author": "Operations Manager",
-          "role": "Power Generation"
-        }
+        "value": "Growing",
+        "label": "Bloom Frequency",
+        "description": "Warming oceans and changing currents increase bloom intensity and duration"
+      },
+      {
+        "value": "3 Industries",
+        "label": "Most Affected",
+        "description": "Power generation, desalination, and aquaculture face the highest operational risks"
       }
-    ]
+    ],
+    "problems": {
+      "title": "Traditional Solutions Fall Short",
+      "items": [
+        {
+          "problem": "Mechanical Screens",
+          "why": "Kill organisms, clog constantly, require intensive maintenance, high energy consumption"
+        },
+        {
+          "problem": "Chemical Treatment",
+          "why": "Toxic discharge harms ecosystems, regulatory restrictions, expensive chemicals, inconsistent results"
+        },
+        {
+          "problem": "Manual Removal",
+          "why": "Labor-intensive, reactive not preventive, costly emergency responses, high safety risks"
+        }
+      ]
+    },
+    "solution": {
+      "title": "JellyGuard: A New Approach",
+      "subtitle": "Nature-Inspired Protection Without Harm",
+      "benefits": [
+        {
+          "title": "Zero Environmental Impact",
+          "description": "No chemicals, no organism damage, works with natural marine behavior patterns"
+        },
+        {
+          "title": "Continuous Protection",
+          "description": "Prevents blooms from reaching intake zones before they cause disruption"
+        },
+        {
+          "title": "Minimal Maintenance",
+          "description": "Passive system design reduces operational burden and emergency interventions"
+        },
+        {
+          "title": "Scalable Solution",
+          "description": "Adaptable from small intakes to large industrial facilities across all marine environments"
+        }
+      ]
+    }
   },
   "faq": {
     "eyebrow": "Questions & Answers",
