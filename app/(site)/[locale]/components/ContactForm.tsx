@@ -101,7 +101,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="organization" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.organization')} *
@@ -151,7 +151,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1">
               {t('fields.phone')}

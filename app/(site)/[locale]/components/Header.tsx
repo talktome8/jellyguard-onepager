@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20" dir={isRTL ? 'rtl' : 'ltr'}>
+        <div className="flex items-center justify-between h-16 sm:h-20" dir={isRTL ? 'rtl' : 'ltr'}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href={`/${locale}`} className="flex items-center group">
@@ -43,10 +43,10 @@ export default function Header() {
                 alt="JellyGuard" 
                 width={64}
                 height={64}
-                className="h-14 w-14 sm:h-16 sm:w-16 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-md"
+                className="h-10 w-10 sm:h-14 sm:w-14 md:h-16 md:w-16 mr-2 sm:mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-md"
                 priority
               />
-              <div className="text-2xl sm:text-3xl font-bold text-navy group-hover:text-teal transition-colors">
+              <div className="text-lg sm:text-2xl md:text-3xl font-bold text-navy group-hover:text-teal transition-colors">
                 JellyGuard
               </div>
             </Link>
@@ -56,12 +56,12 @@ export default function Header() {
           <div className="relative flex items-center">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-              className="px-4 py-2 text-sm font-semibold text-navy hover:text-teal transition-smooth rounded-lg hover:bg-sand/50 focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 flex items-center gap-2"
+              className="px-2 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-navy hover:text-teal transition-smooth rounded-lg hover:bg-sand/50 focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 flex items-center gap-1 sm:gap-2"
               aria-label="Select language"
             >
               <span>{currentLanguage.flag}</span>
-              <span>{currentLanguage.name}</span>
-              <svg className={`w-4 h-4 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span className="hidden sm:inline">{currentLanguage.name}</span>
+              <svg className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -89,9 +89,10 @@ export default function Header() {
           <div className="flex-shrink-0">
             <a 
               href="#contact" 
-              className="btn-primary focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2"
+              className="btn-primary text-xs sm:text-sm md:text-base px-3 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3.5 focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2"
             >
-              {t('cta')}
+              <span className="hidden sm:inline">{t('cta')}</span>
+              <span className="sm:hidden">Contact</span>
             </a>
           </div>
         </div>
