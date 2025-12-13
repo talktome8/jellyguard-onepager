@@ -119,8 +119,20 @@ export async function POST(request: NextRequest) {
     // Check request origin (basic CSRF protection)
     const origin = request.headers.get('origin');
     const host = request.headers.get('host');
-    if (origin && host && !origin.includes(host.split(':')[0])) {
-      // Log suspicious cross-origin request (without sensitive data)
+    
+    // Allow requests from same origin, Vercel preview URLs, and custom domain
+    const allowedOrigins = [
+      'jellyguard.raztom.com',
+      'jellyguard-onepager.vercel.app',
+      'localhost',
+      '127.0.0.1'
+    ];
+    
+    const isAllowedOrigin = !origin || allowedOrigins.some(allowed => 
+      origin.includes(allowed) || (host && host.includes(allowed))
+    );
+    
+    if (!isAllowedOrigin) {
       console.warn('Cross-origin request blocked:', { origin, host, timestamp: new Date().toISOString() });
       return NextResponse.json(
         { success: false, message: 'Invalid request origin' },
