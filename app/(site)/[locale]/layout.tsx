@@ -52,9 +52,7 @@ export default async function LocaleLayout({
         <title>JellyGuard - Clean Water, Naturally</title>
         <meta name="description" content="Nature-inspired technology to protect marine intake systems from jellyfish blooms" />
         
-        {/* Security meta tags */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        {/* Security meta tags - X-Frame-Options set via HTTP headers in middleware */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         
         {/* Preconnect to trusted origins only */}
