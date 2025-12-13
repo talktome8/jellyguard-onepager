@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const languages = [
@@ -36,9 +37,11 @@ export default function Footer() {
           {/* Logo */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
-              <img 
+              <Image 
                 src="/logo.svg" 
                 alt="JellyGuard" 
+                width={96}
+                height={96}
                 className="h-20 w-20 sm:h-24 sm:w-24 drop-shadow-lg"
               />
               <div className="text-3xl sm:text-4xl font-bold text-teal">

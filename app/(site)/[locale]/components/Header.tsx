@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const languages = [
@@ -37,10 +38,13 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href={`/${locale}`} className="flex items-center group">
-              <img 
+              <Image 
                 src="/logo.svg" 
                 alt="JellyGuard" 
+                width={64}
+                height={64}
                 className="h-14 w-14 sm:h-16 sm:w-16 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-md"
+                priority
               />
               <div className="text-2xl sm:text-3xl font-bold text-navy group-hover:text-teal transition-colors">
                 JellyGuard

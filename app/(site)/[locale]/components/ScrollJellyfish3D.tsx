@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 // Jellyfish swarm - simple CSS animation approach  
 const JELLIES = [
@@ -80,13 +81,14 @@ export default function ScrollJellyfish3D() {
               opacity: 0.25,
             } as React.CSSProperties}
           >
-            <img
+            <Image
               src={`/images/${jelly.img}`}
               alt=""
               width={jelly.size}
               height={jelly.size}
               className="w-full h-full object-contain"
               loading="lazy"
+              quality={75}
             />
           </div>
         ))}
