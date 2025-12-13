@@ -51,6 +51,18 @@ export default async function LocaleLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>JellyGuard - Clean Water, Naturally</title>
         <meta name="description" content="Nature-inspired technology to protect marine intake systems from jellyfish blooms" />
+        
+        {/* Security meta tags */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        
+        {/* Preconnect to trusted origins only */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body className={locale === 'he' ? 'font-heebo' : 'font-inter'}>
         <NextIntlClientProvider messages={messages}>

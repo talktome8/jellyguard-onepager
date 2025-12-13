@@ -1,52 +1,162 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
+// === INPUT SANITIZATION ===
+
+// Sanitize string input to prevent XSS and injection attacks
+function sanitizeString(input: string): string {
+  return input
+    .trim()
+    .replace(/[<>]/g, '') // Remove angle brackets
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/on\w+=/gi, '') // Remove event handlers
+    .slice(0, 5000); // Limit length
+}
+
+// Sanitize email specifically
+function sanitizeEmail(email: string): string {
+  return email
+    .trim()
+    .toLowerCase()
+    .replace(/[<>"']/g, '') // Remove dangerous characters
+    .slice(0, 254); // RFC 5321 max length
+}
+
+// === VALIDATION SCHEMA ===
+
 const contactSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Invalid email address'),
-  company: z.string().min(1, 'Company is required'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
+  name: z.string()
+    .min(1, 'Name is required')
+    .max(100, 'Name too long')
+    .transform(sanitizeString),
+  email: z.string()
+    .email('Invalid email address')
+    .max(254, 'Email too long')
+    .transform(sanitizeEmail),
+  company: z.string()
+    .min(1, 'Company is required')
+    .max(200, 'Company name too long')
+    .transform(sanitizeString),
+  message: z.string()
+    .min(10, 'Message must be at least 10 characters')
+    .max(5000, 'Message too long')
+    .transform(sanitizeString),
   honeypot: z.string().optional(), // Spam honeypot field
 });
 
-// Simple in-memory rate limiting (token bucket)
-const rateLimitMap = new Map<string, { tokens: number; lastRefill: number }>();
+// === RATE LIMITING ===
+
+// Enhanced rate limiting with IP tracking and burst protection
+const rateLimitMap = new Map<string, { tokens: number; lastRefill: number; blockedUntil?: number }>();
 const MAX_REQUESTS = 5; // 5 requests
 const REFILL_INTERVAL = 60 * 1000; // per minute
+const BLOCK_DURATION = 15 * 60 * 1000; // 15 minutes block after abuse
 
-function checkRateLimit(ip: string): boolean {
+function checkRateLimit(ip: string): { allowed: boolean; retryAfter?: number } {
   const now = Date.now();
   const bucket = rateLimitMap.get(ip) || { tokens: MAX_REQUESTS, lastRefill: now };
+
+  // Check if IP is blocked
+  if (bucket.blockedUntil && now < bucket.blockedUntil) {
+    return { allowed: false, retryAfter: Math.ceil((bucket.blockedUntil - now) / 1000) };
+  }
 
   // Refill tokens
   const timePassed = now - bucket.lastRefill;
   if (timePassed > REFILL_INTERVAL) {
     bucket.tokens = MAX_REQUESTS;
     bucket.lastRefill = now;
+    delete bucket.blockedUntil; // Remove block after refill period
   }
 
   if (bucket.tokens > 0) {
     bucket.tokens--;
     rateLimitMap.set(ip, bucket);
-    return true;
+    return { allowed: true };
   }
 
-  return false;
+  // Block IP for repeated abuse
+  bucket.blockedUntil = now + BLOCK_DURATION;
+  rateLimitMap.set(ip, bucket);
+  return { allowed: false, retryAfter: BLOCK_DURATION / 1000 };
 }
+
+// Clean up old entries periodically (prevent memory leak)
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, bucket] of rateLimitMap.entries()) {
+    if (now - bucket.lastRefill > REFILL_INTERVAL * 10) {
+      rateLimitMap.delete(ip);
+    }
+  }
+}, 60 * 1000); // Clean every minute
 
 export async function POST(request: NextRequest) {
   try {
-    // Rate limiting
-    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
-    if (!checkRateLimit(ip)) {
+    // === SECURITY CHECKS ===
+    
+    // Verify Content-Type header (prevent CSRF with simple requests)
+    const contentType = request.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
       return NextResponse.json(
-        { success: false, message: 'Rate limit exceeded. Please try again later.' },
-        { status: 429 }
+        { success: false, message: 'Invalid content type' },
+        { status: 415 }
+      );
+    }
+    
+    // Check request origin (basic CSRF protection)
+    const origin = request.headers.get('origin');
+    const host = request.headers.get('host');
+    if (origin && host && !origin.includes(host.split(':')[0])) {
+      // Log suspicious cross-origin request (without sensitive data)
+      console.warn('Cross-origin request blocked:', { origin, host, timestamp: new Date().toISOString() });
+      return NextResponse.json(
+        { success: false, message: 'Invalid request origin' },
+        { status: 403 }
       );
     }
 
-    const body = await request.json();
-    console.log('Received form data:', JSON.stringify(body, null, 2));
+    // Rate limiting with enhanced blocking
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ip = forwarded ? forwarded.split(',')[0].trim() : 
+               request.headers.get('x-real-ip') || 
+               'unknown';
+    
+    const rateLimit = checkRateLimit(ip);
+    if (!rateLimit.allowed) {
+      const response = NextResponse.json(
+        { success: false, message: 'Rate limit exceeded. Please try again later.' },
+        { status: 429 }
+      );
+      if (rateLimit.retryAfter) {
+        response.headers.set('Retry-After', String(rateLimit.retryAfter));
+      }
+      return response;
+    }
+
+    // Parse body with size limit check
+    const bodyText = await request.text();
+    if (bodyText.length > 50000) { // 50KB max
+      return NextResponse.json(
+        { success: false, message: 'Request too large' },
+        { status: 413 }
+      );
+    }
+    
+    let body;
+    try {
+      body = JSON.parse(bodyText);
+    } catch {
+      return NextResponse.json(
+        { success: false, message: 'Invalid JSON' },
+        { status: 400 }
+      );
+    }
+    
+    // Log sanitized info only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Received form submission from:', ip.substring(0, 10) + '***');
+    }
     
     // Validate the request body
     const validatedData = contactSchema.parse(body);
@@ -123,11 +233,10 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Log successful submission (without sensitive data)
+    // Log successful submission (minimal data, no PII)
     console.log('Contact form submitted successfully:', {
-      email: validatedData.email,
-      company: validatedData.company,
       timestamp: new Date().toISOString(),
+      hasCompany: !!validatedData.company,
     });
 
     return NextResponse.json(
