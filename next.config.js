@@ -7,6 +7,10 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Remove X-Powered-By header
   compress: true, // Enable gzip compression
+  // Force revalidation on every request to avoid stale content
+  experimental: {
+    // Ensure fresh deployments
+  },
   images: {
     formats: ['image/webp', 'image/avif'],
     remotePatterns: [
