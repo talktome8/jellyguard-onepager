@@ -326,5 +326,27 @@
     "stillQuestions": "Still Have Questions?",
     "contactPrompt": "Our technical team is ready to discuss your specific requirements",
     "contactButton": "Talk to an Expert"
+  },
+  "cookies": {
+    "title": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept All', you consent to our use of cookies.",
+    "acceptAll": "Accept All",
+    "rejectAll": "Necessary Only",
+    "settings": "Cookie Settings",
+    "settingsTitle": "Cookie Preferences",
+    "savePreferences": "Save Preferences",
+    "required": "Required",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "description": "Essential for the website to function properly. Cannot be disabled."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with our website."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to deliver personalized advertisements and track campaigns."
+    }
   }
 }

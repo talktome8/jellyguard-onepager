@@ -210,5 +210,27 @@
     "stillQuestions": "¿Todavía Tiene Preguntas?",
     "contactPrompt": "Nuestro equipo está listo para discutir sus requisitos",
     "contactButton": "Hablar con un Experto"
+  },
+  "cookies": {
+    "title": "Valoramos su privacidad",
+    "description": "Utilizamos cookies para mejorar su experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en 'Aceptar Todo', consiente el uso de cookies.",
+    "acceptAll": "Aceptar Todo",
+    "rejectAll": "Solo Necesarias",
+    "settings": "Configuración",
+    "settingsTitle": "Preferencias de Cookies",
+    "savePreferences": "Guardar Preferencias",
+    "required": "Requerido",
+    "necessary": {
+      "title": "Cookies Necesarias",
+      "description": "Esenciales para el funcionamiento del sitio. No se pueden desactivar."
+    },
+    "analytics": {
+      "title": "Cookies de Análisis",
+      "description": "Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio."
+    },
+    "marketing": {
+      "title": "Cookies de Marketing",
+      "description": "Utilizadas para ofrecer anuncios personalizados y rastrear campañas."
+    }
   }
 }

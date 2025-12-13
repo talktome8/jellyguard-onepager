@@ -6,6 +6,7 @@ import { locales } from '@/i18n';
 import JellyScroll from './components/JellyScroll';
 import ScrollProgress from './components/ScrollProgress';
 import ScrollJellyfish3D from './components/ScrollJellyfish3D';
+import CookieConsent from './components/CookieConsent';
 import '@/styles/globals.css';
 import '@/styles/theme.css';
 
@@ -75,6 +76,9 @@ export default async function LocaleLayout({
           
           {/* Page content */}
           {children}
+          
+          {/* Cookie consent banner */}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -210,5 +210,27 @@
     "stillQuestions": "还有问题？",
     "contactPrompt": "我们的团队随时准备讨论您的需求",
     "contactButton": "联系专家"
+  },
+  "cookies": {
+    "title": "我们重视您的隐私",
+    "description": "我们使用Cookie来增强您的浏览体验、分析网站流量并个性化内容。点击"全部接受"即表示您同意我们使用Cookie。",
+    "acceptAll": "全部接受",
+    "rejectAll": "仅必要",
+    "settings": "Cookie设置",
+    "settingsTitle": "Cookie偏好设置",
+    "savePreferences": "保存设置",
+    "required": "必需",
+    "necessary": {
+      "title": "必要Cookie",
+      "description": "网站正常运行所必需的。无法禁用。"
+    },
+    "analytics": {
+      "title": "分析Cookie",
+      "description": "帮助我们了解访问者如何与我们的网站互动。"
+    },
+    "marketing": {
+      "title": "营销Cookie",
+      "description": "用于提供个性化广告和跟踪营销活动。"
+    }
   }
 }
