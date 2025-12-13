@@ -142,5 +142,73 @@
     "submitting": "Enviando...",
     "success": "Gracias - nos pondremos en contacto pronto.",
     "error": "No pudimos enviar su mensaje. Por favor intente nuevamente."
+  },
+  "caseStudies": {
+    "eyebrow": "El Desafío Global",
+    "title": "Las Floraciones de Medusas Están Aumentando en Todo el Mundo",
+    "subtitle": "El cambio climático está intensificando las poblaciones de medusas, amenazando la infraestructura crítica",
+    "stats": [
+      { "value": "$2.5B", "label": "Impacto Global", "description": "Pérdidas anuales estimadas por interrupciones relacionadas con medusas" },
+      { "value": "2x-3x", "label": "Frecuencia", "description": "Los océanos más cálidos duplican la intensidad de las floraciones" },
+      { "value": "3 Industrias", "label": "Más Afectadas", "description": "Generación de energía, desalinización y acuicultura" }
+    ],
+    "problems": {
+      "title": "Las Soluciones Tradicionales No Alcanzan",
+      "items": [
+        { "problem": "Pantallas Mecánicas", "why": "Matan organismos, requieren mantenimiento intensivo" },
+        { "problem": "Tratamiento Químico", "why": "Descarga tóxica daña ecosistemas" },
+        { "problem": "Remoción Manual", "why": "Intensivo en mano de obra, reactivo" }
+      ]
+    },
+    "solution": {
+      "title": "JellyGuard: Un Nuevo Enfoque",
+      "subtitle": "Protección Inspirada en la Naturaleza Sin Daño",
+      "benefits": [
+        { "title": "Cero Impacto Ambiental", "description": "Sin químicos, sin daño a organismos" },
+        { "title": "Protección Continua", "description": "Previene floraciones antes de causar interrupciones" },
+        { "title": "Mantenimiento Mínimo", "description": "Diseño pasivo reduce carga operacional" },
+        { "title": "Solución Escalable", "description": "Adaptable a cualquier tamaño de instalación" }
+      ]
+    }
+  },
+  "technical": {
+    "eyebrow": "Especificaciones Técnicas",
+    "title": "Diseñado para el Rendimiento",
+    "subtitle": "Tecnología probada con eficacia superior",
+    "metrics": [
+      { "value": "95-98%", "label": "Tasa de Eficacia" },
+      { "value": "2-8 kW", "label": "Consumo" },
+      { "value": "15+ años", "label": "Vida Útil" },
+      { "value": "24/7", "label": "Operación" }
+    ],
+    "table": { "category": "Categoría", "specification": "Especificación" },
+    "specs": [
+      { "category": "Rango de Capacidad", "value": "5,000 - 500,000 m³/hr" },
+      { "category": "Diámetro de Toma", "value": "0.5m - 15m" },
+      { "category": "Consumo de Energía", "value": "2-8 kW" },
+      { "category": "Vida Útil", "value": "15+ años" }
+    ],
+    "comparisonTitle": "Comparación de Tecnología",
+    "comparison": {
+      "feature": "Característica",
+      "chemical": "Tratamiento Químico",
+      "mechanical": "Pantallas Mecánicas",
+      "manual": "Remoción Manual",
+      "rows": []
+    }
+  },
+  "faq": {
+    "eyebrow": "Preguntas Frecuentes",
+    "title": "Todo Lo Que Necesita Saber",
+    "subtitle": "Respuestas a las preguntas más comunes",
+    "categories": { "technical": "Técnico", "installation": "Instalación", "cost": "Costo", "performance": "Rendimiento" },
+    "items": [
+      { "question": "¿Qué tamaños de toma puede proteger JellyGuard?", "answer": "JellyGuard escala desde 0.5m hasta 15m de diámetro." },
+      { "question": "¿Cuáles son los requisitos de energía?", "answer": "Mínimos. Los sistemas estándar consumen 2-8 kW." },
+      { "question": "¿Cuánto tiempo toma la instalación?", "answer": "La mayoría de las instalaciones operan en 8 semanas." }
+    ],
+    "stillQuestions": "¿Todavía Tiene Preguntas?",
+    "contactPrompt": "Nuestro equipo está listo para discutir sus requisitos",
+    "contactButton": "Hablar con un Experto"
   }
 }

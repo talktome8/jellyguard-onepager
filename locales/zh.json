@@ -142,5 +142,73 @@
     "submitting": "发送中...",
     "success": "谢谢 - 我们会尽快与您联系。",
     "error": "我们无法发送您的消息。请重试。"
+  },
+  "caseStudies": {
+    "eyebrow": "全球挑战",
+    "title": "水母暴发在全球范围内增加",
+    "subtitle": "气候变化正在加剧水母种群，威胁关键基础设施",
+    "stats": [
+      { "value": "$25亿", "label": "全球影响", "description": "水母中断造成的年度损失" },
+      { "value": "2-3倍", "label": "频率", "description": "海洋变暖使暴发强度翻倍" },
+      { "value": "3个行业", "label": "受影响最大", "description": "发电、海水淡化和水产养殖" }
+    ],
+    "problems": {
+      "title": "传统解决方案不足",
+      "items": [
+        { "problem": "机械屏障", "why": "杀死生物，需要密集维护" },
+        { "problem": "化学处理", "why": "有毒排放损害生态系统" },
+        { "problem": "人工清除", "why": "劳动密集，被动应对" }
+      ]
+    },
+    "solution": {
+      "title": "JellyGuard：全新方法",
+      "subtitle": "仿生保护，零伤害",
+      "benefits": [
+        { "title": "零环境影响", "description": "无化学品，不伤害生物" },
+        { "title": "持续保护", "description": "在造成中断前预防暴发" },
+        { "title": "最小维护", "description": "被动设计减少运营负担" },
+        { "title": "可扩展方案", "description": "适应任何设施规模" }
+      ]
+    }
+  },
+  "technical": {
+    "eyebrow": "技术规格",
+    "title": "为性能而设计",
+    "subtitle": "经过验证的技术，效率卓越",
+    "metrics": [
+      { "value": "95-98%", "label": "有效率" },
+      { "value": "2-8 kW", "label": "能耗" },
+      { "value": "15+年", "label": "使用寿命" },
+      { "value": "24/7", "label": "运行" }
+    ],
+    "table": { "category": "类别", "specification": "规格" },
+    "specs": [
+      { "category": "容量范围", "value": "5,000 - 500,000 m³/hr" },
+      { "category": "进水口直径", "value": "0.5m - 15m" },
+      { "category": "能源消耗", "value": "2-8 kW" },
+      { "category": "使用寿命", "value": "15+年" }
+    ],
+    "comparisonTitle": "技术对比",
+    "comparison": {
+      "feature": "特性",
+      "chemical": "化学处理",
+      "mechanical": "机械屏障",
+      "manual": "人工清除",
+      "rows": []
+    }
+  },
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "您需要知道的一切",
+    "subtitle": "常见问题解答",
+    "categories": { "technical": "技术", "installation": "安装", "cost": "成本", "performance": "性能" },
+    "items": [
+      { "question": "JellyGuard可以保护多大的进水口？", "answer": "JellyGuard可扩展至0.5m至15m直径。" },
+      { "question": "能源需求是什么？", "answer": "最小化。标准系统消耗2-8 kW。" },
+      { "question": "安装需要多长时间？", "answer": "大多数安装在8周内投入运行。" }
+    ],
+    "stillQuestions": "还有问题？",
+    "contactPrompt": "我们的团队随时准备讨论您的需求",
+    "contactButton": "联系专家"
   }
 }

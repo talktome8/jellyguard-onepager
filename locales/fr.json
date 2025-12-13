@@ -142,5 +142,73 @@
     "submitting": "Envoi en cours...",
     "success": "Merci - nous vous recontacterons sous peu.",
     "error": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
+  },
+  "caseStudies": {
+    "eyebrow": "Le Défi Mondial",
+    "title": "Les Proliférations de Méduses Augmentent Partout",
+    "subtitle": "Le changement climatique intensifie les populations de méduses, menaçant les infrastructures critiques",
+    "stats": [
+      { "value": "$2.5B", "label": "Impact Mondial", "description": "Pertes annuelles estimées dues aux perturbations" },
+      { "value": "2x-3x", "label": "Fréquence", "description": "Les océans plus chauds doublent l'intensité des proliférations" },
+      { "value": "3 Industries", "label": "Plus Touchées", "description": "Production d'énergie, dessalement et aquaculture" }
+    ],
+    "problems": {
+      "title": "Les Solutions Traditionnelles Échouent",
+      "items": [
+        { "problem": "Écrans Mécaniques", "why": "Tuent les organismes, maintenance intensive" },
+        { "problem": "Traitement Chimique", "why": "Rejets toxiques endommagent les écosystèmes" },
+        { "problem": "Enlèvement Manuel", "why": "Main d'œuvre intensive, réactif" }
+      ]
+    },
+    "solution": {
+      "title": "JellyGuard: Une Nouvelle Approche",
+      "subtitle": "Protection Inspirée par la Nature Sans Dommage",
+      "benefits": [
+        { "title": "Zéro Impact Environnemental", "description": "Sans produits chimiques, sans dommage aux organismes" },
+        { "title": "Protection Continue", "description": "Prévient les proliférations avant qu'elles ne causent des perturbations" },
+        { "title": "Maintenance Minimale", "description": "Conception passive réduit la charge opérationnelle" },
+        { "title": "Solution Évolutive", "description": "Adaptable à toute taille d'installation" }
+      ]
+    }
+  },
+  "technical": {
+    "eyebrow": "Spécifications Techniques",
+    "title": "Conçu pour la Performance",
+    "subtitle": "Technologie éprouvée avec efficacité supérieure",
+    "metrics": [
+      { "value": "95-98%", "label": "Taux d'Efficacité" },
+      { "value": "2-8 kW", "label": "Consommation" },
+      { "value": "15+ ans", "label": "Durée de Vie" },
+      { "value": "24/7", "label": "Opération" }
+    ],
+    "table": { "category": "Catégorie", "specification": "Spécification" },
+    "specs": [
+      { "category": "Plage de Capacité", "value": "5,000 - 500,000 m³/hr" },
+      { "category": "Diamètre d'Entrée", "value": "0.5m - 15m" },
+      { "category": "Consommation d'Énergie", "value": "2-8 kW" },
+      { "category": "Durée de Vie", "value": "15+ ans" }
+    ],
+    "comparisonTitle": "Comparaison des Technologies",
+    "comparison": {
+      "feature": "Caractéristique",
+      "chemical": "Traitement Chimique",
+      "mechanical": "Écrans Mécaniques",
+      "manual": "Enlèvement Manuel",
+      "rows": []
+    }
+  },
+  "faq": {
+    "eyebrow": "Questions Fréquentes",
+    "title": "Tout Ce Que Vous Devez Savoir",
+    "subtitle": "Réponses aux questions les plus courantes",
+    "categories": { "technical": "Technique", "installation": "Installation", "cost": "Coût", "performance": "Performance" },
+    "items": [
+      { "question": "Quelles tailles d'entrées JellyGuard peut-il protéger?", "answer": "JellyGuard s'adapte de 0.5m à 15m de diamètre." },
+      { "question": "Quelles sont les exigences énergétiques?", "answer": "Minimales. Les systèmes standard consomment 2-8 kW." },
+      { "question": "Combien de temps prend l'installation?", "answer": "La plupart des installations sont opérationnelles en 8 semaines." }
+    ],
+    "stillQuestions": "Encore des Questions?",
+    "contactPrompt": "Notre équipe est prête à discuter de vos besoins",
+    "contactButton": "Parler à un Expert"
   }
 }
