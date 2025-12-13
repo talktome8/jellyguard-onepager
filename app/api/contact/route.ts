@@ -29,14 +29,26 @@ const contactSchema = z.object({
     .min(1, 'Name is required')
     .max(100, 'Name too long')
     .transform(sanitizeString),
+  organization: z.string()
+    .min(1, 'Organization is required')
+    .max(200, 'Organization name too long')
+    .transform(sanitizeString),
+  role: z.string()
+    .min(1, 'Role is required')
+    .max(100, 'Role too long')
+    .transform(sanitizeString),
   email: z.string()
     .email('Invalid email address')
     .max(254, 'Email too long')
     .transform(sanitizeEmail),
-  company: z.string()
-    .min(1, 'Company is required')
-    .max(200, 'Company name too long')
-    .transform(sanitizeString),
+  phone: z.string()
+    .max(30, 'Phone too long')
+    .optional()
+    .transform((val) => val ? sanitizeString(val) : ''),
+  region: z.string()
+    .max(100, 'Region too long')
+    .optional()
+    .transform((val) => val ? sanitizeString(val) : ''),
   message: z.string()
     .min(10, 'Message must be at least 10 characters')
     .max(5000, 'Message too long')
@@ -188,11 +200,11 @@ export async function POST(request: NextRequest) {
     // Prepare payload for Google Sheets (exclude honeypot)
     const payload = {
       name: validatedData.name,
-      organization: validatedData.company,
-      role: '',
+      organization: validatedData.organization,
+      role: validatedData.role,
       email: validatedData.email,
-      phone: '',
-      region: '',
+      phone: validatedData.phone || '',
+      region: validatedData.region || '',
       message: validatedData.message,
       page,
       userAgent,
@@ -236,7 +248,7 @@ export async function POST(request: NextRequest) {
     // Log successful submission (minimal data, no PII)
     console.log('Contact form submitted successfully:', {
       timestamp: new Date().toISOString(),
-      hasCompany: !!validatedData.company,
+      hasOrganization: !!validatedData.organization,
     });
 
     return NextResponse.json(

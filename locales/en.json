@@ -85,14 +85,20 @@
     "title": "Join Early Interest Program",
     "fields": {
       "name": "Full Name",
+      "organization": "Organization",
+      "role": "Your Role",
       "email": "Email Address",
-      "company": "Company & Role",
+      "phone": "Phone Number",
+      "region": "Region",
       "message": "Tell Us About Your Needs"
     },
     "placeholders": {
       "name": "John Smith",
+      "organization": "e.g., Pacific Energy, Mediterranean Desal Plant",
+      "role": "e.g., Operations Manager, Chief Engineer",
       "email": "john@company.com",
-      "company": "e.g., Pacific Energy - Operations Manager",
+      "phone": "+1 555 123 4567",
+      "region": "e.g., Mediterranean, Southeast Asia, Gulf Coast",
       "message": "Describe your facility type, current challenges with jellyfish blooms, and any specific requirements..."
     },
     "submit": "Join Early Interest Program",

@@ -7,8 +7,11 @@ export default function ContactForm() {
   const t = useTranslations('contactForm');
   const [formData, setFormData] = useState({
     name: '',
+    organization: '',
+    role: '',
     email: '',
-    company: '',
+    phone: '',
+    region: '',
     message: '',
     honeypot: '', // Spam honeypot field
   });
@@ -47,8 +50,11 @@ export default function ContactForm() {
         setStatus('success');
         setFormData({
           name: '',
+          organization: '',
+          role: '',
           email: '',
-          company: '',
+          phone: '',
+          region: '',
           message: '',
           honeypot: '',
         });
@@ -95,6 +101,40 @@ export default function ContactForm() {
           />
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="organization" className="block text-sm font-semibold text-slate-700 mb-1">
+              {t('fields.organization')} *
+            </label>
+            <input
+              type="text"
+              id="organization"
+              name="organization"
+              required
+              value={formData.organization}
+              onChange={handleChange}
+              placeholder={t('placeholders.organization')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="role" className="block text-sm font-semibold text-slate-700 mb-1">
+              {t('fields.role')} *
+            </label>
+            <input
+              type="text"
+              id="role"
+              name="role"
+              required
+              value={formData.role}
+              onChange={handleChange}
+              placeholder={t('placeholders.role')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+            />
+          </div>
+        </div>
+
         <div>
           <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1">
             {t('fields.email')} *
@@ -111,20 +151,36 @@ export default function ContactForm() {
           />
         </div>
 
-        <div>
-          <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-1">
-            {t('fields.company')} *
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            required
-            value={formData.company}
-            onChange={handleChange}
-            placeholder={t('placeholders.company')}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1">
+              {t('fields.phone')}
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder={t('placeholders.phone')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="region" className="block text-sm font-semibold text-slate-700 mb-1">
+              {t('fields.region')}
+            </label>
+            <input
+              type="text"
+              id="region"
+              name="region"
+              value={formData.region}
+              onChange={handleChange}
+              placeholder={t('placeholders.region')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+            />
+          </div>
         </div>
 
         <div>
@@ -135,7 +191,7 @@ export default function ContactForm() {
             id="message"
             name="message"
             required
-            rows={5}
+            rows={4}
             value={formData.message}
             onChange={handleChange}
             placeholder={t('placeholders.message')}

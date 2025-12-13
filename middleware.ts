@@ -6,7 +6,8 @@ import { locales } from './i18n';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale: 'en',
-  localePrefix: 'always' // Always show locale in URL to avoid redirect loops
+  localePrefix: 'always', // Always show locale in URL to avoid redirect loops
+  localeDetection: false // Disable browser language detection - always start with English
 });
 
 // Generate nonce for CSP (in production, use crypto.randomUUID())
