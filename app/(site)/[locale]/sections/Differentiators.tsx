@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import WaterCaustics from '../components/WaterCaustics';
 import MiniJellyfish from '../components/MiniJellyfish';
 import DepthLayers from '../components/DepthLayers';
@@ -44,7 +45,7 @@ export default function Differentiators() {
   ];
 
   return (
-    <section ref={ref} className="strip strip-sand section relative overflow-hidden">
+    <section ref={ref} className="strip strip-navy section relative overflow-hidden">
       {/* Depth layers showing multi-layered solution approach */}
       <DepthLayers layers={5} color="rgba(26, 163, 163, 0.06)" />
       <MiniJellyfish position="right" size="sm" opacity={0.12} />
@@ -53,47 +54,74 @@ export default function Differentiators() {
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-6xl mx-auto">
             {/* Title Section */}
-            <div className="text-center mb-16">
-              <div className="mb-3 text-xs uppercase tracking-widest text-teal font-semibold">
-                {t('eyebrow')}
+            <div className="text-center mb-12 sm:mb-20 px-4">
+              <div className="inline-block mb-4 px-4 py-2 rounded-full bg-white/10 border border-white/20">
+                <span className="text-sm uppercase tracking-widest text-teal-light font-bold">{t('eyebrow')}</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-navy mb-4">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
                 {t('title')}
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
               {items.map((idx) => (
                 <div 
                   key={idx} 
-                  className={`reveal ${isVisible ? 'is-in' : ''} card-glass card-hover`}
+                  className={`reveal ${isVisible ? 'is-in' : ''} group`}
                   style={{ animationDelay: `${0.1 + idx * 0.1}s` }}
                 >
-                  <div className="flex items-start gap-4">
-                    {/* Icon with coral tick - animate on hover */}
-                    <div className="flex-shrink-0">
-                      <div className="relative transition-transform duration-300 group-hover:scale-110">
-                        {icons[idx]}
-                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-coral rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-125">
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-white/20 hover:border-teal/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl h-full">
+                    <div className="flex items-start gap-4 sm:gap-6">
+                      {/* Icon with coral tick */}
+                      <div className="flex-shrink-0">
+                        <div className="relative p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-teal/10 to-navy/10 group-hover:from-teal/20 group-hover:to-navy/20 transition-all duration-300">
+                          <div className="transform group-hover:scale-110 transition-transform duration-300">
+                            {icons[idx]}
+                          </div>
+                          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-coral to-coral-dark rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-125 transition-transform duration-300">
+                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div>
-                      <h3 className="text-xl font-bold text-navy mb-2 transition-colors duration-300 group-hover:text-teal">
-                        {t(`items.${idx}.title`)}
-                      </h3>
-                      <p className="text-slate-700 leading-relaxed font-medium">
-                        {t(`items.${idx}.text`)}
-                      </p>
+                      
+                      {/* Content */}
+                      <div className="flex-1">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 group-hover:text-teal transition-colors duration-300">
+                          {t(`items.${idx}.title`)}
+                        </h3>
+                        <p className="text-base sm:text-lg text-white/90 leading-relaxed">
+                          {t(`items.${idx}.text`)}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Hero Image Section */}
+            <div className="mt-12 sm:mt-20 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl mx-4">
+              <Image
+                src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2070&auto=format&fit=crop"
+                alt="Beautiful jellyfish in their natural habitat"
+                fill
+                className="object-cover"
+                quality={90}
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/40 to-transparent" />
+              <div className="absolute inset-0 flex items-end justify-center p-6 sm:p-8 md:p-12">
+                <div className="text-center max-w-3xl">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
+                    Protecting Infrastructure, Preserving Ocean Life
+                  </h3>
+                  <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
+                    Our technology works in harmony with marine ecosystems, ensuring zero harm while delivering maximum protection.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

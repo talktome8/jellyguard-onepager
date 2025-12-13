@@ -12,13 +12,13 @@
   --coral-dark: #d95a45;  /* Darker coral for accessibility */
   --white: #ffffff;
   
-  /* Semantic colors - WCAG AA compliant */
+  /* Semantic colors - WCAG AA+ compliant */
   --bg-primary: var(--sand);
   --bg-secondary: var(--white);
   --bg-accent: var(--navy);
   --text-primary: var(--ink);  /* 14.5:1 on white - excellent */
-  --text-secondary: #475569;  /* Changed from #64748b - now 7.2:1 on white (WCAG AAA) */
-  --text-muted: #64748b;  /* 5.3:1 on white - use only for large text */
+  --text-secondary: #334155;  /* 9.7:1 on white - WCAG AAA compliant */
+  --text-muted: #475569;  /* 7.2:1 on white - WCAG AAA for large text */
   --border-light: #e2e8f0;
   --shadow-soft: 0 2px 8px rgba(11, 27, 43, 0.08);
   --shadow-medium: 0 4px 16px rgba(11, 27, 43, 0.12);
@@ -136,6 +136,18 @@ body::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  /* Animated gradient for hero title */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
   /* Floating animation */

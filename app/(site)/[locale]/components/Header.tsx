@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20" dir={isRTL ? 'rtl' : 'ltr'}>
           {/* Logo */}
@@ -40,9 +40,9 @@ export default function Header() {
               <img 
                 src="/logo.svg" 
                 alt="JellyGuard" 
-                className="h-12 w-12 mr-3 transition-transform duration-300 group-hover:scale-110"
+                className="h-14 w-14 sm:h-16 sm:w-16 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-md"
               />
-              <div className="text-2xl font-bold text-navy group-hover:text-teal transition-colors">
+              <div className="text-2xl sm:text-3xl font-bold text-navy group-hover:text-teal transition-colors">
                 JellyGuard
               </div>
             </Link>

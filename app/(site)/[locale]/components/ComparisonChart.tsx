@@ -206,7 +206,7 @@ export default function ComparisonChart() {
           <div className="card-glass p-8 rounded-2xl">
             {renderMetricChart("Removal Efficacy", "efficacy", "%", false)}
             <p className="text-sm text-navy/60 mt-2">
-              * JellyGuard: 95-98% verified range. Others: industry averages.
+              * JellyGuard: 95-98% verified range. Traditional solutions: based on client operational data and industry reports.
             </p>
           </div>
           
@@ -243,21 +243,21 @@ export default function ComparisonChart() {
           <div className="card-glass p-6 rounded-xl text-center border-2 border-teal/30">
             <div className="text-3xl font-bold text-teal mb-2">60-75%</div>
             <div className="text-navy/70 text-sm">Lower TCO vs. Alternatives</div>
-            <div className="text-xs text-navy/50 mt-1">(10-year comparison)</div>
+            <div className="text-xs text-navy/50 mt-1">(based on client facility data)</div>
           </div>
           
           <div className="card-glass p-6 rounded-xl text-center border-2 border-teal/30">
             <div className="text-3xl font-bold text-teal mb-2">100%</div>
-            <div className="text-navy/70 text-sm">Eco-Friendly Score</div>
-            <div className="text-xs text-navy/50 mt-1">(ISO 14001 certified)</div>
+            <div className="text-navy/70 text-sm">Eco-Friendly Design</div>
+            <div className="text-xs text-navy/50 mt-1">(zero-harm approach)</div>
           </div>
         </div>
         
         {/* Data Source Disclaimer */}
         <div className="mt-8 p-4 bg-white/50 rounded-lg border border-navy/20 max-w-4xl mx-auto">
           <p className="text-navy/70 text-xs text-center">
-            <strong>Data Sources:</strong> JellyGuard figures from Technical Specifications section based on 50+ installations (2021-2024). 
-            Competitor data: industry averages from marine infrastructure reports. 
+            <strong>Data Sources:</strong> JellyGuard figures from Technical Specifications based on 50+ installations (2021-2024). 
+            Traditional solution data compiled from client operational reports and marine infrastructure industry studies. 
             Annual costs include chemicals, energy, maintenance, and labor. 
             All monetary values in USD.
           </p>

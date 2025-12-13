@@ -5,6 +5,7 @@ import { Inter, Heebo } from 'next/font/google';
 import { locales } from '@/i18n';
 import JellyScroll from './components/JellyScroll';
 import ScrollProgress from './components/ScrollProgress';
+import ScrollJellyfish3D from './components/ScrollJellyfish3D';
 import '@/styles/globals.css';
 import '@/styles/theme.css';
 
@@ -58,6 +59,9 @@ export default async function LocaleLayout({
           
           {/* Global jellyfish animation overlay */}
           <JellyScroll />
+          
+          {/* 3D Jellyfish companions that follow scroll */}
+          <ScrollJellyfish3D />
           
           {/* Page content */}
           {children}

@@ -275,7 +275,7 @@ export default function Jellyfish3D() {
         style={{ zIndex }}
       >
         <Canvas
-          className="pointer-events-auto"
+          className="pointer-events-none"
           style={{ background: 'transparent' }}
         >
           <PerspectiveCamera makeDefault position={[0, 0, 8]} />

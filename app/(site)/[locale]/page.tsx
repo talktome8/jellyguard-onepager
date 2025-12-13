@@ -1,8 +1,6 @@
 import { setRequestLocale } from 'next-intl/server';
-import dynamic from 'next/dynamic';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import FloatingJellyfish from './components/FloatingJellyfish';
 import DepthGradient from './components/DepthGradient';
 import StickyCtaButton from './components/StickyCtaButton';
 import Hero from './sections/Hero';
@@ -15,12 +13,6 @@ import Differentiators from './sections/Differentiators';
 import FAQ from './sections/FAQ';
 import FinalCTA from './sections/FinalCTA';
 
-// Dynamically import 3D Jellyfish (client-side only, no SSR)
-const Jellyfish3D = dynamic(() => import('./components/Jellyfish3D'), {
-  ssr: false,
-  loading: () => null
-});
-
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   // Enable static rendering
   setRequestLocale(locale);
@@ -28,11 +20,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   return (
     <>
       {/* Atmospheric background effects */}
-      <FloatingJellyfish />
       <DepthGradient />
-      
-      {/* 3D Interactive Jellyfish */}
-      <Jellyfish3D />
       
       <div className="content-layer">
         <Header />

@@ -81,11 +81,11 @@
 
 /* Glassy card - improved contrast for accessibility */
 .card-glass {
-  @apply rounded-2xl border border-white/60 bg-white/85 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 p-6 md:p-8;
+  @apply rounded-2xl border border-white/70 bg-white/95 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 p-6 md:p-8;
   position: relative;
   overflow: hidden;
   /* Ensure text contrast is maintained */
-  color: var(--ink);
+  color: var(--navy);
 }
 
 .card-glass::before {
@@ -124,29 +124,161 @@
 
 .strip-sand {
   @apply bg-sand;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(26, 163, 163, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(11, 27, 43, 0.02) 0%, transparent 50%);
+  border-top: 1px solid rgba(26, 163, 163, 0.08);
+  border-bottom: 1px solid rgba(26, 163, 163, 0.08);
+  position: relative;
+}
+
+.strip-sand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(26, 163, 163, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.strip-sand:hover::before {
+  opacity: 1;
 }
 
 .strip-sand:hover {
-  background-color: rgba(237, 245, 247, 0.98);
-  filter: brightness(1.02);
+  background-color: rgba(237, 245, 247, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(26, 163, 163, 0.08);
+}
+
+/* Improve text contrast on sand backgrounds */
+.strip-sand h1,
+.strip-sand h2,
+.strip-sand h3,
+.strip-sand h4,
+.strip-sand h5,
+.strip-sand h6 {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.strip-sand p,
+.strip-sand li,
+.strip-sand span {
+  color: rgb(51, 65, 85); /* slate-700 for better contrast */
 }
 
 .strip-white {
   @apply bg-white;
+  background-image: 
+    radial-gradient(circle at 30% 40%, rgba(26, 163, 163, 0.02) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255, 127, 102, 0.02) 0%, transparent 60%);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.strip-white::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(26, 163, 163, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.strip-white:hover::after {
+  opacity: 1;
 }
 
 .strip-white:hover {
-  background-color: rgba(255, 255, 255, 0.98);
-  filter: brightness(1.02);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 1),
+    0 4px 24px rgba(26, 163, 163, 0.06);
+}
+
+/* Improve text contrast on white backgrounds */
+.strip-white h1,
+.strip-white h2,
+.strip-white h3,
+.strip-white h4,
+.strip-white h5,
+.strip-white h6 {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.strip-white p,
+.strip-white li,
+.strip-white span {
+  color: rgb(51, 65, 85); /* slate-700 for better contrast */
 }
 
 .strip-navy {
   @apply bg-navy text-white;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(26, 163, 163, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, rgba(26, 163, 163, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(26, 163, 163, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(11, 27, 43, 1) 0%, rgba(15, 33, 50, 1) 100%);
+  border-top: 2px solid rgba(26, 163, 163, 0.2);
+  border-bottom: 2px solid rgba(26, 163, 163, 0.2);
+  position: relative;
+  box-shadow: 
+    inset 0 1px 0 0 rgba(26, 163, 163, 0.1),
+    0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.strip-navy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, transparent 0%, rgba(26, 163, 163, 0.05) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.strip-navy::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(26, 163, 163, 0.02) 40px,
+      rgba(26, 163, 163, 0.02) 80px
+    );
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.strip-navy:hover::before {
+  opacity: 1;
 }
 
 .strip-navy:hover {
-  background-color: rgba(11, 27, 43, 0.97);
-  filter: brightness(1.05);
+  background-color: rgba(11, 27, 43, 1);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(26, 163, 163, 0.2),
+    0 12px 48px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(26, 163, 163, 0.1);
+  border-top-color: rgba(26, 163, 163, 0.3);
+  border-bottom-color: rgba(26, 163, 163, 0.3);
 }
 
 .section-container {

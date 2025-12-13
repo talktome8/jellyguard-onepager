@@ -1,27 +1,47 @@
 /**
  * Google Apps Script for JellyGuard Contact Form
- * 
- * SETUP INSTRUCTIONS:
- * 1. Create a Google Sheet named "JELLYGUARD ONE PAGER"
- * 2. Add headers in row 1: Timestamp, Name, Organization, Role, Email, Phone, Region, Message, Page, UserAgent, IP
- * 3. Go to Extensions > Apps Script
- * 4. Paste this code
- * 5. Deploy as Web App (Execute as: Me, Access: Anyone)
- * 6. Copy the deployment URL to .env.local as GAS_CONTACT_URL
- * 
- * NOTIFICATION:
- * Sends email alert to tomraz8@gmail.com on each submission
+ * Handles CORS and form submissions
  */
+
+const RECIPIENT = 'tomraz8@gmail.com';
+const ALLOWED_ORIGINS = [
+  'http://localhost:3000',
+  'https://*.vercel.app',
+  'https://jellyguard.raztom.com'
+];
+
+// === CORS HANDLER ===
+function corsHeaders_(origin) {
+  const allow = ALLOWED_ORIGINS.some(p => {
+    if (p.includes('*')) {
+      const r = new RegExp('^' + p.replace('.', '\\.').replace('*', '[a-z0-9-]+') + '$');
+      return r.test(origin || '');
+    }
+    return origin === p;
+  });
+  
+  const h = { 'Content-Type': 'application/json' };
+  if (allow) {
+    h['Access-Control-Allow-Origin'] = origin;
+    h['Vary'] = 'Origin';
+  }
+  h['Access-Control-Allow-Methods'] = 'POST, OPTIONS';
+  h['Access-Control-Allow-Headers'] = 'Content-Type';
+  return h;
+}
+
+function doOptions(e) {
+  return ContentService
+    .createTextOutput('')
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeaders(corsHeaders_(e.parameter.origin || (e && e.postData && e.postData.type)));
+}
 
 function doPost(e) {
   try {
-    // Parse incoming JSON
     const data = JSON.parse(e.postData.contents);
-    
-    // Get the active spreadsheet
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     
-    // Prepare row data with timestamp
     const timestamp = new Date();
     const rowData = [
       timestamp,
@@ -37,35 +57,31 @@ function doPost(e) {
       data.ip || ''
     ];
     
-    // Append to sheet
     sheet.appendRow(rowData);
-    
-    // Send email notification
     sendEmailNotification(data, timestamp);
     
-    // Return success response
     return ContentService
       .createTextOutput(JSON.stringify({ 
         success: true, 
         message: 'Form submitted successfully',
         timestamp: timestamp.toISOString()
       }))
-      .setMimeType(ContentService.MimeType.JSON);
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeaders(corsHeaders_(e.parameter.origin || (e && e.postData && e.postData.type)));
       
   } catch (error) {
-    // Log error and return failure response
     Logger.log('Error: ' + error.toString());
     return ContentService
       .createTextOutput(JSON.stringify({ 
         success: false, 
         error: error.toString() 
       }))
-      .setMimeType(ContentService.MimeType.JSON);
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeaders(corsHeaders_(e.parameter.origin || (e && e.postData && e.postData.type)));
   }
 }
 
 function sendEmailNotification(data, timestamp) {
-  const recipient = 'tomraz8@gmail.com';
   const subject = '🐙 New JellyGuard Contact Form Submission';
   
   const htmlBody = `
@@ -164,32 +180,9 @@ View spreadsheet: ${SpreadsheetApp.getActiveSpreadsheet().getUrl()}
   `;
   
   MailApp.sendEmail({
-    to: recipient,
+    to: RECIPIENT,
     subject: subject,
     body: plainBody,
     htmlBody: htmlBody
   });
-}
-
-// Test function (run this to verify setup)
-function testSubmission() {
-  const testData = {
-    postData: {
-      contents: JSON.stringify({
-        name: 'Test User',
-        organization: 'Test Organization',
-        role: 'Test Role',
-        email: 'test@example.com',
-        phone: '+1 234 567 8900',
-        region: 'Mediterranean',
-        message: 'This is a test message to verify the contact form integration is working correctly.',
-        page: '/en',
-        userAgent: 'Mozilla/5.0 (Test)',
-        ip: '127.0.0.1'
-      })
-    }
-  };
-  
-  const result = doPost(testData);
-  Logger.log(result.getContent());
 }

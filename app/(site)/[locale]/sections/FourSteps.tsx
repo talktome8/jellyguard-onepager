@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import WaveFlow from '../components/WaveFlow';
 
 export default function FourSteps() {

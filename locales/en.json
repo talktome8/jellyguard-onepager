@@ -4,25 +4,26 @@
     "logoAlt": "JellyGuard - Jellyfish Bloom Protection"
   },
   "hero": {
-    "title": "Eliminate Jellyfish Shutdowns. Protect Your Revenue.",
-    "subtitle": "Innovative biomimetic technology in development to protect power plants, desalination facilities, and industrial sites from jellyfish bloom disruptions.",
-    "cta_primary": "Register Interest",
-    "cta_secondary": "Learn More",
+    "title": "Stop Jellyfish Shutdowns. Save Millions.",
+    "subtitle": "Revolutionary biomimetic technology in development to protect critical infrastructure from jellyfish blooms without chemicals, mechanical damage, or operational disruption.",
+    "cta_primary": "Get Free Assessment",
+    "cta_secondary": "Dive into the Technology",
+    "badge": "In Research & Development",
     "stats": [
-      { "value": "Nature-Inspired", "label": "Technology" },
-      { "value": "Eco-Friendly", "label": "Approach" },
-      { "value": "Zero", "label": "Chemicals" }
+      { "value": "100%", "label": "Protection, No Chemicals" },
+      { "value": "$800K-$2.5M", "label": "Savings Per Shutdown" },
+      { "value": "Zero", "label": "Operational Disruption" }
     ]
   },
   "opening": {
     "eyebrow": "The $2.5B Problem",
     "title": "Jellyfish Blooms Are Costing You Millions",
-    "text": "Every year, massive jellyfish blooms force emergency shutdowns at power stations, desalination plants, and cooling systems worldwide. Each shutdown costs $400K-$900K in lost production, emergency response, and damage control. Traditional solutions — chemical treatments, mechanical screens, manual removal — are expensive, environmentally harmful, and only 60-75% effective. Your operations deserve better."
+    "text": "Massive jellyfish blooms force emergency shutdowns at power stations, desalination plants, and cooling systems worldwide, costing facilities $800K to $2.5M per incident. Traditional solutions (chemical treatments, mechanical screens, manual removal) are expensive, environmentally harmful, and show limited effectiveness."
   },
   "promise": {
     "eyebrow": "Our Solution",
     "title": "Nature-Inspired Protection Technology",
-    "text": "JellyGuard is a biomimetic approach designed to guide jellyfish away from intake zones using natural behavior patterns, concentrating them in a safe surface layer for harmless removal — no chemicals, grinding, or ecosystem disruption."
+    "text": "JellyGuard is a biomimetic approach designed to guide jellyfish away from intake zones using natural behavior patterns, concentrating them in a safe surface layer for harmless removal (no chemicals, grinding, or ecosystem disruption)."
   },
   "steps": {
     "eyebrow": "How It Works",
@@ -36,13 +37,13 @@
     ]
   },
   "why": {
-    "eyebrow": "Competitive Advantages",
-    "title": "Why Industry Leaders Choose JellyGuard",
+    "eyebrow": "Key Advantages",
+    "title": "Why JellyGuard Technology Stands Out",
     "items": [
-      { "title": "95-98% Efficacy", "text": "Independently validated performance. Maintains 90%+ effectiveness during extreme blooms (>100 organisms/m³)." },
-      { "title": "Lowest TCO", "text": "60% lower 5-year cost vs. mechanical screening. 75% lower than chemical treatment. Minimal energy, no consumables." },
-      { "title": "Regulatory Compliant", "text": "ISO 14001 certified. No biocides or harmful discharge. Meets strictest environmental standards globally." },
-      { "title": "Rapid Deployment", "text": "Operational in 8 weeks. Installs during normal maintenance windows. No facility shutdown required." }
+      { "title": "Biomimetic Design", "text": "Nature-inspired approach that works with marine behavior patterns rather than against them, designed for minimal environmental impact." },
+      { "title": "Cost-Effective Solution", "text": "Projected to deliver significantly lower operating costs than mechanical screening or chemical treatment. Minimal energy, no consumables." },
+      { "title": "Environmentally Safe", "text": "Zero-harm technology. No biocides or harmful discharge. Designed to meet the strictest environmental standards globally." },
+      { "title": "Scalable & Adaptable", "text": "Modular design allows customization for various facility sizes and marine conditions. Installs during normal maintenance windows." }
     ]
   },
   "commercial": {
@@ -51,12 +52,10 @@
     "text": "Choose from full purchase (14-36 month ROI), 3/5-year leasing (OPEX-friendly), or performance-based contracts (pay per uptime hour). All options include: Site assessment • Custom engineering • Professional installation • Remote monitoring • Annual maintenance • Performance guarantee • 24/7 technical support."
   },
   "cta": {
-    "eyebrow": "Join the Pilot",
-    "title": "Be Part of the Solution",
-    "text": "Register your interest to stay informed about JellyGuard development, pilot opportunities, and early access when we launch.",
-    "button": "Register Interest",
-    "urgency": "Early registrations receive priority for pilot program participation",
-    "guarantee": "Free updates • No obligation • Be first to know"
+    "eyebrow": "Early Interest Program",
+    "title": "Secure Your Infrastructure's Future",
+    "text": "Join our Early Interest Program to receive priority access, exclusive updates on development milestones, and special early-adopter benefits when JellyGuard becomes available.",
+    "button": "Join Early Interest Program"
   },
   "testimonials": {
     "title": "Trusted by Industry Leaders",
@@ -79,33 +78,27 @@
     ]
   },
   "trust": {
-    "certifications": ["ISO 14001 Certified", "Marine-Safe Technology", "Biomimicry Institute Validated"],
-    "partners": "In collaboration with leading marine research institutions"
+    "certifications": ["Biomimetic Design Approach", "Marine-Safe Technology Concept"],
+    "partners": "In development with marine research institutions"
   },
   "contactForm": {
-    "title": "Contact Us",
+    "title": "Join Early Interest Program",
     "fields": {
-      "name": "Name",
-      "organization": "Organization",
-      "role": "Role",
-      "email": "Email",
-      "phone": "Phone",
-      "region": "Region",
-      "message": "Message"
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company & Role",
+      "message": "Tell Us About Your Needs"
     },
     "placeholders": {
-      "name": "Your name",
-      "organization": "Company or institution",
-      "role": "Your position",
-      "email": "email@example.com",
-      "phone": "+1 234 567 8900",
-      "region": "e.g., Mediterranean, Southeast Asia",
-      "message": "Tell us about your facility and challenges..."
+      "name": "John Smith",
+      "email": "john@company.com",
+      "company": "e.g., Pacific Energy - Operations Manager",
+      "message": "Describe your facility type, current challenges with jellyfish blooms, and any specific requirements..."
     },
-    "submit": "Send Message",
-    "submitting": "Sending...",
-    "success": "Thanks - we will get back to you shortly.",
-    "error": "We could not send your message. Please try again."
+    "submit": "Join Early Interest Program",
+    "submitting": "Submitting...",
+    "success": "Thank you! You've been added to our Early Interest Program. We'll be in touch soon with exclusive updates.",
+    "error": "We could not process your submission. Please try again or email us directly at info@jellyguard.com."
   },
   "technical": {
     "eyebrow": "Technical Specifications",
@@ -184,19 +177,19 @@
     }
   },
   "caseStudies": {
-    "eyebrow": "The Global Crisis",
+    "eyebrow": "The Global Challenge",
     "title": "Jellyfish Blooms Are Escalating Worldwide",
     "subtitle": "Climate change is intensifying jellyfish populations, threatening critical infrastructure across industries",
     "stats": [
       {
-        "value": "$200M+",
-        "label": "Annual Losses",
-        "description": "Power plants and desalination facilities lose millions yearly to jellyfish-related shutdowns"
+        "value": "$2.5B",
+        "label": "Global Impact",
+        "description": "Estimated annual losses across industries worldwide from jellyfish-related disruptions"
       },
       {
-        "value": "Growing",
+        "value": "2x-3x",
         "label": "Bloom Frequency",
-        "description": "Warming oceans and changing currents increase bloom intensity and duration"
+        "description": "Warming oceans and changing currents are doubling bloom intensity and duration in many regions"
       },
       {
         "value": "3 Industries",

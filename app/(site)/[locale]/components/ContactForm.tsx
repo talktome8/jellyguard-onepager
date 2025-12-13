@@ -7,11 +7,8 @@ export default function ContactForm() {
   const t = useTranslations('contactForm');
   const [formData, setFormData] = useState({
     name: '',
-    organization: '',
-    role: '',
     email: '',
-    phone: '',
-    region: '',
+    company: '',
     message: '',
     honeypot: '', // Spam honeypot field
   });
@@ -25,6 +22,8 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('submitting');
 
+    console.log('Submitting form data:', formData);
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -32,22 +31,33 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      let data;
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response:', text);
+        data = { success: false, error: 'Invalid response from server' };
+      }
+      
+      console.log('API Response:', response.status, data);
+
+      if (response.ok && data.success) {
         setStatus('success');
         setFormData({
           name: '',
-          organization: '',
-          role: '',
           email: '',
-          phone: '',
-          region: '',
+          company: '',
           message: '',
           honeypot: '',
         });
       } else {
+        console.error('Form submission failed:', data);
         setStatus('error');
       }
     } catch (error) {
+      console.error('Form error:', error);
       setStatus('error');
     }
   };
@@ -69,104 +79,52 @@ export default function ContactForm() {
           aria-hidden="true"
         />
         
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.name')} *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              placeholder={t('placeholders.name')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="organization" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.organization')} *
-            </label>
-            <input
-              type="text"
-              id="organization"
-              name="organization"
-              required
-              value={formData.organization}
-              onChange={handleChange}
-              placeholder={t('placeholders.organization')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
+        <div>
+          <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-1">
+            {t('fields.name')} *
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            placeholder={t('placeholders.name')}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="role" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.role')} *
-            </label>
-            <input
-              type="text"
-              id="role"
-              name="role"
-              required
-              value={formData.role}
-              onChange={handleChange}
-              placeholder={t('placeholders.role')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.email')} *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              placeholder={t('placeholders.email')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1">
+            {t('fields.email')} *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            placeholder={t('placeholders.email')}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.phone')}
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder={t('placeholders.phone')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="region" className="block text-sm font-semibold text-slate-700 mb-1">
-              {t('fields.region')}
-            </label>
-            <input
-              type="text"
-              id="region"
-              name="region"
-              value={formData.region}
-              onChange={handleChange}
-              placeholder={t('placeholders.region')}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth"
-            />
-          </div>
+        <div>
+          <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-1">
+            {t('fields.company')} *
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            required
+            value={formData.company}
+            onChange={handleChange}
+            placeholder={t('placeholders.company')}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent transition-smooth text-base"
+          />
         </div>
 
         <div>

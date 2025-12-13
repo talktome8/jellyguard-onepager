@@ -9,7 +9,7 @@ export default function ROICalculator() {
   // User inputs
   const [facilitySize, setFacilitySize] = useState<string>("medium");
   const [shutdownsPerYear, setShutdownsPerYear] = useState<number>(4);
-  const [costPerShutdown, setCostPerShutdown] = useState<number>(650000);
+  const [costPerShutdown, setCostPerShutdown] = useState<number>(1500000);
   
   // Calculated values
   const [currentAnnualLoss, setCurrentAnnualLoss] = useState<number>(0);
@@ -112,13 +112,15 @@ export default function ROICalculator() {
         {/* Input Section */}
         <div className="space-y-6">
           <div className="card-glass p-6 rounded-xl">
-            <label className="block text-white font-semibold mb-3">
+            <label htmlFor="facility-size" className="block text-white font-semibold mb-3">
               Facility Size
             </label>
             <select
+              id="facility-size"
               value={facilitySize}
               onChange={(e) => setFacilitySize(e.target.value)}
               className="w-full px-4 py-3 bg-navy-light border-2 border-teal/30 rounded-lg text-white focus:border-teal focus:outline-none transition-colors"
+              aria-label="Select facility size"
             >
               <option value="small">Small (5K-50K m³/hr)</option>
               <option value="medium">Medium (50K-200K m³/hr)</option>
@@ -130,10 +132,11 @@ export default function ROICalculator() {
           </div>
           
           <div className="card-glass p-6 rounded-xl">
-            <label className="block text-white font-semibold mb-3">
+            <label htmlFor="shutdowns-per-year" className="block text-white font-semibold mb-3">
               Current Shutdowns Per Year
             </label>
             <input
+              id="shutdowns-per-year"
               type="range"
               min="0"
               max="10"
@@ -141,6 +144,8 @@ export default function ROICalculator() {
               value={shutdownsPerYear}
               onChange={(e) => setShutdownsPerYear(parseInt(e.target.value))}
               className="w-full h-2 bg-navy-light rounded-lg appearance-none cursor-pointer accent-teal"
+              aria-label="Number of shutdowns per year"
+              title="Adjust shutdowns per year"
             />
             <div className="flex justify-between text-sand/60 text-sm mt-2">
               <span>0</span>
@@ -150,25 +155,28 @@ export default function ROICalculator() {
           </div>
           
           <div className="card-glass p-6 rounded-xl">
-            <label className="block text-white font-semibold mb-3">
+            <label htmlFor="cost-per-shutdown" className="block text-white font-semibold mb-3">
               Average Cost Per Shutdown
             </label>
             <input
+              id="cost-per-shutdown"
               type="range"
-              min="400000"
-              max="900000"
-              step="50000"
+              min="800000"
+              max="2500000"
+              step="100000"
+              aria-label="Average cost per shutdown"
+              title="Adjust cost per shutdown"
               value={costPerShutdown}
               onChange={(e) => setCostPerShutdown(parseInt(e.target.value))}
               className="w-full h-2 bg-navy-light rounded-lg appearance-none cursor-pointer accent-teal"
             />
             <div className="flex justify-between items-center mt-2">
-              <span className="text-sand/60 text-sm">$400K</span>
+              <span className="text-sand/60 text-sm">$800K</span>
               <span className="text-teal text-xl font-bold">{formatCurrency(costPerShutdown)}</span>
-              <span className="text-sand/60 text-sm">$900K</span>
+              <span className="text-sand/60 text-sm">$2.5M</span>
             </div>
             <p className="text-sand/60 text-xs mt-2">
-              * Based on industry averages for production loss + equipment damage + emergency repairs
+              * Includes: lost production, operations team costs, emergency maintenance, component replacement, and productivity losses
             </p>
           </div>
         </div>

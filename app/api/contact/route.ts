@@ -3,11 +3,8 @@ import { z } from 'zod';
 
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
-  organization: z.string().min(1, 'Organization is required'),
-  role: z.string().min(1, 'Role is required'),
   email: z.string().email('Invalid email address'),
-  phone: z.string().optional(),
-  region: z.string().optional(),
+  company: z.string().min(1, 'Company is required'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
   honeypot: z.string().optional(), // Spam honeypot field
 });
@@ -49,6 +46,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
+    console.log('Received form data:', JSON.stringify(body, null, 2));
     
     // Validate the request body
     const validatedData = contactSchema.parse(body);
@@ -80,11 +78,11 @@ export async function POST(request: NextRequest) {
     // Prepare payload for Google Sheets (exclude honeypot)
     const payload = {
       name: validatedData.name,
-      organization: validatedData.organization,
-      role: validatedData.role,
+      organization: validatedData.company,
+      role: '',
       email: validatedData.email,
-      phone: validatedData.phone || '',
-      region: validatedData.region || '',
+      phone: '',
+      region: '',
       message: validatedData.message,
       page,
       userAgent,
@@ -100,6 +98,12 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(payload),
     });
 
+    console.log('GAS Response Status:', gasResponse.status);
+    console.log('GAS Response Headers:', Object.fromEntries(gasResponse.headers.entries()));
+    
+    const gasText = await gasResponse.text();
+    console.log('GAS Response Text:', gasText);
+
     if (!gasResponse.ok) {
       console.error('Google Apps Script error:', gasResponse.status, gasResponse.statusText);
       return NextResponse.json(
@@ -108,12 +112,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const gasResult = await gasResponse.json();
+    let gasResult;
+    try {
+      gasResult = JSON.parse(gasText);
+    } catch (e) {
+      console.error('Failed to parse GAS response as JSON:', gasText);
+      return NextResponse.json(
+        { success: false, message: 'Invalid response from backend.' },
+        { status: 500 }
+      );
+    }
     
     // Log successful submission (without sensitive data)
     console.log('Contact form submitted successfully:', {
       email: validatedData.email,
-      organization: validatedData.organization,
+      company: validatedData.company,
       timestamp: new Date().toISOString(),
     });
 
@@ -123,6 +136,7 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     if (error instanceof z.ZodError) {
+      console.log('Validation errors:', JSON.stringify(error.errors, null, 2));
       return NextResponse.json(
         { success: false, errors: error.errors },
         { status: 400 }

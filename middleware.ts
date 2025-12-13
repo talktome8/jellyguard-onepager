@@ -6,15 +6,10 @@ import { locales } from './i18n';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale: 'en',
-  localePrefix: 'as-needed' // Don't force /en in URL
+  localePrefix: 'always' // Always show locale in URL to avoid redirect loops
 });
 
 export default function middleware(request: NextRequest) {
-  // Redirect root to /en
-  if (request.nextUrl.pathname === '/') {
-    return NextResponse.redirect(new URL('/en', request.url));
-  }
-  
   const response = intlMiddleware(request);
 
   // Add security headers

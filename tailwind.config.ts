@@ -16,6 +16,10 @@ const config: Config = {
         ink: '#0f172a',
         coral: '#ff7f66',
         'coral-dark': '#d95a45',  // Darker coral for accessibility (4.5:1 on white)
+        slate: {
+          600: '#475569',  // 7.2:1 contrast - WCAG AAA
+          700: '#334155',  // 9.7:1 contrast - WCAG AAA
+        }
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],

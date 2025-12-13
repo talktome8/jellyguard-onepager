@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import BubbleRise from '../components/BubbleRise';
 
 export default function Opening() {
@@ -27,16 +28,36 @@ export default function Opening() {
       
       <div className="section-container relative z-10">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-3 text-xs uppercase tracking-widest text-teal font-semibold">
-              {t('eyebrow')}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Left: Visual */}
+              <div className="relative h-[350px] sm:h-[400px] md:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
+                <Image
+                  src="/images/bloom4.png"
+                  alt="Massive jellyfish bloom causing problems"
+                  fill
+                  className="object-cover"
+                  priority
+                  quality={90}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/30 to-transparent" />
+              </div>
+              
+              {/* Right: Content */}
+              <div className="text-center md:text-left order-1 md:order-2 px-4">
+                <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-teal/10 border border-teal/20">
+                  <span className="text-xs sm:text-sm uppercase tracking-widest text-teal-dark font-bold">{t('eyebrow')}</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy mb-6 sm:mb-8 leading-tight tracking-tight">
+                  {t('title')}
+                </h2>
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg border border-navy/10">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-700 leading-relaxed">
+                    {t('text')}
+                  </p>
+                </div>
+              </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-navy mb-6">
-              {t('title')}
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              {t('text')}
-            </p>
           </div>
         </div>
       </div>
