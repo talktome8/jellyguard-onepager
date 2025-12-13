@@ -3,7 +3,6 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter, Heebo } from 'next/font/google';
 import { locales } from '@/i18n';
-import JellyScroll from './components/JellyScroll';
 import ScrollProgress from './components/ScrollProgress';
 import ScrollJellyfish3D from './components/ScrollJellyfish3D';
 import CookieConsent from './components/CookieConsent';
@@ -68,10 +67,7 @@ export default async function LocaleLayout({
           {/* Scroll progress bar */}
           <ScrollProgress />
           
-          {/* Global jellyfish animation overlay */}
-          <JellyScroll />
-          
-          {/* 3D Jellyfish companions that follow scroll */}
+          {/* Floating jellyfish - hidden on mobile for performance */}
           <ScrollJellyfish3D />
           
           {/* Page content */}

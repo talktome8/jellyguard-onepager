@@ -85,9 +85,9 @@ export default function FourSteps() {
             
             <div className="relative">
               {/* Thin connector line behind cards on md+ */}
-              <div className="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-coral/40 to-transparent" />
+              <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-coral/40 to-transparent" />
               
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
                 {[0, 1, 2, 3].map((idx) => (
                   <div 
                     key={idx}

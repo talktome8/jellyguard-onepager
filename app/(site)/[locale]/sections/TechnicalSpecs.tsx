@@ -38,13 +38,13 @@ export default function TechnicalSpecs() {
             </div>
 
             {/* Performance Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {[0, 1, 2, 3].map((idx) => (
                 <div key={idx} className="card text-center hover-lift">
-                  <div className="text-4xl font-bold text-teal mb-2">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal mb-2">
                     {t(`metrics.${idx}.value`)}
                   </div>
-                  <div className="text-sm text-gray-600 uppercase tracking-wide">
+                  <div className="text-xs sm:text-sm text-gray-600 uppercase tracking-wide">
                     {t(`metrics.${idx}.label`)}
                   </div>
                 </div>

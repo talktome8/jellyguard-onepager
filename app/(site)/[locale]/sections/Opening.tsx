@@ -29,9 +29,9 @@ export default function Opening() {
       <div className="section-container relative z-10">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid sm:grid-cols-2 gap-8 sm:gap-12 items-center">
               {/* Left: Visual */}
-              <div className="relative h-[350px] sm:h-[400px] md:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
+              <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl order-2 sm:order-1">
                 <Image
                   src="/images/bloom4.png"
                   alt="Massive jellyfish bloom causing problems"
@@ -44,7 +44,7 @@ export default function Opening() {
               </div>
               
               {/* Right: Content */}
-              <div className="text-center md:text-left order-1 md:order-2 px-4">
+              <div className="text-center sm:text-left order-1 sm:order-2 px-4 sm:px-0">
                 <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-teal/10 border border-teal/20">
                   <span className="text-xs sm:text-sm uppercase tracking-widest text-teal-dark font-bold">{t('eyebrow')}</span>
                 </div>

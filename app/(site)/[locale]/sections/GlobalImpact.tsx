@@ -80,7 +80,7 @@ export default function GlobalImpact() {
               ))}
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12">
               {/* Left Column - Problem */}
               <div className={`reveal ${isVisible ? 'is-in' : ''} card-glass transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`} style={{ animationDelay: '0.1s' }}>
                 <h3 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
