@@ -42,8 +42,9 @@ export default function Hero() {
   const particlesY = useTransform(smoothProgress, [0, 1], ['0%', '40%']);
   const waveY = useTransform(smoothProgress, [0, 1], ['0%', '25%']);
   const contentY = useTransform(smoothProgress, [0, 1], ['0%', '15%']);
-  const contentOpacity = useTransform(smoothProgress, [0, 0.5], [1, 0]);
-  const contentScale = useTransform(smoothProgress, [0, 0.5], [1, 0.95]);
+  // Keep content fully visible until 70% scroll, then fade to 0.3 (still readable)
+  const contentOpacity = useTransform(smoothProgress, [0, 0.7, 1], [1, 1, 0.4]);
+  const contentScale = useTransform(smoothProgress, [0, 0.8, 1], [1, 1, 0.97]);
 
   return (
     <div ref={sectionRef} className="relative">
@@ -195,7 +196,7 @@ export default function Hero() {
 
             {/* Key Stats - Trust Indicators */}
             <motion.div 
-              className="grid grid-cols-[0.9fr_1.8fr_0.9fr] gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto px-2 sm:px-4"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4 md:gap-6 max-w-5xl mx-auto px-4 sm:px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -203,7 +204,7 @@ export default function Hero() {
               {(t.raw('stats') as Array<{value: string, label: string}>).map((stat, idx) => (
                 <motion.div 
                   key={idx} 
-                  className="text-center p-4 sm:p-6 md:p-7 lg:p-8 rounded-2xl sm:rounded-3xl glass backdrop-blur-xl border-3 border-white/70 hover:border-teal/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group min-w-0 bg-gradient-to-br from-white/90 to-white/75 shadow-xl"
+                  className="text-center p-5 sm:p-6 md:p-7 lg:p-8 rounded-2xl sm:rounded-3xl glass backdrop-blur-xl border-3 border-white/70 hover:border-teal/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group bg-gradient-to-br from-white/90 to-white/75 shadow-xl"
                   whileHover={{ y: -8 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   style={{ 
@@ -232,14 +233,13 @@ export default function Hero() {
                   
                   <div className="mb-2 sm:mb-3">
                     <div 
-                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black bg-gradient-to-br from-teal via-navy to-teal bg-clip-text text-transparent leading-none px-2 group-hover:scale-110 transition-transform duration-300"
-                      style={{ textShadow: '0 2px 8px rgba(255, 255, 255, 0.5)', wordBreak: 'keep-all', whiteSpace: 'nowrap' }}
+                      className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black bg-gradient-to-br from-teal via-navy to-teal bg-clip-text text-transparent leading-none group-hover:scale-110 transition-transform duration-300 whitespace-nowrap"
                     >
                       {stat.value}
                     </div>
                   </div>
                   <div 
-                    className="text-xs sm:text-sm md:text-base lg:text-lg text-navy font-extrabold uppercase tracking-wide leading-snug break-words hyphens-auto px-2"
+                    className="text-sm sm:text-sm md:text-base lg:text-lg text-navy font-extrabold uppercase tracking-wide leading-snug"
                     style={{ textShadow: '0 1px 4px rgba(255, 255, 255, 0.8)' }}
                   >
                     {stat.label}
