@@ -5,25 +5,55 @@
   },
   "hero": {
     "title": "Stop Jellyfish Shutdowns. Save Millions.",
-    "subtitle": "Revolutionary biomimetic technology in development to protect critical infrastructure from jellyfish blooms without chemicals, mechanical damage, or operational disruption.",
+    "subtitle": "Biomimetic technology protecting critical infrastructure from jellyfish blooms — no chemicals, no harm, no downtime.",
     "cta_primary": "Get Free Assessment",
-    "cta_secondary": "Dive into the Technology",
+    "cta_secondary": "Learn How It Works",
     "badge": "In Research & Development",
     "stats": [
-      { "value": "100%", "label": "Protection, No Chemicals" },
-      { "value": "$800K-$2.5M", "label": "Savings Per Shutdown" },
-      { "value": "Zero", "label": "Operational Disruption" }
+      { "value": "$2B+", "label": "Annual Global Losses" },
+      { "value": "Zero", "label": "Chemicals Required" },
+      { "value": "100%", "label": "Eco-Friendly" }
     ]
   },
-  "opening": {
-    "eyebrow": "The $2.5B Problem",
-    "title": "Jellyfish Blooms Are Costing You Millions",
-    "text": "Massive jellyfish blooms force emergency shutdowns at power stations, desalination plants, and cooling systems worldwide, costing facilities $800K to $2.5M per incident. Traditional solutions (chemical treatments, mechanical screens, manual removal) are expensive, environmentally harmful, and show limited effectiveness."
+  "problemSolution": {
+    "problem": {
+      "eyebrow": "The Global Challenge",
+      "title": "Jellyfish Blooms Threaten Critical Infrastructure",
+      "text": "Climate change is intensifying jellyfish populations worldwide. Power plants, desalination facilities, and industrial cooling systems face emergency shutdowns costing millions per incident.",
+      "stats": [
+        { "value": "$2B+", "label": "Annual global losses" },
+        { "value": "3x", "label": "Bloom frequency increase" },
+        { "value": "$2.5M", "label": "Per shutdown cost" }
+      ]
+    },
+    "solution": {
+      "eyebrow": "The JellyGuard Solution",
+      "title": "Nature-Inspired Protection",
+      "text": "Biomimetic technology that guides jellyfish away from intake zones using natural behavior patterns — harmless removal, zero ecosystem disruption.",
+      "benefits": [
+        { "title": "Zero Chemical Discharge", "description": "No biocides or toxic substances released into the marine environment" },
+        { "title": "Continuous Protection", "description": "Prevents blooms from reaching critical zones before disruption occurs" },
+        { "title": "Minimal Maintenance", "description": "Passive system design reduces operational burden significantly" },
+        { "title": "Marine-Safe Design", "description": "Works with natural jellyfish behavior, no organisms harmed" }
+      ]
+    }
   },
-  "promise": {
-    "eyebrow": "Our Solution",
-    "title": "Nature-Inspired Protection Technology",
-    "text": "JellyGuard is a biomimetic approach designed to guide jellyfish away from intake zones using natural behavior patterns, concentrating them in a safe surface layer for harmless removal (no chemicals, grinding, or ecosystem disruption)."
+  "circularEconomy": {
+    "eyebrow": "Sustainability First",
+    "title": "Turning Ocean Challenges Into Opportunities",
+    "subtitle": "JellyGuard doesn't just protect infrastructure — we transform captured biomass into valuable resources",
+    "badges": {
+      "circular": { "title": "Circular Economy", "description": "Waste becomes resource" },
+      "blueEconomy": { "title": "Blue Economy", "description": "Sustainable ocean value" },
+      "greenTech": { "title": "Green Technology", "description": "Zero harmful emissions" },
+      "zeroWaste": { "title": "Zero Waste", "description": "100% biomass utilized" }
+    },
+    "biomass": {
+      "title": "Jellyfish Biomass Valorization",
+      "text": "Captured jellyfish are processed into high-value applications, creating new revenue streams while solving the bloom problem. From agricultural fertilizers to pharmaceutical compounds, we close the loop on marine waste.",
+      "applications": ["Organic Fertilizers", "Collagen Extraction", "Biofuel Feedstock", "Research Materials"]
+    },
+    "certifications": ["SDG 14: Life Below Water", "Blue Economy Certified", "Carbon Neutral Process"]
   },
   "steps": {
     "eyebrow": "How It Works",
@@ -38,12 +68,12 @@
   },
   "why": {
     "eyebrow": "Key Advantages",
-    "title": "Why JellyGuard Technology Stands Out",
+    "title": "Why JellyGuard Stands Out",
     "items": [
-      { "title": "Biomimetic Design", "text": "Nature-inspired approach that works with marine behavior patterns rather than against them, designed for minimal environmental impact." },
-      { "title": "Cost-Effective Solution", "text": "Projected to deliver significantly lower operating costs than mechanical screening or chemical treatment. Minimal energy, no consumables." },
-      { "title": "Environmentally Safe", "text": "Zero-harm technology. No biocides or harmful discharge. Designed to meet the strictest environmental standards globally." },
-      { "title": "Scalable & Adaptable", "text": "Modular design allows customization for various facility sizes and marine conditions. Installs during normal maintenance windows." }
+      { "title": "Biomimetic Design", "text": "Works with natural marine behavior patterns, not against them." },
+      { "title": "Cost-Effective", "text": "Lower operating costs than mechanical or chemical alternatives." },
+      { "title": "Eco-Friendly", "text": "Zero biocides, zero harm — meets strictest environmental standards." },
+      { "title": "Scalable", "text": "Modular design adapts to any facility size or marine condition." }
     ]
   },
   "commercial": {
@@ -54,7 +84,7 @@
   "cta": {
     "eyebrow": "Early Interest Program",
     "title": "Secure Your Infrastructure's Future",
-    "text": "Join our Early Interest Program to receive priority access, exclusive updates on development milestones, and special early-adopter benefits when JellyGuard becomes available.",
+    "text": "Join our Early Interest Program for priority access and exclusive early-adopter benefits.",
     "button": "Join Early Interest Program"
   },
   "testimonials": {
@@ -78,7 +108,7 @@
     ]
   },
   "trust": {
-    "certifications": ["Biomimetic Design Approach", "Marine-Safe Technology Concept"],
+    "certifications": ["Biomimetic Design", "Marine-Safe Technology"],
     "partners": "In development with marine research institutions"
   },
   "contactForm": {

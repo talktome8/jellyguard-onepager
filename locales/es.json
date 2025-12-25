@@ -4,25 +4,55 @@
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Proteja Sus Operaciones (Naturalmente)",
-    "subtitle": "JellyGuard mantiene las tomas de agua de mar despejadas y los ecosistemas prosperando con tecnología biomimética inspirada en el equilibrio oceánico.",
-    "cta_primary": "Programar Consulta",
-    "cta_secondary": "Descubrir Más",
+    "title": "Detenga Cierres por Medusas. Ahorre Millones.",
+    "subtitle": "Tecnología biomimética protegiendo infraestructura crítica de floraciones de medusas — sin químicos, sin daño, sin tiempo de inactividad.",
+    "cta_primary": "Evaluación Gratuita",
+    "cta_secondary": "Cómo Funciona",
     "stats": [
-      { "value": "24/7", "label": "Protección Continua" },
-      { "value": "Bajo Consumo", "label": "Eficiencia Energética" },
-      { "value": "Cero", "label": "Químicos Utilizados" }
+      { "value": "$2B+", "label": "Pérdidas Globales Anuales" },
+      { "value": "Cero", "label": "Químicos Requeridos" },
+      { "value": "100%", "label": "Ecológico" }
     ]
   },
-  "opening": {
-    "eyebrow": "El Desafío",
-    "title": "Cuando Los Enjambres de Medusas Interrumpen las Operaciones",
-    "text": "En costas y mares, las floraciones de medusas cierran plantas eléctricas, instalaciones de desalinización, tomas de enfriamiento, interrumpen operaciones pesqueras y cierran playas turísticas (costando millones en tiempo de inactividad y respuesta de emergencia). Las barreras tradicionales dañan la vida marina y exigen mantenimiento intensivo. Hay una mejor manera."
+  "problemSolution": {
+    "problem": {
+      "eyebrow": "El Desafío Global",
+      "title": "Las Floraciones de Medusas Amenazan Infraestructura Crítica",
+      "text": "El cambio climático intensifica las poblaciones de medusas en todo el mundo. Las plantas eléctricas, instalaciones de desalinización y sistemas de enfriamiento enfrentan cierres de emergencia que cuestan millones por incidente.",
+      "stats": [
+        { "value": "$2B+", "label": "Pérdidas globales anuales" },
+        { "value": "3x", "label": "Aumento frecuencia" },
+        { "value": "$2.5M", "label": "Costo por cierre" }
+      ]
+    },
+    "solution": {
+      "eyebrow": "La Solución JellyGuard",
+      "title": "Protección Inspirada en la Naturaleza",
+      "text": "Tecnología biomimética que guía a las medusas lejos de zonas de captación usando patrones de comportamiento natural — extracción sin daño, cero perturbación del ecosistema.",
+      "benefits": [
+        { "title": "Cero Descarga Química", "description": "Sin biocidas ni sustancias tóxicas liberadas al ambiente marino" },
+        { "title": "Protección Continua", "description": "Previene que las floraciones alcancen zonas críticas antes de que ocurra la perturbación" },
+        { "title": "Mantenimiento Mínimo", "description": "El diseño de sistema pasivo reduce significativamente la carga operativa" },
+        { "title": "Diseño Seguro para el Mar", "description": "Trabaja con el comportamiento natural de las medusas, sin dañar organismos" }
+      ]
+    }
   },
-  "promise": {
-    "eyebrow": "Nuestra Solución",
-    "title": "Tecnología de Protección Biomimética",
-    "text": "Un enfoque pasivo y biomimético que guía a las medusas lejos de las zonas de captación y las concentra en una capa superficial delgada para su extracción segura (sin químicos, trituración o alteración del ecosistema)."
+  "circularEconomy": {
+    "eyebrow": "Sostenibilidad Primero",
+    "title": "Convirtiendo Desafíos Oceánicos en Oportunidades",
+    "subtitle": "JellyGuard no solo protege infraestructura — transformamos la biomasa capturada en recursos valiosos",
+    "badges": {
+      "circular": { "title": "Economía Circular", "description": "Residuos a recursos" },
+      "blueEconomy": { "title": "Economía Azul", "description": "Valor oceánico sostenible" },
+      "greenTech": { "title": "Tecnología Verde", "description": "Cero emisiones dañinas" },
+      "zeroWaste": { "title": "Cero Residuos", "description": "100% biomasa utilizada" }
+    },
+    "biomass": {
+      "title": "Valorización de Biomasa de Medusas",
+      "text": "Las medusas capturadas se procesan en aplicaciones de alto valor, creando nuevas fuentes de ingresos mientras resolvemos el problema de las floraciones.",
+      "applications": ["Fertilizantes Orgánicos", "Extracción de Colágeno", "Biocombustible", "Materiales de Investigación"]
+    },
+    "certifications": ["ODS 14: Vida Submarina", "Economía Azul Certificada", "Proceso Carbono Neutral"]
   },
   "impact": {
     "eyebrow": "Impacto Global",
@@ -52,12 +82,12 @@
   },
   "why": {
     "eyebrow": "Ventajas Clave",
-    "title": "Por Qué Funciona JellyGuard",
+    "title": "Por Qué JellyGuard Destaca",
     "items": [
-      { "title": "Bajo Consumo y Confiable", "text": "Hardware submarino mínimo. Mantenimiento modular." },
-      { "title": "Ecológico", "text": "Sin químicos, sin atrapamiento, sin daño." },
-      { "title": "Escalable", "text": "Desde pequeñas tomas hasta grandes sitios industriales." },
-      { "title": "Enfoque Probado", "text": "Biomímesis validada por investigación y pruebas." }
+      { "title": "Diseño Biomimético", "text": "Trabaja con patrones de comportamiento marino natural, no contra ellos." },
+      { "title": "Rentable", "text": "Costos operativos más bajos que alternativas mecánicas o químicas." },
+      { "title": "Ecológico", "text": "Cero biocidas, cero daño — cumple con estándares ambientales más estrictos." },
+      { "title": "Escalable", "text": "Diseño modular se adapta a cualquier tamaño de instalación o condición marina." }
     ]
   },
   "serve": {

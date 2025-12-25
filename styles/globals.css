@@ -386,3 +386,114 @@ body::before {
     animation-duration: 1ms; 
   }
 }
+
+/* Cross-browser compatibility */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific fixes */
+  .sticky-cta {
+    position: fixed;
+    -webkit-transform: translateY(100px) scale(0.8);
+    transform: translateY(100px) scale(0.8);
+  }
+  
+  .sticky-cta.visible {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Firefox specific fixes */
+@-moz-document url-prefix() {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Ensure text is readable on small screens */
+  body {
+    font-size: 16px; /* Prevents zoom on iOS input focus */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Touch-friendly button sizes */
+  button, 
+  a[role="button"],
+  .btn {
+    min-height: 44px; /* Apple's recommended touch target */
+    min-width: 44px;
+  }
+  
+  /* Prevent horizontal scroll */
+  .section-container {
+    overflow-x: hidden;
+  }
+  
+  /* Better spacing on mobile */
+  .section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve readability */
+  p, li {
+    line-height: 1.7;
+  }
+}
+
+/* Ensure all browsers handle gradients */
+.bg-gradient-to-br {
+  background: -webkit-linear-gradient(315deg, var(--tw-gradient-stops));
+  background: -moz-linear-gradient(315deg, var(--tw-gradient-stops));
+  background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Safe area insets for modern phones with notches */
+@supports (padding: max(0px)) {
+  .section-container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  .sticky-cta {
+    bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
+    right: max(2rem, calc(env(safe-area-inset-right) + 1rem));
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --border-light: #000000;
+  }
+  
+  /* Force white text on dark backgrounds in high contrast mode */
+  .strip-navy .text-gray-100,
+  .strip-navy .text-gray-200,
+  [style*="background: linear-gradient"] .text-gray-100 {
+    color: #ffffff !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sticky-cta,
+  .jelly,
+  .jellyfish-container {
+    display: none !important;
+  }
+  
+  body::before {
+    display: none;
+  }
+  
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

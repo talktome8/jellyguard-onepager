@@ -4,25 +4,55 @@
     "logoAlt": "JellyGuard 水母防护"
   },
   "hero": {
-    "title": "自然保护您的运营",
-    "subtitle": "JellyGuard 采用受海洋平衡启发的仿生技术，保持海水入口畅通，生态系统繁荣。",
-    "cta_primary": "预约咨询",
-    "cta_secondary": "了解更多",
+    "title": "阻止水母停机。节省数百万。",
+    "subtitle": "仿生技术保护关键基础设施免受水母爆发影响 — 无化学品、无伤害、无停机。",
+    "cta_primary": "免费评估",
+    "cta_secondary": "了解原理",
     "stats": [
-      { "value": "24/7", "label": "持续保护" },
-      { "value": "低功耗", "label": "节能高效" },
-      { "value": "零", "label": "化学品使用" }
+      { "value": "$20亿+", "label": "年度全球损失" },
+      { "value": "零", "label": "化学品需求" },
+      { "value": "100%", "label": "环保友好" }
     ]
   },
-  "opening": {
-    "eyebrow": "挑战",
-    "title": "当水母群破坏运营时",
-    "text": "在沿海和海域，水母爆发关闭发电厂、海水淡化设施、冷卻进水口，中断渔业运营，关闭旅游海滩（造成数百万的停机时间和紧急响应成本）。传统屏障损害海洋生物，需要密集维护。有更好的方法。"
+  "problemSolution": {
+    "problem": {
+      "eyebrow": "全球挑战",
+      "title": "水母爆发威胁关键基础设施",
+      "text": "气候变化正在加剧全球水母数量。发电厂、海水淡化设施和工业冷却系统面临紧急停机，每次事故损失数百万。",
+      "stats": [
+        { "value": "$20亿+", "label": "年度全球损失" },
+        { "value": "3倍", "label": "爆发频率增加" },
+        { "value": "$250万", "label": "每次停机成本" }
+      ]
+    },
+    "solution": {
+      "eyebrow": "JellyGuard 解决方案",
+      "title": "源自自然的保护",
+      "text": "仿生技术利用自然行为模式引导水母远离进水区域 — 无害移除，零生态系统干扰。",
+      "benefits": [
+        { "title": "零化学排放", "description": "无杀生剂或有毒物质释放到海洋环境" },
+        { "title": "持续保护", "description": "在干扰发生前阻止爆发到达关键区域" },
+        { "title": "最低维护", "description": "被动系统设计显著降低运营负担" },
+        { "title": "海洋安全设计", "description": "配合水母自然行为，不伤害生物" }
+      ]
+    }
   },
-  "promise": {
-    "eyebrow": "我们的解决方案",
-    "title": "仿生保护技术",
-    "text": "一种被动的仿生方法，引导水母远离进水区域，并将它们集中在薄表层中以便安全移除（无需化学品、粉碎或生态系统破坏）。"
+  "circularEconomy": {
+    "eyebrow": "可持续优先",
+    "title": "将海洋挑战转化为机遇",
+    "subtitle": "JellyGuard 不仅保护基础设施 — 我们将捕获的生物质转化为有价值的资源",
+    "badges": {
+      "circular": { "title": "循环经济", "description": "废物变资源" },
+      "blueEconomy": { "title": "蓝色经济", "description": "可持续海洋价值" },
+      "greenTech": { "title": "绿色技术", "description": "零有害排放" },
+      "zeroWaste": { "title": "零废弃", "description": "100%生物质利用" }
+    },
+    "biomass": {
+      "title": "水母生物质价值化",
+      "text": "捕获的水母被加工成高价值应用，在解决爆发问题的同时创造新的收入来源。",
+      "applications": ["有机肥料", "胶原蛋白提取", "生物燃料原料", "研究材料"]
+    },
+    "certifications": ["SDG 14: 水下生命", "蓝色经济认证", "碳中和流程"]
   },
   "impact": {
     "eyebrow": "全球影响",
@@ -52,12 +82,12 @@
   },
   "why": {
     "eyebrow": "关键优势",
-    "title": "为什么 JellyGuard 有效",
+    "title": "为什么 JellyGuard 脱颖而出",
     "items": [
-      { "title": "低功耗且可靠", "text": "最少的水下硬件。模块化维护。" },
-      { "title": "生态友好", "text": "无化学品，无捕获，无损害。" },
-      { "title": "可扩展", "text": "从小型进水口到大型工业场地。" },
-      { "title": "经过验证的方法", "text": "经研究和测试验证的仿生学。" }
+      { "title": "仿生设计", "text": "配合自然海洋行为模式，而非对抗它们。" },
+      { "title": "成本效益", "text": "运营成本低于机械或化学替代方案。" },
+      { "title": "环保友好", "text": "零杀生剂、零伤害 — 符合最严格的环境标准。" },
+      { "title": "可扩展", "text": "模块化设计适应任何设施规模或海洋条件。" }
     ]
   },
   "serve": {

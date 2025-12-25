@@ -187,7 +187,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#168a8a] to-teal opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a 
-                href="#opening" 
+                href="#problem" 
                 className="glass border-2 border-navy/40 text-navy hover:bg-navy/10 hover:border-navy/70 font-bold text-lg sm:text-xl px-10 py-4 sm:px-12 sm:py-5 rounded-2xl transition-all duration-300 w-full sm:w-auto focus:ring-2 focus:ring-navy focus:ring-offset-2 group backdrop-blur-md shadow-lg hover:shadow-xl"
               >
                 <span className="group-hover:tracking-wide transition-all duration-300">{t('cta_secondary')}</span>

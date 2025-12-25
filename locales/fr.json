@@ -4,25 +4,55 @@
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Protégez Vos Opérations (Naturellement)",
-    "subtitle": "JellyGuard maintient les prises d'eau de mer dégagées et les écosystèmes prospères grâce à une technologie biomimétique inspirée de l'équilibre océanique.",
-    "cta_primary": "Planifier une Consultation",
-    "cta_secondary": "En Savoir Plus",
+    "title": "Stoppez les Arrêts Méduses. Économisez des Millions.",
+    "subtitle": "Technologie biomimétique protégeant les infrastructures critiques des blooms de méduses — sans produits chimiques, sans dommage, sans arrêt.",
+    "cta_primary": "Évaluation Gratuite",
+    "cta_secondary": "Comment Ça Marche",
     "stats": [
-      { "value": "24/7", "label": "Protection Continue" },
-      { "value": "Basse Consommation", "label": "Efficacité Énergétique" },
-      { "value": "Zéro", "label": "Produits Chimiques" }
+      { "value": "$2Mds+", "label": "Pertes Mondiales Annuelles" },
+      { "value": "Zéro", "label": "Produits Chimiques" },
+      { "value": "100%", "label": "Écologique" }
     ]
   },
-  "opening": {
-    "eyebrow": "Le Défi",
-    "title": "Quand Les Essaims de Méduses Perturbent Les Opérations",
-    "text": "Sur les côtes et les mers, les blooms de méduses ferment les centrales électriques, les installations de dessalement, les prises de refroidissement, perturbent les opérations de pêche et ferment les plages touristiques (coûtant des millions en temps d'arrêt et en intervention d'urgence). Les barrières traditionnelles nuisent à la vie marine et exigent un entretien intensif. Il existe une meilleure solution."
+  "problemSolution": {
+    "problem": {
+      "eyebrow": "Le Défi Mondial",
+      "title": "Les Blooms de Méduses Menacent les Infrastructures Critiques",
+      "text": "Le changement climatique intensifie les populations de méduses dans le monde entier. Les centrales électriques, installations de dessalement et systèmes de refroidissement font face à des arrêts d'urgence coûtant des millions par incident.",
+      "stats": [
+        { "value": "$2Mds+", "label": "Pertes mondiales annuelles" },
+        { "value": "3x", "label": "Augmentation fréquence" },
+        { "value": "$2.5M", "label": "Coût par arrêt" }
+      ]
+    },
+    "solution": {
+      "eyebrow": "La Solution JellyGuard",
+      "title": "Protection Inspirée par la Nature",
+      "text": "Technologie biomimétique guidant les méduses loin des zones de captage en utilisant des patterns comportementaux naturels — retrait sans dommage, zéro perturbation de l'écosystème.",
+      "benefits": [
+        { "title": "Zéro Rejet Chimique", "description": "Aucun biocide ou substance toxique libéré dans l'environnement marin" },
+        { "title": "Protection Continue", "description": "Empêche les blooms d'atteindre les zones critiques avant perturbation" },
+        { "title": "Maintenance Minimale", "description": "La conception passive réduit significativement la charge opérationnelle" },
+        { "title": "Conception Marine-Safe", "description": "Fonctionne avec le comportement naturel des méduses, aucun organisme blessé" }
+      ]
+    }
   },
-  "promise": {
-    "eyebrow": "Notre Solution",
-    "title": "Technologie de Protection Biomimétique",
-    "text": "Une approche passive et biomimétique qui éloigne les méduses des zones de captage et les concentre dans une fine couche de surface pour un retrait sûr (sans produits chimiques, déchiquetage ou perturbation de l'écosystème)."
+  "circularEconomy": {
+    "eyebrow": "Durabilité d'Abord",
+    "title": "Transformer les Défis Océaniques en Opportunités",
+    "subtitle": "JellyGuard ne protège pas seulement les infrastructures — nous transformons la biomasse capturée en ressources précieuses",
+    "badges": {
+      "circular": { "title": "Économie Circulaire", "description": "Déchets en ressources" },
+      "blueEconomy": { "title": "Économie Bleue", "description": "Valeur océanique durable" },
+      "greenTech": { "title": "Tech Verte", "description": "Zéro émissions nocives" },
+      "zeroWaste": { "title": "Zéro Déchet", "description": "100% biomasse utilisée" }
+    },
+    "biomass": {
+      "title": "Valorisation de la Biomasse de Méduses",
+      "text": "Les méduses capturées sont transformées en applications à haute valeur, créant de nouvelles sources de revenus tout en résolvant le problème des blooms.",
+      "applications": ["Engrais Organiques", "Extraction de Collagène", "Biocarburant", "Matériaux de Recherche"]
+    },
+    "certifications": ["ODD 14: Vie Aquatique", "Économie Bleue Certifiée", "Processus Neutre en Carbone"]
   },
   "impact": {
     "eyebrow": "Impact Mondial",
@@ -52,12 +82,12 @@
   },
   "why": {
     "eyebrow": "Avantages Clés",
-    "title": "Pourquoi JellyGuard Fonctionne",
+    "title": "Pourquoi JellyGuard Se Démarque",
     "items": [
-      { "title": "Basse Consommation et Fiable", "text": "Matériel sous-marin minimal. Entretien modulaire." },
-      { "title": "Écologique", "text": "Pas de produits chimiques, pas de piégeage, pas de dommages." },
-      { "title": "Évolutif", "text": "Des petites prises aux grands sites industriels." },
-      { "title": "Approche Éprouvée", "text": "Biomimétisme validé par la recherche et les tests." }
+      { "title": "Conception Biomimétique", "text": "Travaille avec les modèles de comportement marin naturels, pas contre eux." },
+      { "title": "Rentable", "text": "Coûts d'exploitation inférieurs aux alternatives mécaniques ou chimiques." },
+      { "title": "Écologique", "text": "Zéro biocide, zéro dommage — répond aux normes environnementales les plus strictes." },
+      { "title": "Évolutif", "text": "La conception modulaire s'adapte à toute taille d'installation ou condition marine." }
     ]
   },
   "serve": {
