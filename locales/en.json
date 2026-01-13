@@ -10,7 +10,7 @@
     "cta_secondary": "Learn How It Works",
     "badge": "In Research & Development",
     "stats": [
-      { "value": "$2B+", "label": "Annual Global Losses" },
+      { "value": "$15B+", "label": "At-Risk Infrastructure" },
       { "value": "Zero", "label": "Chemicals Required" },
       { "value": "100%", "label": "Eco-Friendly" }
     ]
@@ -19,11 +19,11 @@
     "problem": {
       "eyebrow": "The Global Challenge",
       "title": "Jellyfish Blooms Threaten Critical Infrastructure",
-      "text": "Climate change is intensifying jellyfish populations worldwide. Power plants, desalination facilities, and industrial cooling systems face emergency shutdowns costing millions per incident.",
+      "text": "Changing ocean conditions are intensifying jellyfish populations worldwide. Power plants, desalination facilities, and industrial cooling systems face emergency shutdowns—documented incidents have cost facilities from millions to tens of millions per event.",
       "stats": [
-        { "value": "$2B+", "label": "Annual global losses" },
-        { "value": "3x", "label": "Bloom frequency increase" },
-        { "value": "$2.5M", "label": "Per shutdown cost" }
+        { "value": "$5-20B", "label": "Global market at risk" },
+        { "value": "Rising", "label": "Bloom frequency & intensity" },
+        { "value": "$1-50M", "label": "Per major shutdown" }
       ]
     },
     "solution": {
@@ -50,7 +50,7 @@
     },
     "biomass": {
       "title": "Jellyfish Biomass Valorization",
-      "text": "Captured jellyfish are processed into high-value applications, creating new revenue streams while solving the bloom problem. From agricultural fertilizers to pharmaceutical compounds, we close the loop on marine waste.",
+      "text": "Captured jellyfish can be processed into valuable applications, creating potential additional revenue streams. Emerging uses include agricultural fertilizers, collagen extraction, and research materials—representing future upside beyond core infrastructure protection.",
       "applications": ["Organic Fertilizers", "Collagen Extraction", "Biofuel Feedstock", "Research Materials"]
     },
     "certifications": ["SDG 14: Life Below Water", "Blue Economy Certified", "Carbon Neutral Process"]
@@ -215,17 +215,17 @@
   "caseStudies": {
     "eyebrow": "The Global Challenge",
     "title": "Jellyfish Blooms Are Escalating Worldwide",
-    "subtitle": "Climate change is intensifying jellyfish populations, threatening critical infrastructure across industries",
+    "subtitle": "Changing ocean conditions are increasing jellyfish populations, creating growing risks for coastal infrastructure",
     "stats": [
       {
-        "value": "$2.5B",
-        "label": "Global Impact",
-        "description": "Estimated annual losses across industries worldwide from jellyfish-related disruptions"
+        "value": "$15B",
+        "label": "At-Risk Infrastructure",
+        "description": "Global addressable market for jellyfish protection based on at-risk infrastructure and avoided losses"
       },
       {
-        "value": "2x-3x",
-        "label": "Bloom Frequency",
-        "description": "Warming oceans and changing currents are doubling bloom intensity and duration in many regions"
+        "value": "Increasing",
+        "label": "Operational Risk",
+        "description": "Industry assessments indicate rising bloom frequency and intensity across key coastal regions"
       },
       {
         "value": "3 Industries",

@@ -9,7 +9,7 @@
     "cta_primary": "Évaluation Gratuite",
     "cta_secondary": "Comment Ça Marche",
     "stats": [
-      { "value": "$2Mds+", "label": "Pertes Mondiales Annuelles" },
+      { "value": "$15Mds+", "label": "Infrastructures à Risque" },
       { "value": "Zéro", "label": "Produits Chimiques" },
       { "value": "100%", "label": "Écologique" }
     ]
@@ -18,11 +18,11 @@
     "problem": {
       "eyebrow": "Le Défi Mondial",
       "title": "Les Blooms de Méduses Menacent les Infrastructures Critiques",
-      "text": "Le changement climatique intensifie les populations de méduses dans le monde entier. Les centrales électriques, installations de dessalement et systèmes de refroidissement font face à des arrêts d'urgence coûtant des millions par incident.",
+      "text": "Les conditions océaniques changeantes intensifient les populations de méduses dans le monde entier. Les centrales électriques, installations de dessalement et systèmes de refroidissement font face à des arrêts d'urgence—des incidents documentés ont coûté de millions à des dizaines de millions par événement.",
       "stats": [
-        { "value": "$2Mds+", "label": "Pertes mondiales annuelles" },
-        { "value": "3x", "label": "Augmentation fréquence" },
-        { "value": "$2.5M", "label": "Coût par arrêt" }
+        { "value": "$5-20Mds", "label": "Marché mondial à risque" },
+        { "value": "En hausse", "label": "Fréquence et intensité" },
+        { "value": "$1-50M", "label": "Par arrêt majeur" }
       ]
     },
     "solution": {
@@ -49,7 +49,7 @@
     },
     "biomass": {
       "title": "Valorisation de la Biomasse de Méduses",
-      "text": "Les méduses capturées sont transformées en applications à haute valeur, créant de nouvelles sources de revenus tout en résolvant le problème des blooms.",
+      "text": "Les méduses capturées peuvent être transformées en applications précieuses, créant des sources de revenus potentielles supplémentaires. Les utilisations émergentes comprennent les engrais agricoles, l'extraction de collagène et les matériaux de recherche—représentant un potentiel additionnel au-delà de la protection des infrastructures.",
       "applications": ["Engrais Organiques", "Extraction de Collagène", "Biocarburant", "Matériaux de Recherche"]
     },
     "certifications": ["ODD 14: Vie Aquatique", "Économie Bleue Certifiée", "Processus Neutre en Carbone"]
@@ -176,10 +176,10 @@
   "caseStudies": {
     "eyebrow": "Le Défi Mondial",
     "title": "Les Proliférations de Méduses Augmentent Partout",
-    "subtitle": "Le changement climatique intensifie les populations de méduses, menaçant les infrastructures critiques",
+    "subtitle": "Les conditions océaniques changeantes intensifient les populations de méduses, créant des risques croissants pour les infrastructures côtières",
     "stats": [
-      { "value": "$2.5B", "label": "Impact Mondial", "description": "Pertes annuelles estimées dues aux perturbations" },
-      { "value": "2x-3x", "label": "Fréquence", "description": "Les océans plus chauds doublent l'intensité des proliférations" },
+      { "value": "$15Mds", "label": "Infrastructures à Risque", "description": "Marché mondial pour la protection contre les méduses basé sur les infrastructures à risque" },
+      { "value": "En hausse", "label": "Risque Opérationnel", "description": "Les évaluations du secteur indiquent une fréquence et une intensité croissantes des proliférations" },
       { "value": "3 Industries", "label": "Plus Touchées", "description": "Production d'énergie, dessalement et aquaculture" }
     ],
     "problems": {

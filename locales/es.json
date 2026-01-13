@@ -9,7 +9,7 @@
     "cta_primary": "Evaluación Gratuita",
     "cta_secondary": "Cómo Funciona",
     "stats": [
-      { "value": "$2B+", "label": "Pérdidas Globales Anuales" },
+      { "value": "$15B+", "label": "Infraestructura en Riesgo" },
       { "value": "Cero", "label": "Químicos Requeridos" },
       { "value": "100%", "label": "Ecológico" }
     ]
@@ -18,11 +18,11 @@
     "problem": {
       "eyebrow": "El Desafío Global",
       "title": "Las Floraciones de Medusas Amenazan Infraestructura Crítica",
-      "text": "El cambio climático intensifica las poblaciones de medusas en todo el mundo. Las plantas eléctricas, instalaciones de desalinización y sistemas de enfriamiento enfrentan cierres de emergencia que cuestan millones por incidente.",
+      "text": "Las condiciones oceánicas cambiantes intensifican las poblaciones de medusas en todo el mundo. Las plantas eléctricas, instalaciones de desalinización y sistemas de enfriamiento enfrentan cierres de emergencia—incidentes documentados han costado desde millones hasta decenas de millones por evento.",
       "stats": [
-        { "value": "$2B+", "label": "Pérdidas globales anuales" },
-        { "value": "3x", "label": "Aumento frecuencia" },
-        { "value": "$2.5M", "label": "Costo por cierre" }
+        { "value": "$5-20B", "label": "Mercado global en riesgo" },
+        { "value": "En Aumento", "label": "Frecuencia e intensidad" },
+        { "value": "$1-50M", "label": "Por cierre mayor" }
       ]
     },
     "solution": {
@@ -49,7 +49,7 @@
     },
     "biomass": {
       "title": "Valorización de Biomasa de Medusas",
-      "text": "Las medusas capturadas se procesan en aplicaciones de alto valor, creando nuevas fuentes de ingresos mientras resolvemos el problema de las floraciones.",
+      "text": "Las medusas capturadas pueden procesarse en aplicaciones valiosas, creando potenciales fuentes de ingresos adicionales. Los usos emergentes incluyen fertilizantes agrícolas, extracción de colágeno y materiales de investigación—representando un potencial adicional más allá de la protección de infraestructura.",
       "applications": ["Fertilizantes Orgánicos", "Extracción de Colágeno", "Biocombustible", "Materiales de Investigación"]
     },
     "certifications": ["ODS 14: Vida Submarina", "Economía Azul Certificada", "Proceso Carbono Neutral"]
@@ -176,10 +176,10 @@
   "caseStudies": {
     "eyebrow": "El Desafío Global",
     "title": "Las Floraciones de Medusas Están Aumentando en Todo el Mundo",
-    "subtitle": "El cambio climático está intensificando las poblaciones de medusas, amenazando la infraestructura crítica",
+    "subtitle": "Las condiciones oceánicas cambiantes están intensificando las poblaciones de medusas, creando riesgos crecientes para la infraestructura costera",
     "stats": [
-      { "value": "$2.5B", "label": "Impacto Global", "description": "Pérdidas anuales estimadas por interrupciones relacionadas con medusas" },
-      { "value": "2x-3x", "label": "Frecuencia", "description": "Los océanos más cálidos duplican la intensidad de las floraciones" },
+      { "value": "$15B", "label": "Infraestructura en Riesgo", "description": "Mercado global para protección contra medusas basado en infraestructura en riesgo" },
+      { "value": "En Aumento", "label": "Riesgo Operativo", "description": "Evaluaciones de la industria indican mayor frecuencia e intensidad de floraciones" },
       { "value": "3 Industrias", "label": "Más Afectadas", "description": "Generación de energía, desalinización y acuicultura" }
     ],
     "problems": {
