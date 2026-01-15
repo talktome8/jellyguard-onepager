@@ -4,14 +4,20 @@
     "logoAlt": "JellyGuard 水母防护"
   },
   "hero": {
-    "title": "阻止水母停机。节省数百万。",
-    "subtitle": "仿生技术保护关键基础设施免受水母爆发影响 — 无化学品、无伤害、无停机。",
-    "cta_primary": "免费评估",
-    "cta_secondary": "了解原理",
+    "title": "保护沿海基础设施免受水母侵扰",
+    "subtitle": "减少停机时间，保护资产，防止昂贵的停机事故。",
+    "cta_primary": "获取免费影响评估",
+    "cta_secondary": "了解工作原理",
+    "badge": "研发中",
     "stats": [
       { "value": "$150亿+", "label": "面临风险的基础设施" },
       { "value": "零", "label": "化学品需求" },
       { "value": "100%", "label": "环保友好" }
+    ],
+    "valueBullets": [
+      { "icon": "shield", "text": "保护关键沿海设施的正常运行" },
+      { "icon": "alert", "text": "最大限度降低水母爆发的运营风险" },
+      { "icon": "leaf", "text": "环保且经过验证的解决方案" }
     ]
   },
   "problemSolution": {

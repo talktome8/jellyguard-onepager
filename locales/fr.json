@@ -4,14 +4,20 @@
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Stoppez les Arrêts Méduses. Économisez des Millions.",
-    "subtitle": "Technologie biomimétique protégeant les infrastructures critiques des blooms de méduses — sans produits chimiques, sans dommage, sans arrêt.",
-    "cta_primary": "Évaluation Gratuite",
-    "cta_secondary": "Comment Ça Marche",
+    "title": "Protégez Vos Infrastructures Côtières des Méduses",
+    "subtitle": "Réduisez les temps d'arrêt, protégez vos actifs et évitez les fermetures coûteuses.",
+    "cta_primary": "Obtenez Votre Estimation d'Impact",
+    "cta_secondary": "Découvrez Comment Ça Marche",
+    "badge": "En Recherche et Développement",
     "stats": [
       { "value": "$15Mds+", "label": "Infrastructures à Risque" },
       { "value": "Zéro", "label": "Produits Chimiques" },
       { "value": "100%", "label": "Écologique" }
+    ],
+    "valueBullets": [
+      { "icon": "shield", "text": "Protégez la disponibilité des installations côtières critiques" },
+      { "icon": "alert", "text": "Minimisez les risques opérationnels des blooms" },
+      { "icon": "leaf", "text": "Solution écologique et éprouvée" }
     ]
   },
   "problemSolution": {

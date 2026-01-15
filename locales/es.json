@@ -4,14 +4,20 @@
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Detenga Cierres por Medusas. Ahorre Millones.",
-    "subtitle": "Tecnología biomimética protegiendo infraestructura crítica de floraciones de medusas — sin químicos, sin daño, sin tiempo de inactividad.",
-    "cta_primary": "Evaluación Gratuita",
-    "cta_secondary": "Cómo Funciona",
+    "title": "Proteja Infraestructura Costera de Disrupciones por Medusas",
+    "subtitle": "Reduzca tiempos de inactividad, proteja activos y prevenga cierres costosos.",
+    "cta_primary": "Obtenga su Estimación de Impacto",
+    "cta_secondary": "Vea Cómo Funciona",
+    "badge": "En Investigación y Desarrollo",
     "stats": [
       { "value": "$15B+", "label": "Infraestructura en Riesgo" },
       { "value": "Cero", "label": "Químicos Requeridos" },
       { "value": "100%", "label": "Ecológico" }
+    ],
+    "valueBullets": [
+      { "icon": "shield", "text": "Proteja el tiempo de actividad de instalaciones costeras críticas" },
+      { "icon": "alert", "text": "Minimice el riesgo operacional de floraciones" },
+      { "icon": "leaf", "text": "Solución ecológica y probada" }
     ]
   },
   "problemSolution": {

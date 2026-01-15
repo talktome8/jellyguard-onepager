@@ -1,18 +1,23 @@
 {
   "header": {
-    "cta": "Get Free Assessment",
+    "cta": "Get Free Impact Estimate",
     "logoAlt": "JellyGuard - Jellyfish Bloom Protection"
   },
   "hero": {
-    "title": "Stop Jellyfish Shutdowns. Save Millions.",
-    "subtitle": "Biomimetic technology protecting critical infrastructure from jellyfish blooms — no chemicals, no harm, no downtime.",
-    "cta_primary": "Get Free Assessment",
-    "cta_secondary": "Learn How It Works",
+    "title": "Protect Coastal Infrastructure from Jellyfish Disruptions",
+    "subtitle": "Reduce downtime, protect assets, and prevent costly shutdowns.",
+    "cta_primary": "Get Your Free Impact Estimate",
+    "cta_secondary": "See How It Works",
     "badge": "In Research & Development",
     "stats": [
       { "value": "$15B+", "label": "At-Risk Infrastructure" },
       { "value": "Zero", "label": "Chemicals Required" },
       { "value": "100%", "label": "Eco-Friendly" }
+    ],
+    "valueBullets": [
+      { "icon": "shield", "text": "Protect uptime for critical coastal facilities" },
+      { "icon": "alert", "text": "Minimize operational risk from blooms" },
+      { "icon": "leaf", "text": "Eco-friendly, proven solution" }
     ]
   },
   "problemSolution": {
