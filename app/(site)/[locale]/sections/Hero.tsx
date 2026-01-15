@@ -1,286 +1,251 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
-
-// Generate consistent particle positions (not random on every render)
-const PARTICLE_POSITIONS = Array.from({ length: 15 }, (_, i) => ({
-  left: (i * 7.3 + 13) % 100, // Pseudo-random but deterministic
-  top: (i * 11.7 + 19) % 100,
-  delay: (i * 0.4) % 5,
-  duration: 8 + (i % 8),
-}));
 
 export default function Hero() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [mounted, setMounted] = useState(false);
-
-  // Only mount particles on client side to avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   
-  // Smooth scroll tracking with spring physics for buttery smooth motion
+  // Smooth scroll tracking with spring physics
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"]
   });
 
-  // Apply spring physics for natural, sophisticated motion
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
   });
 
-  // Sophisticated parallax transforms with varying speeds for depth
-  const backgroundY = useTransform(smoothProgress, [0, 1], ['0%', '50%']);
-  const meshY = useTransform(smoothProgress, [0, 1], ['0%', '30%']);
-  const particlesY = useTransform(smoothProgress, [0, 1], ['0%', '40%']);
-  const waveY = useTransform(smoothProgress, [0, 1], ['0%', '25%']);
-  const contentY = useTransform(smoothProgress, [0, 1], ['0%', '15%']);
-  // Keep content fully visible until 70% scroll, then fade to 0.3 (still readable)
-  const contentOpacity = useTransform(smoothProgress, [0, 0.7, 1], [1, 1, 0.4]);
-  const contentScale = useTransform(smoothProgress, [0, 0.8, 1], [1, 1, 0.97]);
+  // Parallax transforms
+  const imageY = useTransform(smoothProgress, [0, 1], ['0%', '30%']);
+  const imageScale = useTransform(smoothProgress, [0, 1], [1, 1.1]);
+  const contentY = useTransform(smoothProgress, [0, 1], ['0%', '20%']);
+  const contentOpacity = useTransform(smoothProgress, [0, 0.6, 1], [1, 1, 0.3]);
 
   return (
     <div ref={sectionRef} className="relative">
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20 sm:py-24">
-        {/* Underwater jellyfish background image */}
-        <div className="absolute inset-0 -z-30">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        
+        {/* Full-bleed jellyfish background image - PROMINENT */}
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ y: imageY, scale: imageScale }}
+        >
+          <Image
+            src="/images/bloom4.png"
+            alt="Jellyfish swarm in ocean"
+            fill
+            className="object-cover"
+            priority
+            quality={95}
+            sizes="100vw"
+          />
+          {/* Dark gradient overlay for text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/40" />
+        </motion.div>
+
+        {/* Secondary floating jellyfish image on the right - desktop only */}
+        <motion.div 
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[80%] hidden lg:block z-0 opacity-60"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 0.6, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+        >
           <Image
             src="/images/bloom8.png"
-            alt="Underwater jellyfish bloom"
+            alt="Jellyfish bloom"
             fill
-            className="object-cover opacity-25"
-            priority
+            className="object-contain object-right"
             quality={90}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#c8e9f5]/98 via-[#a8dff0]/95 to-[#88d4eb]/98" />
-          <div className="absolute inset-0 bg-white/15" />
+        </motion.div>
+
+        {/* Animated light particles */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-teal/40 rounded-full"
+              style={{
+                left: `${(i * 5.3 + 10) % 100}%`,
+                top: `${(i * 7.1 + 15) % 100}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.2, 0.6, 0.2],
+              }}
+              transition={{
+                duration: 4 + (i % 3),
+                repeat: Infinity,
+                delay: i * 0.2,
+              }}
+            />
+          ))}
         </div>
-        
-        {/* Animated gradient mesh background with parallax */}
-        <motion.div className="absolute inset-0 -z-20" style={{ y: backgroundY }}>
-          {/* Base gradient sea with animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#c8e9f5] via-[#a8dff0] to-[#88d4eb] animate-[gradient_15s_ease_infinite] bg-[length:200%_200%]" />
-          
-          {/* Radial gradient overlays for depth - layered parallax */}
-          <motion.div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(26,163,163,0.15)_0%,transparent_50%)]" style={{ y: meshY }} />
-          <motion.div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(136,212,235,0.2)_0%,transparent_50%)]" style={{ y: meshY }} />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)]" />
-          
-          {/* Vertical vignettes */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#edf5f7]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-navy/8" />
-          
-          {/* Animated light rays */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-white/40 via-white/10 to-transparent transform -skew-x-12 animate-[shimmer_8s_ease-in-out_infinite]" />
-            <div className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-white/30 via-white/10 to-transparent transform -skew-x-12 animate-[shimmer_10s_ease-in-out_infinite] [animation-delay:2s]" />
-          </div>
-        </motion.div>
-        
-        {/* Particles removed for better text contrast and focus */}
 
-        {/* Decorative elements removed for cleaner, more professional appearance */}
-        
-        {/* Parallax wave layers */}
+        {/* Content container */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 -z-10"
-          style={{ y: waveY }}
+          className="relative z-10 w-full"
+          style={{ y: contentY, opacity: contentOpacity }}
         >
-          <svg
-            viewBox="0 0 1200 200"
-            preserveAspectRatio="none"
-            className="w-full h-32 md:h-40 lg:h-48"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,120 C240,80 480,80 600,120 C720,160 960,160 1200,120 L1200,200 L0,200 Z"
-              fill="#edf5f7"
-              opacity="0.3"
-            />
-          </svg>
-        </motion.div>
-
-        <motion.div 
-          className="absolute bottom-0 left-0 right-0 -z-10"
-          style={{ y: waveY }}
-        >
-          <svg
-            viewBox="0 0 1200 200"
-            preserveAspectRatio="none"
-            className="w-full h-32 md:h-40 lg:h-48"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,140 C320,100 480,100 600,140 C720,180 880,180 1200,140 L1200,200 L0,200 Z"
-              fill="#edf5f7"
-              opacity="0.5"
-            />
-            <path
-              d="M0,160 C240,130 480,130 600,160 C720,190 960,190 1200,160 L1200,200 L0,200 Z"
-              fill="#edf5f7"
-              opacity="0.8"
-            />
-          </svg>
-        </motion.div>
-
-        {/* Content with fade and scale animation */}
-        <motion.div 
-          className="section-container text-center z-10 px-4"
-          style={{ 
-            y: contentY,
-            opacity: contentOpacity,
-            scale: contentScale,
-          }}
-        >
-          <div className="max-w-5xl mx-auto">
-            {/* Badge removed for cleaner lead generation focus */}
-
-            <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-navy mb-4 sm:mb-5 leading-[1.05] tracking-tight px-2"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              style={{ 
-                textShadow: '0 4px 20px rgba(255, 255, 255, 1), 0 8px 40px rgba(255, 255, 255, 0.8), 0 2px 8px rgba(255, 255, 255, 0.9)',
-                filter: 'drop-shadow(0 3px 6px rgba(255, 255, 255, 0.7)) drop-shadow(0 1px 3px rgba(255, 255, 255, 0.9))'
-              }}
-            >
-              {t('title')}
-            </motion.h1>
-            <motion.p 
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-800 mb-8 sm:mb-10 leading-[1.4] max-w-3xl mx-auto font-semibold px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              style={{ 
-                textShadow: '0 2px 12px rgba(255, 255, 255, 1), 0 4px 24px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(11, 27, 43, 0.1)',
-                filter: 'drop-shadow(0 1px 2px rgba(255, 255, 255, 0.6))'
-              }}
-            >
-              {t('subtitle')}
-            </motion.p>
-            
-            {/* Dual CTAs with stagger animation */}
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-10 px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <a 
-                href="#contact" 
-                className="btn-primary text-base sm:text-lg px-8 py-3.5 sm:px-10 sm:py-4 shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(26,163,163,0.5)] w-full sm:w-auto group relative overflow-hidden transform hover:scale-[1.02] transition-all duration-300 ring-2 ring-teal/20 hover:ring-teal/40"
+          <div className="section-container px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
+            <div className="max-w-4xl">
+              
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-6"
               >
-                <span className="relative z-10 font-bold flex items-center justify-center gap-2">
-                  {t('cta_primary')}
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal/20 border border-teal/40 backdrop-blur-sm">
+                  <span className="w-2 h-2 bg-teal rounded-full animate-pulse"></span>
+                  <span className="text-teal font-semibold text-sm">{t('badge')}</span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#168a8a] to-teal opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-              <a 
-                href="#problem" 
-                className="glass border-2 border-navy/40 text-navy hover:bg-navy/10 hover:border-navy/70 font-bold text-base sm:text-lg px-8 py-3.5 sm:px-10 sm:py-4 rounded-2xl transition-all duration-300 w-full sm:w-auto focus:ring-2 focus:ring-navy focus:ring-offset-2 group backdrop-blur-md shadow-lg hover:shadow-xl text-center"
+              </motion.div>
+
+              {/* Main headline - HIGH CONTRAST WHITE TEXT */}
+              <motion.h1 
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1] tracking-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
               >
-                <span className="group-hover:tracking-wide transition-all duration-300">{t('cta_secondary')}</span>
-              </a>
-            </motion.div>
+                {t('title')}
+              </motion.h1>
 
-            {/* Value Bullets - Quick benefits summary */}
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center mb-8 sm:mb-10 px-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {(t.raw('valueBullets') as Array<{icon: string, text: string}>)?.map((bullet, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-navy/90">
-                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-teal/20 flex items-center justify-center">
-                    {bullet.icon === 'shield' && (
-                      <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                    {bullet.icon === 'alert' && (
-                      <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                    {bullet.icon === 'leaf' && (
-                      <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a1 1 0 00-1 1v1.323l-3.954.99A1 1 0 005 6.308V8c0 1.652.58 3.17 1.54 4.362L10 17l3.46-4.638A6.975 6.975 0 0015 8V6.308a1 1 0 00-.046-.995l-3.954-.99V3a1 1 0 00-1-1z" />
-                      </svg>
-                    )}
+              {/* Subtitle - CLEAR READABLE TEXT */}
+              <motion.p 
+                className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl font-medium"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {t('subtitle')}
+              </motion.p>
+
+              {/* Value bullets */}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {(t.raw('valueBullets') as Array<{icon: string, text: string}>)?.map((bullet, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-teal/30 border border-teal/50 flex items-center justify-center">
+                      {bullet.icon === 'shield' && (
+                        <svg className="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                      {bullet.icon === 'alert' && (
+                        <svg className="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                      {bullet.icon === 'leaf' && (
+                        <svg className="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                    </div>
+                    <span className="text-white/90 font-medium text-sm sm:text-base">
+                      {bullet.text}
+                    </span>
                   </div>
-                  <span className="text-sm sm:text-base font-medium" style={{ textShadow: '0 1px 4px rgba(255, 255, 255, 0.9)' }}>
-                    {bullet.text}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
+                ))}
+              </motion.div>
 
-            {/* Key Stats - Trust Indicators */}
-            <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-5 max-w-4xl mx-auto px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {(t.raw('stats') as Array<{value: string, label: string}>).map((stat, idx) => (
-                <motion.div 
-                  key={idx} 
-                  className="text-center p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl glass backdrop-blur-xl border-2 border-white/70 hover:border-teal/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group bg-gradient-to-br from-white/90 to-white/75 shadow-lg"
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  style={{ 
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.8) inset'
-                  }}
+              {/* CTA Buttons */}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <a 
+                  href="#contact" 
+                  className="group relative inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal/90 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-teal/30 hover:shadow-xl hover:shadow-teal/40 hover:scale-[1.02]"
                 >
-                  {/* Icon based on index */}
-                  <div className="mb-2 flex justify-center opacity-60 group-hover:opacity-100 transition-opacity">
-                    {idx === 0 && (
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
-                      </svg>
-                    )}
-                    {idx === 1 && (
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                    {idx === 2 && (
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-teal" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                  </div>
-                  
-                  <div className="mb-1 sm:mb-2">
-                    <div 
-                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-br from-teal via-navy to-teal bg-clip-text text-transparent leading-none group-hover:scale-105 transition-transform duration-300 whitespace-nowrap"
-                    >
+                  {t('cta_primary')}
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+                <a 
+                  href="#problem" 
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white/50 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300"
+                >
+                  {t('cta_secondary')}
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Stats cards - positioned lower right on desktop */}
+            <motion.div 
+              className="mt-16 lg:mt-0 lg:absolute lg:bottom-8 lg:right-8 xl:right-16"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-md lg:max-w-lg">
+                {(t.raw('stats') as Array<{value: string, label: string}>).map((stat, idx) => (
+                  <motion.div 
+                    key={idx} 
+                    className="text-center p-4 sm:p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all duration-300"
+                    whileHover={{ scale: 1.05, y: -4 }}
+                  >
+                    <div className="text-xl sm:text-2xl md:text-3xl font-black text-teal mb-1">
                       {stat.value}
                     </div>
-                  </div>
-                  <div 
-                    className="text-xs sm:text-sm md:text-base text-navy font-bold uppercase tracking-wide leading-snug"
-                    style={{ textShadow: '0 1px 4px rgba(255, 255, 255, 0.8)' }}
-                  >
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
+                    <div className="text-xs sm:text-sm text-white/80 font-semibold uppercase tracking-wide">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
+        </motion.div>
+
+        {/* Bottom wave transition */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="w-full h-16 sm:h-20 md:h-24"
+            fill="#edf5f7"
+          >
+            <path d="M0,60 C300,100 600,20 900,60 C1050,80 1150,70 1200,60 L1200,120 L0,120 Z" />
+          </svg>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div 
+          className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          <span className="text-white/60 text-sm font-medium">Scroll to explore</span>
+          <motion.div
+            className="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center p-2"
+            animate={{ opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <motion.div
+              className="w-1.5 h-3 bg-white/60 rounded-full"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </motion.div>
         </motion.div>
       </section>
     </div>
