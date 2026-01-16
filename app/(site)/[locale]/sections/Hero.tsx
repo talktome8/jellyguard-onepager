@@ -50,22 +50,6 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/40" />
         </motion.div>
 
-        {/* Secondary floating jellyfish image on the right - desktop only */}
-        <motion.div 
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[80%] hidden lg:block z-0 opacity-60"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 0.6, x: 0 }}
-          transition={{ duration: 1.2, delay: 0.5 }}
-        >
-          <Image
-            src="/images/bloom8.png"
-            alt="Jellyfish bloom"
-            fill
-            className="object-contain object-right"
-            quality={90}
-          />
-        </motion.div>
-
         {/* Animated light particles */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (

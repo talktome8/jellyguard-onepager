@@ -86,7 +86,7 @@ export default function CircularEconomy() {
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
                 {t('biomass.title')}
               </h3>
-              <p className="text-sm sm:text-base md:text-lg text-gray-100 max-w-2xl mx-auto mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-white max-w-2xl mx-auto mb-6 leading-relaxed">
                 {t('biomass.text')}
               </p>
               
@@ -95,7 +95,7 @@ export default function CircularEconomy() {
                 {[0, 1, 2, 3].map((idx) => (
                   <div 
                     key={idx}
-                    className="px-3 sm:px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-medium"
+                    className="px-3 sm:px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-xs sm:text-sm font-medium"
                   >
                     {t(`biomass.applications.${idx}`)}
                   </div>
