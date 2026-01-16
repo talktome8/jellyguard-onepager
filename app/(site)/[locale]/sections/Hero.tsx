@@ -78,8 +78,8 @@ export default function Hero() {
           className="relative z-10 w-full"
           style={{ y: contentY, opacity: contentOpacity }}
         >
-          <div className="section-container px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
-            <div className="max-w-4xl">
+          <div className="section-container px-6 sm:px-8 lg:px-12 py-20 sm:py-24 lg:py-32">
+            <div className="max-w-4xl mx-auto sm:mx-0">
               
               {/* Badge */}
               <motion.div

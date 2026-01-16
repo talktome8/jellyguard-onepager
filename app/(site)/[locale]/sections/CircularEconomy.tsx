@@ -72,7 +72,7 @@ export default function CircularEconomy() {
             <div 
               className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 text-center"
               style={{
-                background: 'linear-gradient(135deg, #0b1b2b 0%, #1a3a4a 100%)',
+                background: 'linear-gradient(135deg, #0d2940 0%, #1a4a5e 100%)',
                 boxShadow: '0 20px 60px rgba(11, 27, 43, 0.3)'
               }}
             >
@@ -83,10 +83,10 @@ export default function CircularEconomy() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                 {t('biomass.title')}
               </h3>
-              <p className="text-sm sm:text-base md:text-lg text-white max-w-2xl mx-auto mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-white/95 max-w-2xl mx-auto mb-6 leading-relaxed font-medium" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.2)' }}>
                 {t('biomass.text')}
               </p>
               
@@ -95,7 +95,7 @@ export default function CircularEconomy() {
                 {[0, 1, 2, 3].map((idx) => (
                   <div 
                     key={idx}
-                    className="px-3 sm:px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-xs sm:text-sm font-medium"
+                    className="px-3 sm:px-4 py-2 rounded-full bg-teal/30 border border-teal/50 text-white text-xs sm:text-sm font-semibold"
                   >
                     {t(`biomass.applications.${idx}`)}
                   </div>
