@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
+import { HeroWavesMesh } from '../components/visuals';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -49,6 +50,9 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/50" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/40" />
         </motion.div>
+
+        {/* 3D Waves Mesh Background - Elegant depth layer */}
+        <HeroWavesMesh />
 
         {/* Animated light particles */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

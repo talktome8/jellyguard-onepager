@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import { ShieldFlowVisual } from '../components/visuals';
 
 export default function WhatIsJellyGuard() {
   const t = useTranslations('whatIsJellyGuard');
@@ -26,8 +27,13 @@ export default function WhatIsJellyGuard() {
       <div className="section-container relative z-10 px-5 sm:px-6 md:px-8">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
-            {/* Title Section */}
+            {/* Title Section with 3D Visual */}
             <div className="text-center mb-8">
+              {/* Abstract 3D Shield/Flow Visual */}
+              <div className="w-36 sm:w-44 mx-auto mb-6">
+                <ShieldFlowVisual />
+              </div>
+              
               <div className="inline-block mb-3 px-4 py-2 rounded-full bg-teal/20 border border-teal/40">
                 <span className="text-xs sm:text-sm uppercase tracking-widest text-teal-light font-bold">
                   {t('eyebrow')}

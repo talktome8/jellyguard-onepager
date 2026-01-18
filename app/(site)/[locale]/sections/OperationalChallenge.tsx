@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
+import { FlowDistortionVisual } from '../components/visuals';
 
 export default function OperationalChallenge() {
   const t = useTranslations('operationalChallenge');
@@ -26,8 +27,13 @@ export default function OperationalChallenge() {
       <div className="section-container relative z-10 px-5 sm:px-6 md:px-8">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
-            {/* Title Section */}
+            {/* Title Section with 3D Visual */}
             <div className="text-center mb-8">
+              {/* Abstract 3D Flow Distortion Visual */}
+              <div className="w-32 sm:w-40 mx-auto mb-6">
+                <FlowDistortionVisual variant="challenge" />
+              </div>
+              
               <div className="inline-block mb-3 px-4 py-2 rounded-full bg-amber-50 border border-amber-200">
                 <span className="text-xs sm:text-sm uppercase tracking-widest text-amber-700 font-bold">
                   {t('eyebrow')}
