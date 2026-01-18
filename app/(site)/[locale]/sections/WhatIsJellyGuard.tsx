@@ -23,7 +23,7 @@ export default function WhatIsJellyGuard() {
 
   return (
     <section ref={ref} className="strip strip-navy section relative overflow-hidden py-12 sm:py-16">
-      <div className="section-container relative z-10 px-4">
+      <div className="section-container relative z-10 px-5 sm:px-6 md:px-8">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
             {/* Title Section */}
