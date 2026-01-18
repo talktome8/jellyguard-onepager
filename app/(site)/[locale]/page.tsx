@@ -4,10 +4,11 @@ import Footer from './components/Footer';
 import DepthGradient from './components/DepthGradient';
 import StickyCtaButton from './components/StickyCtaButton';
 import Hero from './sections/Hero';
-import ProblemSolution from './sections/ProblemSolution';
-import FourSteps from './sections/FourSteps';
-import CircularEconomy from './sections/CircularEconomy';
-import Differentiators from './sections/Differentiators';
+import OperationalChallenge from './sections/OperationalChallenge';
+import WhatIsJellyGuard from './sections/WhatIsJellyGuard';
+import MarketContext from './sections/MarketContext';
+import ProjectStatus from './sections/ProjectStatus';
+import ExpectedImpact from './sections/ExpectedImpact';
 import FinalCTA from './sections/FinalCTA';
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
@@ -23,22 +24,25 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <Header />
         
         <main>
-          {/* 1. HERO - Immediate value proposition with compelling stats */}
+          {/* 1. HERO - Immediate value proposition */}
           <Hero />
           
-          {/* 2. PROBLEM → SOLUTION - Compact problem statement and solution */}
-          <ProblemSolution />
+          {/* 2. THE PROBLEM - Operational Challenge */}
+          <OperationalChallenge />
           
-          {/* 3. HOW IT WORKS - Simple 4-step process visualization */}
-          <FourSteps />
+          {/* 3. JELLYGUARD POSITIONING - What It Is */}
+          <WhatIsJellyGuard />
           
-          {/* 4. CIRCULAR ECONOMY - Green tech, blue economy, biomass valorization */}
-          <CircularEconomy />
+          {/* 4. MARKET CONTEXT - Why This Matters Globally */}
+          <MarketContext />
           
-          {/* 5. DIFFERENTIATION - Why JellyGuard wins vs alternatives */}
-          <Differentiators />
+          {/* 5. PROJECT STATUS - Transparent and Conservative */}
+          <ProjectStatus />
           
-          {/* 6. FINAL CTA - High-urgency contact form with clear value */}
+          {/* 6. EXPECTED IMPACT - Conditional Only */}
+          <ExpectedImpact />
+          
+          {/* 7. FINAL CTA - Contact Form */}
           <FinalCTA />
         </main>
 

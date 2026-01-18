@@ -106,12 +106,22 @@ export default function Hero() {
 
               {/* Subtitle - CLEAR READABLE TEXT */}
               <motion.p 
-                className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl font-medium"
+                className="text-lg sm:text-xl md:text-2xl text-white/90 mb-4 leading-relaxed max-w-2xl font-medium"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 {t('subtitle')}
+              </motion.p>
+
+              {/* Supporting Line - Factual framing */}
+              <motion.p 
+                className="text-base sm:text-lg text-white/75 mb-8 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.25 }}
+              >
+                {t('supportingLine')}
               </motion.p>
 
               {/* Value bullets */}

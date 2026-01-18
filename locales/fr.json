@@ -6,6 +6,7 @@
   "hero": {
     "title": "Protégez Vos Infrastructures Côtières des Méduses",
     "subtitle": "Réduisez les temps d'arrêt, protégez vos actifs et évitez les fermetures coûteuses.",
+    "supportingLine": "De nombreuses installations de production d'énergie et de dessalement côtières dans le monde dépendent de systèmes de captage d'eau de mer ouverte qui sont de plus en plus exposés aux blooms saisonniers de méduses et à la biomasse marine.",
     "cta_primary": "Obtenez Votre Estimation d'Impact",
     "cta_secondary": "Découvrez Comment Ça Marche",
     "badge": "En Recherche et Développement",
@@ -19,6 +20,56 @@
       { "icon": "alert", "text": "Minimisez les risques opérationnels des blooms" },
       { "icon": "leaf", "text": "Solution écologique et éprouvée" }
     ]
+  },
+  "operationalChallenge": {
+    "eyebrow": "Comprendre le Risque",
+    "title": "Le Défi Opérationnel",
+    "paragraphs": [
+      "Les blooms de méduses et la biomasse marine constituent un défi opérationnel récurrent pour les infrastructures côtières.",
+      "Dans les installations qui dépendent du captage d'eau de mer ouverte, la charge biologique peut obstruer les filtres et les grilles, réduire l'efficacité du refroidissement et augmenter la pression de maintenance.",
+      "Même des événements de blocage partiels ou temporaires peuvent entraîner des perturbations opérationnelles mesurables."
+    ]
+  },
+  "whatIsJellyGuard": {
+    "eyebrow": "Notre Approche",
+    "title": "Qu'est-ce que JellyGuard",
+    "paragraphs": [
+      "JellyGuard est positionné comme une approche préventive orientée infrastructure, conçue pour traiter les risques liés aux méduses avant qu'ils n'atteignent des seuils opérationnels critiques.",
+      "L'initiative se concentre sur la sensibilisation précoce, la préparation opérationnelle et la réduction de l'exposition à la charge biologique, soutenant un fonctionnement plus résilient des installations côtières dépendantes de l'eau."
+    ]
+  },
+  "marketContext": {
+    "eyebrow": "Pertinence Mondiale",
+    "title": "Pourquoi C'est Important Mondialement",
+    "paragraphs": [
+      "Des milliers d'installations de production d'énergie et de dessalement dans le monde opèrent le long des côtes en utilisant des systèmes de captage d'eau de mer ouverte.",
+      "Une part importante de ces installations sont situées dans des régions avec une exposition moyenne à élevée aux blooms de méduses, particulièrement dans les mers chaudes et en réchauffement comme la Méditerranée et le Moyen-Orient.",
+      "À mesure que les conditions marines continuent de changer, les perturbations biologiques du captage deviennent une considération opérationnelle récurrente plutôt qu'une anomalie isolée."
+    ]
+  },
+  "projectStatus": {
+    "eyebrow": "Phase Actuelle",
+    "title": "Statut du Projet",
+    "paragraphs": [
+      "JellyGuard est actuellement dans une phase de développement précoce.",
+      "La définition du concept et l'analyse de faisabilité ont été complétées, et les activités de planification du pilote sont en cours.",
+      "La validation sur le terrain est prévue, sous réserve d'alignement technique, de considérations réglementaires et de préparation des parties prenantes."
+    ],
+    "pilotContext": {
+      "title": "Contexte du Pilote",
+      "text": "Des discussions initiales ont été entamées avec la compagnie nationale d'électricité d'Israël concernant un pilote de terrain potentiel, sous réserve d'alignement technique et d'approbations requises."
+    }
+  },
+  "expectedImpact": {
+    "eyebrow": "Résultats Projetés",
+    "title": "Impact Attendu (Sous Réserve de Validation)",
+    "paragraphs": [
+      "Si validé avec succès à travers l'activité pilote, JellyGuard devrait démontrer une réduction significative des perturbations de captage liées aux méduses et de la charge opérationnelle associée.",
+      "Les résultats du pilote informeront le développement d'une solution évolutive conçue pour améliorer la résilience opérationnelle des infrastructures côtières dépendantes de l'eau."
+    ]
+  },
+  "ctaEngagement": {
+    "text": "JellyGuard s'engage auprès des opérateurs d'infrastructures, des organismes publics et des parties prenantes stratégiques intéressés par l'exploration de pilotes et les solutions de résilience à long terme."
   },
   "problemSolution": {
     "problem": {

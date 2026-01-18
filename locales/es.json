@@ -6,6 +6,7 @@
   "hero": {
     "title": "Proteja Infraestructura Costera de Disrupciones por Medusas",
     "subtitle": "Reduzca tiempos de inactividad, proteja activos y prevenga cierres costosos.",
+    "supportingLine": "Muchas instalaciones de generación de energía y desalinización costeras en todo el mundo dependen de sistemas de captación de agua de mar abierto que están cada vez más expuestos a floraciones estacionales de medusas y biomasa marina.",
     "cta_primary": "Obtenga su Estimación de Impacto",
     "cta_secondary": "Vea Cómo Funciona",
     "badge": "En Investigación y Desarrollo",
@@ -19,6 +20,56 @@
       { "icon": "alert", "text": "Minimice el riesgo operacional de floraciones" },
       { "icon": "leaf", "text": "Solución ecológica y probada" }
     ]
+  },
+  "operationalChallenge": {
+    "eyebrow": "Comprendiendo el Riesgo",
+    "title": "El Desafío Operacional",
+    "paragraphs": [
+      "Las floraciones de medusas y la biomasa marina representan un desafío operacional recurrente para la infraestructura costera.",
+      "En instalaciones que dependen de la captación de agua de mar abierto, la carga biológica puede obstruir filtros y pantallas, reducir la eficiencia de enfriamiento y aumentar la presión de mantenimiento.",
+      "Incluso eventos de bloqueo parciales o temporales pueden llevar a disrupciones operacionales medibles."
+    ]
+  },
+  "whatIsJellyGuard": {
+    "eyebrow": "Nuestro Enfoque",
+    "title": "Qué es JellyGuard",
+    "paragraphs": [
+      "JellyGuard está posicionado como un enfoque preventivo orientado a la infraestructura, diseñado para abordar los riesgos relacionados con las medusas antes de que alcancen umbrales operacionales críticos.",
+      "La iniciativa se centra en la conciencia temprana, la preparación operacional y la reducción de la exposición a la carga biológica, apoyando una operación más resiliente de las instalaciones costeras dependientes del agua."
+    ]
+  },
+  "marketContext": {
+    "eyebrow": "Relevancia Global",
+    "title": "Por Qué Esto Importa Globalmente",
+    "paragraphs": [
+      "Miles de instalaciones de generación de energía y desalinización en todo el mundo operan a lo largo de las costas utilizando sistemas de captación de agua de mar abierto.",
+      "Una parte significativa de estas instalaciones se encuentran en regiones con exposición media a alta a floraciones de medusas, particularmente en mares cálidos y en calentamiento como el Mediterráneo y el Medio Oriente.",
+      "A medida que las condiciones marinas continúan cambiando, las disrupciones de captación biológica se están convirtiendo en una consideración operacional recurrente en lugar de una anomalía aislada."
+    ]
+  },
+  "projectStatus": {
+    "eyebrow": "Fase Actual",
+    "title": "Estado del Proyecto",
+    "paragraphs": [
+      "JellyGuard se encuentra actualmente en una fase de desarrollo temprano.",
+      "La definición del concepto y el análisis de viabilidad se han completado, y las actividades de planificación del piloto están en curso.",
+      "La validación de campo está planificada, sujeta a alineación técnica, consideraciones regulatorias y preparación de los stakeholders."
+    ],
+    "pilotContext": {
+      "title": "Contexto del Piloto",
+      "text": "Se han iniciado discusiones preliminares con la empresa eléctrica nacional de Israel respecto a un piloto de campo potencial, sujeto a alineación técnica y aprobaciones requeridas."
+    }
+  },
+  "expectedImpact": {
+    "eyebrow": "Resultados Proyectados",
+    "title": "Impacto Esperado (Sujeto a Validación)",
+    "paragraphs": [
+      "Si se valida exitosamente a través de la actividad piloto, se espera que JellyGuard demuestre una reducción significativa en las disrupciones de captación relacionadas con medusas y la carga operacional asociada.",
+      "Los resultados del piloto informarán el desarrollo de una solución escalable diseñada para mejorar la resiliencia operacional en infraestructura costera dependiente del agua."
+    ]
+  },
+  "ctaEngagement": {
+    "text": "JellyGuard está comprometiéndose con operadores de infraestructura, organismos públicos y stakeholders estratégicos interesados en la exploración de pilotos y soluciones de resiliencia a largo plazo."
   },
   "problemSolution": {
     "problem": {

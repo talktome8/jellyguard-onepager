@@ -8,6 +8,7 @@ import RippleEffect from '../components/RippleEffect';
 export default function FinalCTA() {
   const t = useTranslations('cta');
   const tTrust = useTranslations('trust');
+  const tEngagement = useTranslations('ctaEngagement');
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -42,7 +43,7 @@ export default function FinalCTA() {
               </p>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap gap-3 justify-center mb-8 text-xs text-slate-600 font-medium">
+              <div className="flex flex-wrap gap-3 justify-center mb-6 text-xs text-slate-600 font-medium">
                 {(tTrust.raw('certifications') as string[]).map((cert, idx) => (
                   <div key={idx} className="flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
                     <svg className="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20">
@@ -52,6 +53,11 @@ export default function FinalCTA() {
                   </div>
                 ))}
               </div>
+
+              {/* Engagement Text */}
+              <p className="text-base text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+                {tEngagement('text')}
+              </p>
             </div>
             
             <ContactForm />
