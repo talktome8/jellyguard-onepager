@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { StackedPlanesVisual } from '../components/visuals';
 
 export default function ExpectedImpact() {
-  const t = useTranslations('expectedImpact');
+  const t = useTranslations('evaluationIndicators');
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -34,8 +34,8 @@ export default function ExpectedImpact() {
                 <StackedPlanesVisual variant="impact" />
               </div>
               
-              <div className="inline-block mb-3 px-4 py-2 rounded-full bg-green-50 border border-green-200">
-                <span className="text-xs sm:text-sm uppercase tracking-widest text-green-700 font-bold">
+              <div className="inline-block mb-3 px-4 py-2 rounded-full bg-slate-100 border border-slate-200">
+                <span className="text-xs sm:text-sm uppercase tracking-widest text-slate-600 font-bold">
                   {t('eyebrow')}
                 </span>
               </div>

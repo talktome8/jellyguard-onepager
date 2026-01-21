@@ -1,41 +1,48 @@
 {
   "header": {
-    "cta": "Programar una consulta",
+    "cta": "Explorar el Enfoque",
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Proteja Infraestructura Costera de Disrupciones por Medusas",
-    "subtitle": "Reduzca tiempos de inactividad, proteja activos y prevenga cierres costosos.",
-    "supportingLine": "Muchas instalaciones de generación de energía y desalinización costeras en todo el mundo dependen de sistemas de captación de agua de mar abierto que están cada vez más expuestos a floraciones estacionales de medusas y biomasa marina.",
-    "cta_primary": "Obtenga su Estimación de Impacto",
-    "cta_secondary": "Vea Cómo Funciona",
+    "title": "Las floraciones de medusas no son eventos raros. Son un riesgo operacional recurrente para la infraestructura costera de energía y desalinización.",
+    "subtitle": "Los enjambres de medusas estacionales y climáticos interrumpen repetidamente los sistemas de captación de agua de mar, creando inestabilidad operacional, tensión de mantenimiento y riesgo de cierre no planificado.",
+    "supportingLine": "En diferentes regiones y entornos regulatorios, las instalaciones enfrentan el mismo desafío estructural: los sistemas de captación de mar abierto carecen de una capa de amortiguación dedicada entre el ambiente marino y la infraestructura de enfriamiento crítica. Las respuestas existentes son típicamente reactivas, intensivas en mano de obra, y se activan solo después de que la degradación del flujo ya ha comenzado.",
+    "cta_primary": "Explorar el Enfoque",
+    "cta_secondary": "Discusiones Piloto",
     "badge": "En Investigación y Desarrollo",
     "stats": [
-      { "value": "$15B+", "label": "Infraestructura en Riesgo" },
+      { "value": "Global", "label": "Infraestructura en Riesgo" },
       { "value": "Cero", "label": "Químicos Requeridos" },
-      { "value": "100%", "label": "Ecológico" }
+      { "value": "100%", "label": "No Invasivo" }
     ],
     "valueBullets": [
-      { "icon": "shield", "text": "Proteja el tiempo de actividad de instalaciones costeras críticas" },
-      { "icon": "alert", "text": "Minimice el riesgo operacional de floraciones" },
-      { "icon": "leaf", "text": "Solución ecológica y probada" }
+      { "icon": "shield", "text": "Capa de protección preventiva para captación" },
+      { "icon": "alert", "text": "Reducir la incertidumbre operacional de floraciones" },
+      { "icon": "leaf", "text": "Diseñado para complementar infraestructura existente" }
     ]
   },
-  "operationalChallenge": {
-    "eyebrow": "Comprendiendo el Riesgo",
-    "title": "El Desafío Operacional",
-    "paragraphs": [
-      "Las floraciones de medusas y la biomasa marina representan un desafío operacional recurrente para la infraestructura costera.",
-      "En instalaciones que dependen de la captación de agua de mar abierto, la carga biológica puede obstruir filtros y pantallas, reducir la eficiencia de enfriamiento y aumentar la presión de mantenimiento.",
-      "Incluso eventos de bloqueo parciales o temporales pueden llevar a disrupciones operacionales medibles."
-    ]
+  "problemFraming": {
+    "eyebrow": "La Brecha Estructural",
+    "title": "Una brecha estructural en la protección de captación",
+    "intro": "Las floraciones de medusas están aumentando en frecuencia y densidad debido a cambios ambientales. Sin embargo, la mayoría de las instalaciones costeras todavía dependen de diseños de captación que exponen directamente los sistemas de enfriamiento a cargas biológicas.",
+    "consequences": {
+      "intro": "El resultado no es solo eventos de obstrucción, sino incertidumbre operacional continua:",
+      "items": [
+        "Eficiencia de captación reducida",
+        "Mayor mantenimiento e intervención manual",
+        "Riesgo elevado de cierre parcial o total de captación",
+        "Estrés en bombas, filtros y sistemas aguas abajo"
+      ]
+    },
+    "conclusion": "El desafío no es la ausencia de esfuerzo, sino la ausencia de una capa de mitigación dedicada aguas arriba diseñada específicamente para eventos de masa biológica."
   },
-  "whatIsJellyGuard": {
-    "eyebrow": "Nuestro Enfoque",
-    "title": "Qué es JellyGuard",
+  "jellyguardPositioning": {
+    "eyebrow": "El Enfoque JellyGuard",
+    "title": "Una capa preventiva, no otra solución reactiva",
     "paragraphs": [
-      "JellyGuard está posicionado como un enfoque preventivo orientado a la infraestructura, diseñado para abordar los riesgos relacionados con las medusas antes de que alcancen umbrales operacionales críticos.",
-      "La iniciativa se centra en la conciencia temprana, la preparación operacional y la reducción de la exposición a la carga biológica, apoyando una operación más resiliente de las instalaciones costeras dependientes del agua."
+      "JellyGuard propone un enfoque modular y no invasivo que introduce una capa de respuesta monitoreada aguas arriba de los sistemas de captación de agua de mar.",
+      "En lugar de abordar las medusas solo después de que llegan a la captación, el concepto se centra en la detección temprana, la agregación controlada y la desviación gestionada antes de que los sistemas críticos se vean afectados.",
+      "El enfoque está diseñado para complementar la infraestructura existente, no para reemplazarla, y para ser evaluado progresivamente a través de etapas piloto controladas."
     ]
   },
   "marketContext": {
@@ -60,16 +67,24 @@
       "text": "Se han iniciado discusiones preliminares con la empresa eléctrica nacional de Israel respecto a un piloto de campo potencial, sujeto a alineación técnica y aprobaciones requeridas."
     }
   },
-  "expectedImpact": {
-    "eyebrow": "Resultados Proyectados",
-    "title": "Impacto Esperado (Sujeto a Validación)",
+  "evaluationIndicators": {
+    "eyebrow": "Marco de Evaluación",
+    "title": "Indicadores de Evaluación",
     "paragraphs": [
-      "Si se valida exitosamente a través de la actividad piloto, se espera que JellyGuard demuestre una reducción significativa en las disrupciones de captación relacionadas con medusas y la carga operacional asociada.",
-      "Los resultados del piloto informarán el desarrollo de una solución escalable diseñada para mejorar la resiliencia operacional en infraestructura costera dependiente del agua."
+      "Los indicadores de evaluación propuestos están destinados a apoyar la evaluación cuantitativa en etapa temprana del impacto operacional, como la reducción de disrupciones de captación, la mejora de la estabilidad del flujo y la disminución de la intervención manual.",
+      "Estos indicadores no son especificaciones técnicas y no constituyen garantías de rendimiento. Están diseñados para permitir una evaluación comparativa informada durante las fases piloto iniciales."
+    ]
+  },
+  "biomassHandling": {
+    "eyebrow": "Clarificación del Alcance",
+    "title": "Manejo de Biomasa",
+    "paragraphs": [
+      "Cualquier manejo, procesamiento o transporte de biomasa removida no es una condición para el éxito del sistema y no es parte del objetivo central de mitigación.",
+      "Si se examina, se consideraría una extensión piloto separada y opcional sujeta a alcance independiente, disponibilidad de espacio y presupuesto dedicado."
     ]
   },
   "ctaEngagement": {
-    "text": "JellyGuard está comprometiéndose con operadores de infraestructura, organismos públicos y stakeholders estratégicos interesados en la exploración de pilotos y soluciones de resiliencia a largo plazo."
+    "text": "JellyGuard se está comprometiendo con operadores de infraestructura, organismos de innovación pública y socios estratégicos interesados en la exploración de pilotos y soluciones de resiliencia a largo plazo."
   },
   "problemSolution": {
     "problem": {

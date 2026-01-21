@@ -1,41 +1,48 @@
 {
   "header": {
-    "cta": "Get Free Impact Estimate",
+    "cta": "Explore the Approach",
     "logoAlt": "JellyGuard - Jellyfish Bloom Protection"
   },
   "hero": {
-    "title": "Protect Coastal Infrastructure from Jellyfish Disruptions",
-    "subtitle": "Reduce downtime, protect assets, and prevent costly shutdowns.",
-    "supportingLine": "Many coastal power and desalination facilities worldwide rely on open-sea water intake systems that are increasingly exposed to seasonal jellyfish blooms and marine biomass.",
-    "cta_primary": "Get Your Free Impact Estimate",
-    "cta_secondary": "See How It Works",
+    "title": "Jellyfish blooms are not rare events. They are a recurring operational risk to coastal power and desalination infrastructure.",
+    "subtitle": "Seasonal and climate-driven jellyfish swarms repeatedly disrupt seawater intake systems, creating operational instability, maintenance strain, and unplanned shutdown risk.",
+    "supportingLine": "Across regions and regulatory environments, facilities face the same structural challenge: open-sea intake systems lack a dedicated buffer layer between the marine environment and critical cooling infrastructure. Existing responses are typically reactive, labor-intensive, and activated only after flow degradation has already begun.",
+    "cta_primary": "Explore the Approach",
+    "cta_secondary": "Engage in Pilot Discussions",
     "badge": "In Research & Development",
     "stats": [
-      { "value": "$15B+", "label": "At-Risk Infrastructure" },
+      { "value": "Global", "label": "Infrastructure at Risk" },
       { "value": "Zero", "label": "Chemicals Required" },
-      { "value": "100%", "label": "Eco-Friendly" }
+      { "value": "100%", "label": "Non-Invasive" }
     ],
     "valueBullets": [
-      { "icon": "shield", "text": "Protect uptime for critical coastal facilities" },
-      { "icon": "alert", "text": "Minimize operational risk from blooms" },
-      { "icon": "leaf", "text": "Eco-friendly, proven solution" }
+      { "icon": "shield", "text": "Preventive intake protection layer" },
+      { "icon": "alert", "text": "Reduce operational uncertainty from blooms" },
+      { "icon": "leaf", "text": "Designed to complement existing infrastructure" }
     ]
   },
-  "operationalChallenge": {
-    "eyebrow": "Understanding the Risk",
-    "title": "The Operational Challenge",
-    "paragraphs": [
-      "Jellyfish blooms and marine biomass pose a recurring operational challenge for coastal infrastructure.",
-      "In facilities that rely on open-sea water intake, biological load can obstruct filters and screens, reduce cooling efficiency, and increase maintenance pressure.",
-      "Even partial or temporary blockage events may lead to measurable operational disruption."
-    ]
+  "problemFraming": {
+    "eyebrow": "The Structural Gap",
+    "title": "A structural gap in intake protection",
+    "intro": "Jellyfish blooms are increasing in frequency and density due to environmental shifts. Yet most coastal facilities still rely on intake designs that directly expose cooling systems to biological loads.",
+    "consequences": {
+      "intro": "The result is not only clogging events, but ongoing operational uncertainty:",
+      "items": [
+        "Reduced intake efficiency",
+        "Increased maintenance and manual intervention",
+        "Elevated risk of partial or full intake shutdown",
+        "Stress on pumps, filters, and downstream systems"
+      ]
+    },
+    "conclusion": "The challenge is not the absence of effort, but the absence of a dedicated, upstream mitigation layer designed specifically for biological mass events."
   },
-  "whatIsJellyGuard": {
-    "eyebrow": "Our Approach",
-    "title": "What JellyGuard Is",
+  "jellyguardPositioning": {
+    "eyebrow": "The JellyGuard Approach",
+    "title": "A preventive layer, not another reactive fix",
     "paragraphs": [
-      "JellyGuard is positioned as a preventive, infrastructure-oriented approach designed to address jellyfish-related risks before they reach critical operational thresholds.",
-      "The initiative focuses on early awareness, operational readiness, and reduction of biological load exposure, supporting more resilient operation of coastal water-dependent facilities."
+      "JellyGuard proposes a modular, non-invasive approach that introduces a monitored response layer upstream of seawater intake systems.",
+      "Rather than addressing jellyfish only after they reach the intake, the concept focuses on early detection, controlled aggregation, and managed diversion before critical systems are affected.",
+      "The approach is designed to complement existing infrastructure, not replace it, and to be evaluated progressively through controlled pilot stages."
     ]
   },
   "marketContext": {
@@ -60,16 +67,24 @@
       "text": "Initial discussions have been initiated with Israel's national electric utility regarding a potential field pilot, subject to technical alignment and required approvals."
     }
   },
-  "expectedImpact": {
-    "eyebrow": "Projected Outcomes",
-    "title": "Expected Impact (Subject to Validation)",
+  "evaluationIndicators": {
+    "eyebrow": "Assessment Framework",
+    "title": "Evaluation Indicators",
     "paragraphs": [
-      "If successfully validated through pilot activity, JellyGuard is expected to demonstrate meaningful reduction in jellyfish-related intake disruptions and associated operational load.",
-      "Pilot outcomes will inform the development of a scalable solution designed to improve operational resilience in coastal water-dependent infrastructure."
+      "Proposed evaluation indicators are intended to support early-stage, quantitative assessment of operational impact, such as reduction in intake disruptions, improved flow stability, and decreased manual intervention.",
+      "These indicators are not technical specifications and do not constitute performance guarantees. They are designed to enable informed, comparative evaluation during initial pilot phases."
+    ]
+  },
+  "biomassHandling": {
+    "eyebrow": "Scope Clarification",
+    "title": "Biomass Handling",
+    "paragraphs": [
+      "Any handling, processing, or transport of removed biomass is not a condition for system success and is not part of the core mitigation objective.",
+      "If examined, it would be considered a separate, optional pilot extension subject to independent scope, space availability, and dedicated budgeting."
     ]
   },
   "ctaEngagement": {
-    "text": "JellyGuard is engaging with infrastructure operators, public bodies, and strategic stakeholders interested in pilot exploration and long-term resilience solutions."
+    "text": "JellyGuard is engaging with infrastructure operators, public innovation bodies, and strategic partners interested in pilot exploration and long-term resilience solutions."
   },
   "problemSolution": {
     "problem": {

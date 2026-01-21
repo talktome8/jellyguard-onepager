@@ -2,10 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { useState, useEffect, useRef } from 'react';
-import { ShieldFlowVisual } from '../components/visuals';
 
-export default function WhatIsJellyGuard() {
-  const t = useTranslations('jellyguardPositioning');
+export default function BiomassHandling() {
+  const t = useTranslations('biomassHandling');
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -23,32 +22,27 @@ export default function WhatIsJellyGuard() {
   const paragraphs = t.raw('paragraphs') as string[];
 
   return (
-    <section ref={ref} className="strip strip-navy section relative overflow-hidden py-12 sm:py-16">
+    <section ref={ref} className="strip strip-navy section relative overflow-hidden py-10 sm:py-12">
       <div className="section-container relative z-10 px-5 sm:px-6 md:px-8">
         <div className={`reveal ${isVisible ? 'is-in' : ''}`}>
           <div className="max-w-4xl mx-auto">
-            {/* Title Section with 3D Visual */}
-            <div className="text-center mb-8">
-              {/* Abstract 3D Shield/Flow Visual */}
-              <div className="w-36 sm:w-44 mx-auto mb-6">
-                <ShieldFlowVisual />
-              </div>
-              
-              <div className="inline-block mb-3 px-4 py-2 rounded-full bg-teal/20 border border-teal/40">
-                <span className="text-xs sm:text-sm uppercase tracking-widest text-teal-light font-bold">
+            {/* Title Section */}
+            <div className="text-center mb-6">
+              <div className="inline-block mb-3 px-4 py-2 rounded-full bg-white/10 border border-white/20">
+                <span className="text-xs sm:text-sm uppercase tracking-widest text-white/70 font-bold">
                   {t('eyebrow')}
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                 {t('title')}
               </h2>
             </div>
 
             {/* Content */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 sm:p-8">
-              <div className="space-y-4">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-6">
+              <div className="space-y-3">
                 {paragraphs.map((paragraph, idx) => (
-                  <p key={idx} className="text-base sm:text-lg text-white/90 leading-relaxed">
+                  <p key={idx} className="text-sm sm:text-base text-white/80 leading-relaxed">
                     {paragraph}
                   </p>
                 ))}

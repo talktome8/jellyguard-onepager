@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FlowDistortionVisual } from '../components/visuals';
 
 export default function OperationalChallenge() {
-  const t = useTranslations('operationalChallenge');
+  const t = useTranslations('problemFraming');
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -20,7 +20,7 @@ export default function OperationalChallenge() {
     return () => observer.disconnect();
   }, []);
 
-  const paragraphs = t.raw('paragraphs') as string[];
+  const consequenceItems = t.raw('consequences.items') as string[];
 
   return (
     <section ref={ref} className="strip strip-white section relative overflow-hidden py-12 sm:py-16">
@@ -46,12 +46,33 @@ export default function OperationalChallenge() {
 
             {/* Content */}
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8">
-              <div className="space-y-4">
-                {paragraphs.map((paragraph, idx) => (
-                  <p key={idx} className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                    {paragraph}
+              <div className="space-y-5">
+                {/* Intro paragraph */}
+                <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+                  {t('intro')}
+                </p>
+                
+                {/* Consequences with bullet list */}
+                <div>
+                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-3">
+                    {t('consequences.intro')}
                   </p>
-                ))}
+                  <ul className="space-y-2 ml-4">
+                    {consequenceItems.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-amber-600" />
+                        <span className="text-base sm:text-lg text-slate-700 leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Conclusion paragraph */}
+                <p className="text-base sm:text-lg text-slate-800 leading-relaxed font-medium border-l-4 border-amber-400 pl-4">
+                  {t('conclusion')}
+                </p>
               </div>
             </div>
           </div>

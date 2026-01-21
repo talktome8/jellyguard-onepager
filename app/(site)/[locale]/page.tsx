@@ -9,6 +9,7 @@ import WhatIsJellyGuard from './sections/WhatIsJellyGuard';
 import MarketContext from './sections/MarketContext';
 import ProjectStatus from './sections/ProjectStatus';
 import ExpectedImpact from './sections/ExpectedImpact';
+import BiomassHandling from './sections/BiomassHandling';
 import FinalCTA from './sections/FinalCTA';
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
@@ -27,10 +28,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           {/* 1. HERO - Immediate value proposition */}
           <Hero />
           
-          {/* 2. THE PROBLEM - Operational Challenge */}
+          {/* 2. PROBLEM FRAMING - Structural gap in intake protection */}
           <OperationalChallenge />
           
-          {/* 3. JELLYGUARD POSITIONING - What It Is */}
+          {/* 3. JELLYGUARD POSITIONING - A preventive layer */}
           <WhatIsJellyGuard />
           
           {/* 4. MARKET CONTEXT - Why This Matters Globally */}
@@ -39,10 +40,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           {/* 5. PROJECT STATUS - Transparent and Conservative */}
           <ProjectStatus />
           
-          {/* 6. EXPECTED IMPACT - Conditional Only */}
+          {/* 6. EVALUATION INDICATORS - KPI language */}
           <ExpectedImpact />
           
-          {/* 7. FINAL CTA - Contact Form */}
+          {/* 7. BIOMASS HANDLING - Scope clarification */}
+          <BiomassHandling />
+          
+          {/* 8. FINAL CTA - Contact Form */}
           <FinalCTA />
         </main>
 

@@ -1,41 +1,48 @@
 {
   "header": {
-    "cta": "Planifier une consultation",
+    "cta": "Explorer l'Approche",
     "logoAlt": "JellyGuard"
   },
   "hero": {
-    "title": "Protégez Vos Infrastructures Côtières des Méduses",
-    "subtitle": "Réduisez les temps d'arrêt, protégez vos actifs et évitez les fermetures coûteuses.",
-    "supportingLine": "De nombreuses installations de production d'énergie et de dessalement côtières dans le monde dépendent de systèmes de captage d'eau de mer ouverte qui sont de plus en plus exposés aux blooms saisonniers de méduses et à la biomasse marine.",
-    "cta_primary": "Obtenez Votre Estimation d'Impact",
-    "cta_secondary": "Découvrez Comment Ça Marche",
+    "title": "Les blooms de méduses ne sont pas des événements rares. Ce sont des risques opérationnels récurrents pour les infrastructures côtières d'énergie et de dessalement.",
+    "subtitle": "Les essaims de méduses saisonniers et climatiques perturbent répétitivement les systèmes de captage d'eau de mer, créant une instabilité opérationnelle, une pression de maintenance et un risque d'arrêt imprévu.",
+    "supportingLine": "Dans différentes régions et environnements réglementaires, les installations font face au même défi structurel : les systèmes de captage en mer ouverte manquent d'une couche tampon dédiée entre l'environnement marin et l'infrastructure de refroidissement critique. Les réponses existantes sont typiquement réactives, intensives en main-d'œuvre, et activées seulement après que la dégradation du débit a déjà commencé.",
+    "cta_primary": "Explorer l'Approche",
+    "cta_secondary": "Discussions Pilotes",
     "badge": "En Recherche et Développement",
     "stats": [
-      { "value": "$15Mds+", "label": "Infrastructures à Risque" },
+      { "value": "Mondial", "label": "Infrastructures à Risque" },
       { "value": "Zéro", "label": "Produits Chimiques" },
-      { "value": "100%", "label": "Écologique" }
+      { "value": "100%", "label": "Non Invasif" }
     ],
     "valueBullets": [
-      { "icon": "shield", "text": "Protégez la disponibilité des installations côtières critiques" },
-      { "icon": "alert", "text": "Minimisez les risques opérationnels des blooms" },
-      { "icon": "leaf", "text": "Solution écologique et éprouvée" }
+      { "icon": "shield", "text": "Couche de protection préventive pour le captage" },
+      { "icon": "alert", "text": "Réduire l'incertitude opérationnelle des blooms" },
+      { "icon": "leaf", "text": "Conçu pour compléter l'infrastructure existante" }
     ]
   },
-  "operationalChallenge": {
-    "eyebrow": "Comprendre le Risque",
-    "title": "Le Défi Opérationnel",
-    "paragraphs": [
-      "Les blooms de méduses et la biomasse marine constituent un défi opérationnel récurrent pour les infrastructures côtières.",
-      "Dans les installations qui dépendent du captage d'eau de mer ouverte, la charge biologique peut obstruer les filtres et les grilles, réduire l'efficacité du refroidissement et augmenter la pression de maintenance.",
-      "Même des événements de blocage partiels ou temporaires peuvent entraîner des perturbations opérationnelles mesurables."
-    ]
+  "problemFraming": {
+    "eyebrow": "L'Écart Structurel",
+    "title": "Un écart structurel dans la protection du captage",
+    "intro": "Les blooms de méduses augmentent en fréquence et en densité en raison des changements environnementaux. Pourtant, la plupart des installations côtières reposent encore sur des conceptions de captage qui exposent directement les systèmes de refroidissement aux charges biologiques.",
+    "consequences": {
+      "intro": "Le résultat n'est pas seulement des événements de colmatage, mais une incertitude opérationnelle continue :",
+      "items": [
+        "Efficacité de captage réduite",
+        "Maintenance et intervention manuelle accrues",
+        "Risque élevé d'arrêt partiel ou total du captage",
+        "Stress sur les pompes, filtres et systèmes en aval"
+      ]
+    },
+    "conclusion": "Le défi n'est pas l'absence d'effort, mais l'absence d'une couche d'atténuation dédiée en amont conçue spécifiquement pour les événements de masse biologique."
   },
-  "whatIsJellyGuard": {
-    "eyebrow": "Notre Approche",
-    "title": "Qu'est-ce que JellyGuard",
+  "jellyguardPositioning": {
+    "eyebrow": "L'Approche JellyGuard",
+    "title": "Une couche préventive, pas une autre solution réactive",
     "paragraphs": [
-      "JellyGuard est positionné comme une approche préventive orientée infrastructure, conçue pour traiter les risques liés aux méduses avant qu'ils n'atteignent des seuils opérationnels critiques.",
-      "L'initiative se concentre sur la sensibilisation précoce, la préparation opérationnelle et la réduction de l'exposition à la charge biologique, soutenant un fonctionnement plus résilient des installations côtières dépendantes de l'eau."
+      "JellyGuard propose une approche modulaire et non invasive qui introduit une couche de réponse surveillée en amont des systèmes de captage d'eau de mer.",
+      "Plutôt que de traiter les méduses seulement après qu'elles atteignent le captage, le concept se concentre sur la détection précoce, l'agrégation contrôlée et la déviation gérée avant que les systèmes critiques ne soient affectés.",
+      "L'approche est conçue pour compléter l'infrastructure existante, pas pour la remplacer, et pour être évaluée progressivement à travers des étapes pilotes contrôlées."
     ]
   },
   "marketContext": {
@@ -60,16 +67,24 @@
       "text": "Des discussions initiales ont été entamées avec la compagnie nationale d'électricité d'Israël concernant un pilote de terrain potentiel, sous réserve d'alignement technique et d'approbations requises."
     }
   },
-  "expectedImpact": {
-    "eyebrow": "Résultats Projetés",
-    "title": "Impact Attendu (Sous Réserve de Validation)",
+  "evaluationIndicators": {
+    "eyebrow": "Cadre d'Évaluation",
+    "title": "Indicateurs d'Évaluation",
     "paragraphs": [
-      "Si validé avec succès à travers l'activité pilote, JellyGuard devrait démontrer une réduction significative des perturbations de captage liées aux méduses et de la charge opérationnelle associée.",
-      "Les résultats du pilote informeront le développement d'une solution évolutive conçue pour améliorer la résilience opérationnelle des infrastructures côtières dépendantes de l'eau."
+      "Les indicateurs d'évaluation proposés sont destinés à soutenir l'évaluation quantitative précoce de l'impact opérationnel, comme la réduction des perturbations de captage, l'amélioration de la stabilité du débit et la diminution de l'intervention manuelle.",
+      "Ces indicateurs ne sont pas des spécifications techniques et ne constituent pas des garanties de performance. Ils sont conçus pour permettre une évaluation comparative éclairée pendant les phases pilotes initiales."
+    ]
+  },
+  "biomassHandling": {
+    "eyebrow": "Clarification du Périmètre",
+    "title": "Gestion de la Biomasse",
+    "paragraphs": [
+      "Toute manipulation, traitement ou transport de biomasse retirée n'est pas une condition du succès du système et ne fait pas partie de l'objectif d'atténuation central.",
+      "Si examiné, il serait considéré comme une extension pilote séparée et optionnelle soumise à un périmètre indépendant, une disponibilité d'espace et un budget dédié."
     ]
   },
   "ctaEngagement": {
-    "text": "JellyGuard s'engage auprès des opérateurs d'infrastructures, des organismes publics et des parties prenantes stratégiques intéressés par l'exploration de pilotes et les solutions de résilience à long terme."
+    "text": "JellyGuard s'engage auprès des opérateurs d'infrastructures, des organismes d'innovation publique et des partenaires stratégiques intéressés par l'exploration de pilotes et les solutions de résilience à long terme."
   },
   "problemSolution": {
     "problem": {
